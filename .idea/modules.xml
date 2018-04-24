@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/basicinfo/basicinfo.iml" filepath="$PROJECT_DIR$/basicinfo/basicinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inventory-saas-sinfeeloo.iml" filepath="$PROJECT_DIR$/inventory-saas-sinfeeloo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/management/management.iml" filepath="$PROJECT_DIR$/management/management.iml" />
+    </modules>
+  </component>
+</project>
