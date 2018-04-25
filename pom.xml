@@ -6,13 +6,14 @@
 	<groupId>com.sinfeeloo.inventory</groupId>
 	<artifactId>inventory-saas-sinfeeloo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<modules>
 		<module>common</module>
 		<module>management</module>
 		<module>basicinfo</module>
-	</modules>
+        <module>system</module>
+    </modules>
 
 	<name>inventory-saas-sinfeeloo</name>
 	<description>Demo project for Spring Boot</description>

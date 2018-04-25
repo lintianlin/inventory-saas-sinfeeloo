@@ -8,8 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="basicinfo" />
         <module name="common" />
-        <module name="inventory-saas-sinfeeloo" />
         <module name="management" />
+        <module name="system" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +17,7 @@
       <module name="common" target="1.8" />
       <module name="inventory-saas-sinfeeloo" target="1.8" />
       <module name="management" target="1.8" />
+      <module name="system" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
