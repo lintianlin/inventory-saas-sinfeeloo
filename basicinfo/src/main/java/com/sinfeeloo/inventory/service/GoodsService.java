@@ -17,7 +17,7 @@ public class GoodsService {
 
 
     @Autowired
-    private GoodsMapper goodsMapper;
+    public GoodsMapper goodsMapper;
 
 
     public List<Goods> getGoodsList(){
