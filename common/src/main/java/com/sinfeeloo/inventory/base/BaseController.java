@@ -22,5 +22,9 @@ public abstract class BaseController {
         e.printStackTrace();
         logger.error(msg + "===原因：{}", e.getStackTrace());
     }
+    protected void logError(String msg,  Exception e) {
+        e.printStackTrace();
+        logger.error(msg + "===原因：{}", e.getStackTrace());
+    }
 
 }

@@ -3,11 +3,14 @@ package com.sinfeeloo.inventory.controller;
 import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.MyResponse;
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.UserService;
 import com.sinfeeloo.inventory.utils.EncyptUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -83,6 +86,53 @@ public class UserController extends BaseController {
             logError("登录失败！", response, ex);
         }
         return response;
+    }
+
+
+    /**
+     * 退出
+     *
+     * @return
+     */
+    @RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})
+    public ComResp loginOut() {
+        Subject currentUser = SecurityUtils.getSubject();
+        currentUser.logout();
+        return ComResp.success("退出成功！");
+    }
+
+
+    /**
+     * 通过条件查询用户列表
+     *
+     * @param account
+     * @param roleId
+     * @param isLocked
+     * @param limit
+     * @param page
+     * @return
+     */
+    @GetMapping(value = "/getUserListByPage")
+    public ComResp getUserListByPage(@RequestParam(value = "account", required = false) String account,
+                                     @RequestParam(value = "roleId", required = false) Integer roleId,
+                                     @RequestParam(value = "isLocked", required = false) Integer isLocked,
+                                     @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
+                                     @RequestParam(value = "page", required = false, defaultValue = "1") Integer page) {
+        Paging<User> paging = new Paging<>(page, limit);
+        try {
+            paging.putSearch("account", account);
+            paging.putSearch("roleId", roleId);
+            paging.putSearch("isLocked", isLocked);
+            paging.putSearch("limit", limit);
+            paging.putSearch("page", page);
+            paging.putSearch("sortCode", "updatime");
+            paging.putSearch("sortRole", "ASC");
+            userService.getUserListByPage(paging);
+            return ComResp.success("查询成功！", paging);
+        } catch (Exception e) {
+            logError("查询失败", e);
+            return ComResp.error("查询失败！");
+        }
     }
 
 }

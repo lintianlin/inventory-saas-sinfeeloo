@@ -4,8 +4,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 /**
  * ComResp
+ *
  * @Author: mhj
- * @Desc:  统一响应数据
+ * @Desc: 统一响应数据
  * @Date: 2018/4/25 16:53
  */
 public class ComResp<T> {
@@ -30,6 +31,10 @@ public class ComResp<T> {
 
     public static <T> ComResp success(T data) {
         return new ComResp(SUCCESS, "Success", data);
+    }
+
+    public static <T> ComResp success(String des, T data) {
+        return new ComResp(SUCCESS, des, data);
     }
 
     public static ComResp error(String des) {

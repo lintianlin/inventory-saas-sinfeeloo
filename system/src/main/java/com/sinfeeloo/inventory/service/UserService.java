@@ -1,5 +1,6 @@
 package com.sinfeeloo.inventory.service;
 
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.mapper.UserMapper;
 import com.sinfeeloo.inventory.utils.JWTUtil;
@@ -52,4 +53,15 @@ public class UserService {
     public void addUser(User userTemp) {
         userMapper.insert(userTemp);
     }
+
+
+    /**
+     * 根据条件查询用户列表
+     * @param paging
+     */
+    public void getUserListByPage(Paging<User> paging) {
+        paging.setTotal(userMapper.selectUserCount(paging.getSearchMap()));
+        paging.setList(userMapper.selectUserListByPage(paging.getSearchMap()));
+    }
+
 }
