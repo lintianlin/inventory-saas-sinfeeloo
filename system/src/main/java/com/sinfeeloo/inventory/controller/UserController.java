@@ -28,13 +28,11 @@ public class UserController extends BaseController {
     UserService userService;
 
     @PostMapping(value = "/addUser")
-    public ComResp addTeam(@RequestParam(value = "account", required = true) String account,
+    public ComResp addUser(@RequestParam(value = "account", required = true) String account,
                            @RequestParam(value = "roleId", required = true) Integer roleId,
                            @RequestParam(value = "roleName", required = true) String roleName,
                            @RequestParam(value = "employeeId", required = true) Integer employeeId,
                            @RequestParam(value = "operateAccount", required = true) String operateAccount) {
-        MyResponse response = new MyResponse();
-
         User user = userService.getUserByAccount(account);
         if (user != null) {
             return ComResp.error("该用户已存在！");
@@ -60,8 +58,8 @@ public class UserController extends BaseController {
      * @return
      */
     @PostMapping(value = "/login")
-    public MyResponse teamLogin(@RequestParam(value = "account") String account,
-                                @RequestParam(value = "password") String password) {
+    public MyResponse login(@RequestParam(value = "account") String account,
+                            @RequestParam(value = "password") String password) {
         MyResponse<String> response = new MyResponse();
         try {
             if (StringUtils.isBlank(account)) {
@@ -95,7 +93,7 @@ public class UserController extends BaseController {
      * @return
      */
     @RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})
-    public ComResp loginOut() {
+    public ComResp logout() {
         Subject currentUser = SecurityUtils.getSubject();
         currentUser.logout();
         return ComResp.success("退出成功！");
@@ -132,6 +130,77 @@ public class UserController extends BaseController {
         } catch (Exception e) {
             logError("查询失败", e);
             return ComResp.error("查询失败！");
+        }
+    }
+
+
+    /**
+     * 修改用户
+     *
+     * @param id
+     * @param account
+     * @param roleId
+     * @param roleName
+     * @param employeeId
+     * @param operateAccount
+     * @return
+     */
+    @PostMapping(value = "/modifyUser")
+    public ComResp modifyUser(@RequestParam(value = "id", required = true) Integer id,
+                              @RequestParam(value = "account", required = true) String account,
+                              @RequestParam(value = "roleId", required = true) Integer roleId,
+                              @RequestParam(value = "roleName", required = true) String roleName,
+                              @RequestParam(value = "employeeId", required = true) Integer employeeId,
+                              @RequestParam(value = "operateAccount", required = true) String operateAccount) {
+
+        try {
+            User userTemp = new User();
+            userTemp.setId(id);
+            userTemp.setAccount(account);
+            userTemp.setRoleid(roleId);
+            userTemp.setRolename(roleName);
+            userTemp.setEmployeeid(employeeId);
+            userTemp.setUpdater(operateAccount);
+            int num = userService.modifyUser(userTemp);
+            return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
+        } catch (Exception e) {
+            logError("用户修改失败！", e);
+            return ComResp.error("修改失败！");
+        }
+    }
+
+
+    /**
+     * 删除
+     *
+     * @param id
+     * @return
+     */
+    @PostMapping(value = "/deleteUser")
+    public ComResp deleteUser(@RequestParam(value = "id", required = true) Integer id) {
+        try {
+            int num = userService.deleteUser(id);
+            return num > 0 ? ComResp.success("删除成功！") : ComResp.error("删除失败！");
+        } catch (Exception e) {
+            logError("用户删除失败！", e);
+            return ComResp.error("删除失败！");
+        }
+    }
+
+    /**
+     * 锁定
+     *
+     * @param id
+     * @return
+     */
+    @PostMapping(value = "/lockUser")
+    public ComResp lockUser(@RequestParam(value = "id", required = true) Integer id) {
+        try {
+            int num = userService.lockUser(id);
+            return num > 0 ? ComResp.success("锁定成功！") : ComResp.error("锁定失败！");
+        } catch (Exception e) {
+            logError("用户锁定失败！", e);
+            return ComResp.error("锁定失败！");
         }
     }
 

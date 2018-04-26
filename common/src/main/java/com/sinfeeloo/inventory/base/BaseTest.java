@@ -1,6 +1,7 @@
 package com.sinfeeloo.inventory.base;
 
 
+import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.MyResponse;
 import com.sinfeeloo.inventory.utils.JsonUtil;
 import org.slf4j.Logger;
@@ -15,6 +16,9 @@ import org.springframework.http.ResponseEntity;
 public class BaseTest {
     protected Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    protected void printResponse(ComResp response) {
+        logger.info(JsonUtil.beanToJson(response));
+    }
 
     protected void printResponse(MyResponse response) {
         logger.info(JsonUtil.beanToJson(response));

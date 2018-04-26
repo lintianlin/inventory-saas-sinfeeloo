@@ -43,6 +43,7 @@ public class UserService {
 
     /**
      * 获得用户
+     *
      * @param account
      * @return
      */
@@ -57,11 +58,40 @@ public class UserService {
 
     /**
      * 根据条件查询用户列表
+     *
      * @param paging
      */
     public void getUserListByPage(Paging<User> paging) {
         paging.setTotal(userMapper.selectUserCount(paging.getSearchMap()));
         paging.setList(userMapper.selectUserListByPage(paging.getSearchMap()));
+    }
+
+
+    /**
+     * 修改
+     *
+     * @param user
+     */
+    public int modifyUser(User user) {
+        return userMapper.updateByPrimaryKey(user);
+    }
+
+    /**
+     * 删除
+     *
+     * @param id
+     */
+    public int deleteUser(Integer id) {
+        return userMapper.deleteByPrimaryKey(id);
+    }
+
+    /**
+     * 锁定
+     *
+     * @param id
+     */
+    public int lockUser(Integer id) {
+        return userMapper.lockByPrimaryKey(id);
     }
 
 }
