@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225f1113-7c4d-431a-b78e-3561d205ffb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/RoleController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/RoleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/RoleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/entity/Role.java" afterPath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/entity/Role.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/RoleMapper.java" afterPath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/RoleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/main/resources/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/system/src/main/resources/mapper/RoleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java" afterPath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java" afterPath="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java" afterPath="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,11 +23,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RoleTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="209" column="19" lean-forward="false" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/RoleTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="604">
               <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="670">
+              <caret line="74" column="23" lean-forward="false" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -38,19 +58,20 @@
       <file leaf-file-name="UserMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="16" />
+            <state relative-caret-position="508">
+              <caret line="138" column="26" lean-forward="true" selection-start-line="138" selection-start-column="26" selection-end-line="138" selection-end-column="26" />
               <folding>
-                <marker date="1524726657393" expanded="true" signature="1693:1882" ph="select id, a... lz_sys_user" />
-                <marker date="1524726657393" expanded="true" signature="1995:2466" ph="insert into lz_sys_user... " />
-                <marker date="1524726657393" expanded="true" signature="2575:3026" ph="SELECT u.acc... lz_sys_user" />
-                <marker date="1524726657393" expanded="true" signature="2575:3443" ph="SELECT u.acc... lz_sys_user" />
-                <marker date="1524726657393" expanded="true" signature="3542:3630" ph="SELECT COUNT... lz_sys_user" />
-                <marker date="1524726657393" expanded="true" signature="4105:4284" ph="select id, a... lz_sys_user" />
-                <marker date="1524726657393" expanded="true" signature="4412:4742" ph="update lz_sy... " />
-                <marker date="1524726657393" expanded="true" signature="4412:4756" ph="update lz_sy... " />
-                <marker date="1524726657393" expanded="true" signature="4865:4955" ph="update lz_sy... " />
-                <marker date="1524726657393" expanded="true" signature="5028:5214" ph="update lz_sy... " />
+                <marker date="1524735181749" expanded="true" signature="1693:1882" ph="select id, a... lz_sys_user" />
+                <marker date="1524735181749" expanded="true" signature="1995:2466" ph="insert into lz_sys_user... " />
+                <marker date="1524735181749" expanded="true" signature="2575:3026" ph="SELECT u.acc... lz_sys_user" />
+                <marker date="1524735181749" expanded="true" signature="2575:3443" ph="SELECT u.acc... lz_sys_user" />
+                <marker date="1524735181749" expanded="true" signature="3542:3630" ph="SELECT COUNT... lz_sys_user" />
+                <marker date="1524735181749" expanded="true" signature="4105:4284" ph="select id, a... lz_sys_user" />
+                <marker date="1524735181749" expanded="true" signature="4412:4742" ph="update lz_sy... " />
+                <marker date="1524735181749" expanded="true" signature="4412:4756" ph="update lz_sy... " />
+                <marker date="1524735181749" expanded="true" signature="4865:4955" ph="update lz_sy... " />
+                <marker date="1524735181749" expanded="true" signature="5028:5214" ph="update lz_sy... " />
+                <marker date="1524735181749" expanded="true" signature="5287:5445" ph="update lz_sy... " />
               </folding>
             </state>
           </provider>
@@ -87,7 +108,7 @@
       <file leaf-file-name="RoleMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/RoleMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2046">
+            <state relative-caret-position="528">
               <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
               <folding>
                 <marker date="1524733654192" expanded="true" signature="1556:1697" ph="select id, n... lz_sys_role" />
@@ -99,6 +120,30 @@
                 <marker date="1524733654192" expanded="true" signature="2958:3526" ph="SELECT id, n... lz_sys_role" />
                 <marker date="1524733654192" expanded="true" signature="4056:4415" ph="update lz_sy... " />
                 <marker date="1524733654192" expanded="true" signature="4524:4606" ph="update lz_sy... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="91" column="8" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="110" column="11" lean-forward="false" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2178#2179#0" expanded="true" />
+                <element signature="e#2242#2243#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,18 +222,18 @@
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseController.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseTest.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/entity/ComResp.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java" />
-        <option value="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/entity/Role.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/RoleService.java" />
         <option value="$PROJECT_DIR$/system/src/main/resources/mapper/RoleMapper.xml" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/RoleMapper.java" />
         <option value="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/RoleTest.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/RoleController.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java" />
+        <option value="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java" />
       </list>
     </option>
   </component>
@@ -345,6 +390,16 @@
               <item name="system" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -438,7 +493,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RoleTest.deleteRole">
+  <component name="RunManager" selected="JUnit.UserTest.modifyPwd">
     <configuration name="BasicinfoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinfeeloo.inventory.BasicinfoApplication" />
@@ -560,7 +615,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="UserTest.unlockUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.modifyPwd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sinfeeloo.inventory.*" />
@@ -572,7 +627,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.sinfeeloo.inventory" />
       <option name="MAIN_CLASS_NAME" value="com.sinfeeloo.inventory.UserTest" />
-      <option name="METHOD_NAME" value="unlockUser" />
+      <option name="METHOD_NAME" value="modifyPwd" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -676,19 +731,19 @@
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.ManagementApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.InventorySaasSinfeelooApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.BasicinfoApplication" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.unlockUser" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RoleTest.addRole" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.RoleTest.getRoleListByPage" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.RoleTest.modifyRole" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.RoleTest.deleteRole" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RoleTest.addRole" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RoleTest.getRoleListByPage" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RoleTest.modifyRole" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.RoleTest.deleteRole" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.UserTest.modifyPwd" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RoleTest.deleteRole" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RoleTest.modifyRole" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RoleTest.getRoleListByPage" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RoleTest.addRole" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.unlockUser" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest.modifyPwd" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RoleTest.deleteRole" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RoleTest.modifyRole" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RoleTest.getRoleListByPage" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.RoleTest.addRole" />
       </list>
     </recent_temporary>
   </component>
@@ -708,7 +763,7 @@
       <workItem from="1524557990731" duration="311000" />
       <workItem from="1524617233894" duration="22182000" />
       <workItem from="1524704158147" duration="15952000" />
-      <workItem from="1524725393259" duration="8379000" />
+      <workItem from="1524725393259" duration="9814000" />
     </task>
     <servers />
   </component>
@@ -718,9 +773,6 @@
     </history-entry>
     <history-entry file="RoleTest_deleteRole - 2018.04.26 at 17h 08m 08s.xml">
       <configuration name="RoleTest.deleteRole" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RoleTest_getRoleListByPage - 2018.04.26 at 16h 27m 27s.xml">
-      <configuration name="RoleTest.getRoleListByPage" configurationId="JUnit" />
     </history-entry>
     <history-entry file="RoleTest_getRoleListByPage - 2018.04.26 at 16h 28m 52s.xml">
       <configuration name="RoleTest.getRoleListByPage" configurationId="JUnit" />
@@ -743,9 +795,12 @@
     <history-entry file="RoleTest_modifyRole - 2018.04.26 at 16h 48m 52s.xml">
       <configuration name="RoleTest.modifyRole" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UserTest_modifyPwd - 2018.04.26 at 17h 34m 06s.xml">
+      <configuration name="UserTest.modifyPwd" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52986000" />
+    <option name="totallyTimeSpent" value="54421000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,9 +825,9 @@
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3358862" sideWeight="0.49786323" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08547009" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35339168" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5142232" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15645514" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.072210066" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -808,7 +863,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java</url>
-          <line>31</line>
+          <line>32</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1106,46 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="82" column="8" lean-forward="false" selection-start-line="82" selection-start-column="8" selection-end-line="82" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-            <element signature="e#2192#2193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="126" column="48" lean-forward="true" selection-start-line="123" selection-start-column="12" selection-end-line="126" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1168,56 +1183,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="69" column="47" lean-forward="false" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="16" />
-          <folding>
-            <marker date="1524726657393" expanded="true" signature="1693:1882" ph="select id, a... lz_sys_user" />
-            <marker date="1524726657393" expanded="true" signature="1995:2466" ph="insert into lz_sys_user... " />
-            <marker date="1524726657393" expanded="true" signature="2575:3026" ph="SELECT u.acc... lz_sys_user" />
-            <marker date="1524726657393" expanded="true" signature="2575:3443" ph="SELECT u.acc... lz_sys_user" />
-            <marker date="1524726657393" expanded="true" signature="3542:3630" ph="SELECT COUNT... lz_sys_user" />
-            <marker date="1524726657393" expanded="true" signature="4105:4284" ph="select id, a... lz_sys_user" />
-            <marker date="1524726657393" expanded="true" signature="4412:4742" ph="update lz_sy... " />
-            <marker date="1524726657393" expanded="true" signature="4412:4756" ph="update lz_sy... " />
-            <marker date="1524726657393" expanded="true" signature="4865:4955" ph="update lz_sy... " />
-            <marker date="1524726657393" expanded="true" signature="5028:5214" ph="update lz_sy... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/RoleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-736">
           <caret line="6" column="29" lean-forward="false" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2046">
-          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <marker date="1524733654192" expanded="true" signature="1556:1697" ph="select id, n... lz_sys_role" />
-            <marker date="1524733654192" expanded="true" signature="1990:2089" ph="select id, n... lz_sys_role" />
-            <marker date="1524733654192" expanded="true" signature="2201:2558" ph="insert into lz_sys_role... " />
-            <marker date="1524733654192" expanded="true" signature="2695:2840" ph="select id, n... lz_sys_role" />
-            <marker date="1524733654192" expanded="true" signature="2695:2854" ph="select id, n... lz_sys_role" />
-            <marker date="1524733654192" expanded="true" signature="2958:3219" ph="SELECT id, N... lz_sys_role" />
-            <marker date="1524733654192" expanded="true" signature="2958:3526" ph="SELECT id, n... lz_sys_role" />
-            <marker date="1524733654192" expanded="true" signature="4056:4415" ph="update lz_sy... " />
-            <marker date="1524733654192" expanded="true" signature="4524:4606" ph="update lz_sy... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1245,10 +1215,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/RoleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="114" column="0" lean-forward="true" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <marker date="1524733654192" expanded="true" signature="1556:1697" ph="select id, n... lz_sys_role" />
+            <marker date="1524733654192" expanded="true" signature="1990:2089" ph="select id, n... lz_sys_role" />
+            <marker date="1524733654192" expanded="true" signature="2201:2558" ph="insert into lz_sys_role... " />
+            <marker date="1524733654192" expanded="true" signature="2695:2840" ph="select id, n... lz_sys_role" />
+            <marker date="1524733654192" expanded="true" signature="2695:2854" ph="select id, n... lz_sys_role" />
+            <marker date="1524733654192" expanded="true" signature="2958:3219" ph="SELECT id, N... lz_sys_role" />
+            <marker date="1524733654192" expanded="true" signature="2958:3526" ph="SELECT id, n... lz_sys_role" />
+            <marker date="1524733654192" expanded="true" signature="4056:4415" ph="update lz_sy... " />
+            <marker date="1524733654192" expanded="true" signature="4524:4606" ph="update lz_sy... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="138" column="26" lean-forward="true" selection-start-line="138" selection-start-column="26" selection-end-line="138" selection-end-column="26" />
+          <folding>
+            <marker date="1524735181749" expanded="true" signature="1693:1882" ph="select id, a... lz_sys_user" />
+            <marker date="1524735181749" expanded="true" signature="1995:2466" ph="insert into lz_sys_user... " />
+            <marker date="1524735181749" expanded="true" signature="2575:3026" ph="SELECT u.acc... lz_sys_user" />
+            <marker date="1524735181749" expanded="true" signature="2575:3443" ph="SELECT u.acc... lz_sys_user" />
+            <marker date="1524735181749" expanded="true" signature="3542:3630" ph="SELECT COUNT... lz_sys_user" />
+            <marker date="1524735181749" expanded="true" signature="4105:4284" ph="select id, a... lz_sys_user" />
+            <marker date="1524735181749" expanded="true" signature="4412:4742" ph="update lz_sy... " />
+            <marker date="1524735181749" expanded="true" signature="4412:4756" ph="update lz_sy... " />
+            <marker date="1524735181749" expanded="true" signature="4865:4955" ph="update lz_sy... " />
+            <marker date="1524735181749" expanded="true" signature="5028:5214" ph="update lz_sy... " />
+            <marker date="1524735181749" expanded="true" signature="5287:5445" ph="update lz_sy... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/RoleTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="604">
           <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="110" column="11" lean-forward="false" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2178#2179#0" expanded="true" />
+            <element signature="e#2242#2243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="91" column="8" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="209" column="19" lean-forward="false" selection-start-line="209" selection-start-column="19" selection-end-line="209" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="74" column="23" lean-forward="false" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
           <folding />
         </state>
       </provider>

@@ -195,9 +195,9 @@ public class UserController extends BaseController {
      */
     @PostMapping(value = "/operateLockUser")
     public ComResp operateLockUser(@RequestParam(value = "id", required = true) Integer id,
-                            @RequestParam(value = "isLocked", required = true,defaultValue = "1") Integer isLocked) {
+                                   @RequestParam(value = "isLocked", required = true, defaultValue = "1") Integer isLocked) {
         try {
-            int num = userService.lockUser(id,isLocked);
+            int num = userService.lockUser(id, isLocked);
             return num > 0 ? ComResp.success("操作成功！") : ComResp.error("操作失败！");
         } catch (Exception e) {
             logError("用户操作锁失败！", e);
@@ -205,5 +205,36 @@ public class UserController extends BaseController {
         }
     }
 
+
+    @PostMapping(value = "/modifyPassword")
+    public ComResp modifyPassword(@RequestParam(value = "id", required = true) Integer id,
+                                  @RequestParam(value = "oldPwd", required = true) String oldPwd,
+                                  @RequestParam(value = "newPwd", required = true) String newPwd,
+                                  @RequestParam(value = "confirmPwd", required = true) String confirmPwd) {
+
+        try {
+
+            if (StringUtils.isBlank(oldPwd)) {
+                return ComResp.error("原始密码不能为空！");
+            }
+            if (StringUtils.isBlank(newPwd)) {
+                return ComResp.error("新密码不能为空！");
+            }
+            if (StringUtils.isBlank(confirmPwd)) {
+                return ComResp.error("确认密码不能为空！");
+            }
+            if (!newPwd.equals(confirmPwd)) {
+                return ComResp.error("两次输入的密码不一致！");
+            }
+            //检查原始密码是否正确
+            if (!userService.checkUserPwd(id, oldPwd)) {
+                return ComResp.error("原密码不正确！");
+            }
+            int num = userService.modifyPwd(id, newPwd);
+            return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
+        } catch (Exception e) {
+            return ComResp.error("修改失败！", e);
+        }
+    }
 
 }

@@ -70,4 +70,10 @@ public class UserTest extends BaseTest {
         ComResp resp = userController.operateLockUser(13,0);
         printResponse(resp);
     }
+
+    @Test
+    public void modifyPwd(){
+        ComResp resp = userController.modifyPassword(14,"123456","654321","654321");
+        printResponse(resp);
+    }
 }

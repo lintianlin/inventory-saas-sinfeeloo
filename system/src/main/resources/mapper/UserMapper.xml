@@ -134,4 +134,13 @@
         where id = #{id,jdbcType=INTEGER} AND state = 1
     </update>
 
+    <!--修改密码-->
+    <update id="updatePassword">
+        update lz_sys_user
+        set
+        password = #{newPwd,jdbcType=VARCHAR},
+        updatime = now()
+        where id = #{id,jdbcType=INTEGER} AND state = 1
+    </update>
+
 </mapper>

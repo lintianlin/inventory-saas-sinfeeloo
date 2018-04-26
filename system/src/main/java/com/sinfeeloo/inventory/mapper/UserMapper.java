@@ -82,5 +82,14 @@ public interface UserMapper {
      */
     int lockByPrimaryKey(@Param(value = "id") Integer id, @Param(value = "isLocked") Integer isLocked);
 
+    /**
+     * 修改密码
+     *
+     * @param id
+     * @param newPwd
+     * @return
+     */
+    int updatePassword(@Param(value = "id") Integer id, @Param(value = "newPwd") String newPwd);
+
     //==========================自定义结束======================================
 }

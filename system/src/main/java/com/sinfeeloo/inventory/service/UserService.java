@@ -3,6 +3,7 @@ package com.sinfeeloo.inventory.service;
 import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.mapper.UserMapper;
+import com.sinfeeloo.inventory.utils.EncyptUtils;
 import com.sinfeeloo.inventory.utils.JWTUtil;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -94,4 +95,26 @@ public class UserService {
         return userMapper.lockByPrimaryKey(id, isLocked);
     }
 
+    /**
+     * 检查原始密码是否正确
+     *
+     * @param id
+     * @param oldPwd
+     * @return
+     */
+    public boolean checkUserPwd(Integer id, String oldPwd) {
+        User user = userMapper.selectByPrimaryKey(id);
+        return EncyptUtils.encyptBySha1(oldPwd).equals(user.getPassword());
+    }
+
+    /**
+     * 修改密码
+     *
+     * @param id
+     * @param newPwd
+     * @return
+     */
+    public int modifyPwd(Integer id, String newPwd) {
+        return userMapper.updatePassword(id, EncyptUtils.encyptBySha1(newPwd));
+    }
 }
