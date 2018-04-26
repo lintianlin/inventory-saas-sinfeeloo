@@ -188,20 +188,22 @@ public class UserController extends BaseController {
     }
 
     /**
-     * 锁定
+     * 锁定/解锁
      *
      * @param id
      * @return
      */
-    @PostMapping(value = "/lockUser")
-    public ComResp lockUser(@RequestParam(value = "id", required = true) Integer id) {
+    @PostMapping(value = "/operateLockUser")
+    public ComResp operateLockUser(@RequestParam(value = "id", required = true) Integer id,
+                            @RequestParam(value = "isLocked", required = true,defaultValue = "1") Integer isLocked) {
         try {
-            int num = userService.lockUser(id);
-            return num > 0 ? ComResp.success("锁定成功！") : ComResp.error("锁定失败！");
+            int num = userService.lockUser(id,isLocked);
+            return num > 0 ? ComResp.success("操作成功！") : ComResp.error("操作失败！");
         } catch (Exception e) {
-            logError("用户锁定失败！", e);
-            return ComResp.error("锁定失败！");
+            logError("用户操作锁失败！", e);
+            return ComResp.error("操作失败！");
         }
     }
+
 
 }

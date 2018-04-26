@@ -1,6 +1,8 @@
 package com.sinfeeloo.inventory.mapper;
 
 import com.sinfeeloo.inventory.entity.User;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 import java.util.Map;
 
@@ -23,14 +25,11 @@ public interface UserMapper {
     List<User> selectAll();
 
 
-
-
-
-
-
     //==========================自定义开始======================================
+
     /**
      * 通过账号查询账户
+     *
      * @param account
      * @return
      */
@@ -45,6 +44,7 @@ public interface UserMapper {
 
     /**
      * 分页总数量
+     *
      * @param searchMap
      * @return
      */
@@ -52,13 +52,15 @@ public interface UserMapper {
 
     /**
      * 分页列表
+     *
      * @param searchMap
      * @return
      */
-    List<User> selectUserListByPage(Map<String,Object> searchMap);
+    List<User> selectUserListByPage(Map<String, Object> searchMap);
 
     /**
      * 修改
+     *
      * @param record
      * @return
      */
@@ -66,6 +68,7 @@ public interface UserMapper {
 
     /**
      * 删除
+     *
      * @param id
      * @return
      */
@@ -73,10 +76,11 @@ public interface UserMapper {
 
     /**
      * 锁定
+     *
      * @param id
      * @return
      */
-    int lockByPrimaryKey(Integer id);
+    int lockByPrimaryKey(@Param(value = "id") Integer id, @Param(value = "isLocked") Integer isLocked);
 
     //==========================自定义结束======================================
 }

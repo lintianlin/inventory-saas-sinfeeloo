@@ -125,10 +125,10 @@
     </update>
 
     <!--锁定-->
-    <update id="lockByPrimaryKey" parameterType="java.lang.Integer">
+    <update id="lockByPrimaryKey">
         update lz_sys_user
         set
-        isLocked = 1,
+        isLocked = #{isLocked,jdbcType=INTEGER},
         updatime = now(),
         lockTime = now()
         where id = #{id,jdbcType=INTEGER} AND state = 1

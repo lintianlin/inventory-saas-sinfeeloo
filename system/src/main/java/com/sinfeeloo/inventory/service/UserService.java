@@ -90,8 +90,8 @@ public class UserService {
      *
      * @param id
      */
-    public int lockUser(Integer id) {
-        return userMapper.lockByPrimaryKey(id);
+    public int lockUser(Integer id, Integer isLocked) {
+        return userMapper.lockByPrimaryKey(id, isLocked);
     }
 
 }

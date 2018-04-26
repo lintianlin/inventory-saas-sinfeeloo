@@ -61,7 +61,13 @@ public class UserTest extends BaseTest {
 
     @Test
     public void lockUser(){
-        ComResp resp = userController.lockUser(13);
+        ComResp resp = userController.operateLockUser(13,1);
+        printResponse(resp);
+    }
+
+    @Test
+    public void unlockUser(){
+        ComResp resp = userController.operateLockUser(13,0);
         printResponse(resp);
     }
 }
