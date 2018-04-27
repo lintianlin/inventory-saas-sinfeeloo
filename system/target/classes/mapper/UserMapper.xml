@@ -21,6 +21,8 @@
         <result column="employeeName" jdbcType="VARCHAR" property="employeeName"/>
         <result column="employeeCode" jdbcType="VARCHAR" property="employeeCode"/>
         <result column="updatimeStr" jdbcType="VARCHAR" property="updatimeStr"/>
+        <result column="menuIds" jdbcType="VARCHAR" property="menuIds"/>
+        <result column="menuNames" jdbcType="VARCHAR" property="menuNames"/>
     </resultMap>
 
     <!--通过账户查询用户-->
@@ -101,6 +103,14 @@
         isLocked, lockTime
         from lz_sys_user
         where id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <!--通过id找到user对象对应的菜单-->
+    <select id="selectMenusByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select u.id, u.account,u.roleId, u.roleName, u.employeeId,r.menuIds,r.menuNames
+        from lz_sys_user u
+        LEFT JOIN lz_sys_role  r ON u.roleId=r.id
+        where u.id = #{id,jdbcType=INTEGER} AND u.state = 1
     </select>
 
 

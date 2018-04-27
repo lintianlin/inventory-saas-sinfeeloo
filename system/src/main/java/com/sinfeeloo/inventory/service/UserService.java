@@ -52,6 +52,26 @@ public class UserService {
         return userMapper.selectByAccount(account);
     }
 
+    /**
+     * 通过id获得用户
+     *
+     * @param id
+     * @return
+     */
+    public User getUserById(Integer id) {
+        return userMapper.selectByPrimaryKey(id);
+    }
+
+    /**
+     * 通过id找到user对象对应的菜单
+     *
+     * @param id
+     * @return
+     */
+    public User getUsersMenuByUserId(Integer id) {
+        return userMapper.selectMenusByPrimaryKey(id);
+    }
+
     public void addUser(User userTemp) {
         userMapper.insert(userTemp);
     }

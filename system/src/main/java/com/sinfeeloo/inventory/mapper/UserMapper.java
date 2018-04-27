@@ -91,5 +91,12 @@ public interface UserMapper {
      */
     int updatePassword(@Param(value = "id") Integer id, @Param(value = "newPwd") String newPwd);
 
+    /**
+     * 通过id找到user对象对应的菜单
+     * @param id
+     * @return
+     */
+    User selectMenusByPrimaryKey(Integer id);
+
     //==========================自定义结束======================================
 }
