@@ -20,7 +20,11 @@ public class GoodsService {
     public GoodsMapper goodsMapper;
 
 
-    public List<Goods> getGoodsList(){
-        return goodsMapper.selectAll();
+    /**
+     * 添加商品
+     * @param goods
+     */
+    public void addGoods(Goods goods) {
+        goodsMapper.insert(goods);
     }
 }
