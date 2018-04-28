@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Goods;
 import com.sinfeeloo.inventory.entity.MyResponse;
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -57,7 +58,58 @@ public class GoodsController extends BaseController {
             goodsService.addGoods(goods);
             return ComResp.success("添加成功！");
         } catch (Exception e) {
-            return ComResp.error("添加失败！");
+            return ComResp.error("添加失败！",e);
+        }
+
+    }
+
+
+    /**
+     * 查询商品列表（分页）
+     *
+     * @param goodsName
+     * @param goodsCode
+     * @param goodsType
+     * @param brand
+     * @param color
+     * @param standard
+     * @param material
+     * @param limit
+     * @param page
+     * @param sortCode
+     * @param sortRole
+     * @return
+     */
+    @GetMapping(value = "/getGoodsListByPage")
+    public ComResp getGoodsListByPage(
+            @RequestParam(value = "goodsName", required = false) String goodsName,
+            @RequestParam(value = "goodsCode", required = false) String goodsCode,
+            @RequestParam(value = "goodsType", required = false) String goodsType,
+            @RequestParam(value = "brand", required = false) String brand,
+            @RequestParam(value = "color", required = false) String color,
+            @RequestParam(value = "standard", required = false) String standard,
+            @RequestParam(value = "material", required = false) String material,
+            @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
+            @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
+            @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
+            @RequestParam(value = "sortRole", required = false, defaultValue = "ASC") String sortRole) {
+        Paging<Goods> paging = new Paging<>(page, limit);
+        try {
+            paging.putSearch("goodsName", goodsName);
+            paging.putSearch("goodsCode", goodsCode);
+            paging.putSearch("goodsType", goodsType);
+            paging.putSearch("brand", brand);
+            paging.putSearch("color", color);
+            paging.putSearch("standard", standard);
+            paging.putSearch("material", material);
+            paging.putSearch("limit", limit);
+            paging.putSearch("page", page);
+            paging.putSearch("sortCode", sortCode);
+            paging.putSearch("sortRole", sortRole);
+            goodsService.getGoodsListByPage(paging);
+            return ComResp.success("查询成功！", paging);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！",e);
         }
 
     }

@@ -38,7 +38,24 @@ public class GoodsTest extends BaseTest {
                 "2500",
                 "3000",
                 "美的让生活更美丽",
-                "","admin2");
+                "", "admin2");
         printResponse(response);
+    }
+
+    @Test
+    public void getGoodsListByPage() {
+        ComResp resp = goodsController.getGoodsListByPage(
+                "美",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                20,
+                1,
+                "name",
+                "ASC");
+        printResponse(resp);
     }
 }

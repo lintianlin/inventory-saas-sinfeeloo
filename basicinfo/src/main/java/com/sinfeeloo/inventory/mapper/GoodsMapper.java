@@ -1,7 +1,9 @@
 package com.sinfeeloo.inventory.mapper;
 
 import com.sinfeeloo.inventory.entity.Goods;
+
 import java.util.List;
+import java.util.Map;
 
 public interface GoodsMapper {
     /**
@@ -43,4 +45,20 @@ public interface GoodsMapper {
      * @mbggenerated Tue Apr 24 17:00:10 CST 2018
      */
     int updateByPrimaryKey(Goods record);
+
+    /**
+     * 分页查询数量
+     *
+     * @param searchMap
+     * @return
+     */
+    long selectGoodsListCount(Map<String, Object> searchMap);
+
+    /**
+     * 分页查询列表
+     *
+     * @param searchMap
+     * @return
+     */
+    List<Goods> selectGoodsListByPage(Map<String, Object> searchMap);
 }

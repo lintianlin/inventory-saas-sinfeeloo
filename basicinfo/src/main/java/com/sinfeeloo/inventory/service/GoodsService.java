@@ -1,6 +1,7 @@
 package com.sinfeeloo.inventory.service;
 
 import com.sinfeeloo.inventory.entity.Goods;
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.mapper.GoodsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,15 @@ public class GoodsService {
      */
     public void addGoods(Goods goods) {
         goodsMapper.insert(goods);
+    }
+
+
+    /**
+     * 分页查询商品列表
+     * @param paging
+     */
+    public void getGoodsListByPage(Paging<Goods> paging) {
+        paging.setTotal(goodsMapper.selectGoodsListCount(paging.getSearchMap()));
+        paging.setList(goodsMapper.selectGoodsListByPage(paging.getSearchMap()));
     }
 }
