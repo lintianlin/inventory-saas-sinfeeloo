@@ -1,14 +1,18 @@
 package com.sinfeeloo.inventory.controller;
 
 import com.sinfeeloo.inventory.base.BaseController;
-import com.sinfeeloo.inventory.entity.ComResp;
-import com.sinfeeloo.inventory.entity.Goods;
-import com.sinfeeloo.inventory.entity.MyResponse;
-import com.sinfeeloo.inventory.entity.Paging;
+import com.sinfeeloo.inventory.entity.*;
 import com.sinfeeloo.inventory.service.GoodsService;
+import com.sinfeeloo.inventory.utils.ImageUtils;
+import com.sun.imageio.plugins.common.ImageUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -23,6 +27,11 @@ public class GoodsController extends BaseController {
 
     @Autowired
     private GoodsService goodsService;
+    /**
+     * 在配置文件中配置的文件保存路径
+     */
+    @Value("${img.location}")
+    private String location;
 
 
     @PostMapping(value = "/addGoods")
@@ -196,5 +205,35 @@ public class GoodsController extends BaseController {
         }
     }
 
+
+    @PostMapping("/img/upload")
+    public ComResp uploadImg(@RequestParam("goods-image-file") MultipartFile multipartFile) {
+        if (multipartFile.isEmpty() || StringUtils.isBlank(multipartFile.getOriginalFilename())) {
+            return ComResp.error("图片不能为空！");
+        }
+        String contentType = multipartFile.getContentType();
+        if (!contentType.contains("")) {
+            return ComResp.error("图片处理异常！");
+        }
+        String root_fileName = multipartFile.getOriginalFilename();
+        logger.info("上传图片:name={},type={}", root_fileName, contentType);
+        //处理图片
+//        User currentUser = userService.getCurrentUser();
+        //获取路径
+//        String return_path = ImageUtils.getFilePath(currentUser);
+        String return_path = "return_path/";
+        String filePath = location + return_path;
+        logger.info("图片保存路径={}", filePath);
+        String file_name = null;
+        try {
+            file_name = ImageUtils.saveImg(multipartFile, filePath);
+            String url = return_path + File.separator + file_name;
+            ImageBean imageBean = new ImageBean();
+            imageBean.setUrl(url);
+            return ComResp.success("上传成功！", imageBean);
+        } catch (IOException e) {
+            return ComResp.error("上传失败！", e);
+        }
+    }
 
 }
