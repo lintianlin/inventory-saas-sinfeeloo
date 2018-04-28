@@ -23,6 +23,7 @@ public class GoodsService {
 
     /**
      * 添加商品
+     *
      * @param goods
      */
     public void addGoods(Goods goods) {
@@ -32,10 +33,29 @@ public class GoodsService {
 
     /**
      * 分页查询商品列表
+     *
      * @param paging
      */
     public void getGoodsListByPage(Paging<Goods> paging) {
         paging.setTotal(goodsMapper.selectGoodsListCount(paging.getSearchMap()));
         paging.setList(goodsMapper.selectGoodsListByPage(paging.getSearchMap()));
+    }
+
+    /**
+     * 修改商品
+     *
+     * @param goods
+     * @return
+     */
+    public int modifyGoods(Goods goods) {
+        return goodsMapper.updateByPrimaryKey(goods);
+    }
+
+    /**
+     * 删除
+     * @param goods
+     */
+    public void deleteGoods(Goods goods) {
+        goodsMapper.deleteByPrimaryKey(goods);
     }
 }

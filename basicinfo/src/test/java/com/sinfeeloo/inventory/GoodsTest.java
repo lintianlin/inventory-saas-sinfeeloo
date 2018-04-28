@@ -58,4 +58,10 @@ public class GoodsTest extends BaseTest {
                 "ASC");
         printResponse(resp);
     }
+
+    @Test
+    public void deleteGoods() {
+        ComResp resp = goodsController.deleteGoods(1, "admin2");
+        printResponse(resp);
+    }
 }
