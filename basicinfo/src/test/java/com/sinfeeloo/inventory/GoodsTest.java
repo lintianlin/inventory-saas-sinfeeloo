@@ -64,4 +64,10 @@ public class GoodsTest extends BaseTest {
         ComResp resp = goodsController.deleteGoods(1, "admin2");
         printResponse(resp);
     }
+
+    @Test
+    public void getGoodsDetail() {
+        ComResp resp = goodsController.getGoodsDetail(6);
+        printResponse(resp);
+    }
 }

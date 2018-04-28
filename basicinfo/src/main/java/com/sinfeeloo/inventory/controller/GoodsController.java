@@ -180,4 +180,21 @@ public class GoodsController extends BaseController {
     }
 
 
+    /**
+     * 查询商品详情
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/getGoodsDetail")
+    public ComResp getGoodsDetail(@RequestParam(value = "id") Integer id) {
+        try {
+            Goods goods = goodsService.getGoodsDetail(id);
+            return ComResp.success("查询成功！", goods);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！");
+        }
+    }
+
+
 }

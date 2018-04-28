@@ -53,9 +53,19 @@ public class GoodsService {
 
     /**
      * 删除
+     *
      * @param goods
      */
     public void deleteGoods(Goods goods) {
         goodsMapper.deleteByPrimaryKey(goods);
+    }
+
+    /**
+     * 商品详情
+     * @param id
+     * @return
+     */
+    public Goods getGoodsDetail(Integer id) {
+        return goodsMapper.selectByPrimaryKey(id);
     }
 }
