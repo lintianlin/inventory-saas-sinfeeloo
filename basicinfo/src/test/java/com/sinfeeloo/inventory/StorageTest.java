@@ -1,7 +1,6 @@
 package com.sinfeeloo.inventory;
 
 import com.sinfeeloo.inventory.base.BaseTest;
-import com.sinfeeloo.inventory.controller.GoodsController;
 import com.sinfeeloo.inventory.controller.StorageController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import org.junit.Test;
@@ -47,13 +46,19 @@ public class StorageTest extends BaseTest {
 
 
     @Test
-    public void modifyStorage(){
-        ComResp resp = storageController.modifyStorage(5,"潍坊二号仓库",
+    public void modifyStorage() {
+        ComResp resp = storageController.modifyStorage(5, "潍坊二号仓库",
                 "WFCK002",
                 "潍坊市高新区志远路245号",
                 "主要存储家用电器相关",
                 8,
                 "admin2");
+        printResponse(resp);
+    }
+
+    @Test
+    public void deleteStorage() {
+        ComResp resp = storageController.deleteStorage(2, "admin2");
         printResponse(resp);
     }
 }

@@ -140,9 +140,9 @@ public class StorageController extends BaseController {
                                  @RequestParam(value = "updater") String updater) {
         try {
             storageService.deleteStorage(storageId, updater);
-            return ComResp.success("修改成功！");
+            return ComResp.success("删除成功！");
         } catch (Exception e) {
-            return ComResp.error("修改失败！", e);
+            return ComResp.error("删除失败！", e);
         }
     }
 
