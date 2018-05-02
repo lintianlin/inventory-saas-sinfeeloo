@@ -88,4 +88,51 @@
         #{type,jdbcType=VARCHAR}, #{updater,jdbcType=VARCHAR}, now(),
         #{state,jdbcType=INTEGER})
   </insert>
+
+    <!--分页-->
+    <select id="selectEmployeeListByPage" resultMap="BaseResultMap">
+        SELECT
+        id,
+        NAME,
+        CODE,
+        idCard,
+        mobile,
+        sex,
+        birthday,
+        address,
+        email,
+        type,
+        updater,
+        updatime,
+        DATE_FORMAT(
+        updatime,
+        '%Y-%m-%d %H:%i:%s'
+        ) AS updatimeStr
+        FROM
+        lz_base_employee
+        WHERE
+        state = 1
+        <if test="name != null and name!=''">
+            AND name LIKE CONCAT ('%',#{name},'%' )
+        </if>
+        <if test="type != null and type!=''">
+            AND type =#{type}
+        </if>
+    </select>
+
+    <!--分页-->
+    <select id="selectEmployeeListCount" resultType="long">
+        SELECT
+        count(1)
+        FROM
+        lz_base_employee
+        WHERE
+        state = 1
+        <if test="name != null and name!=''">
+            AND name LIKE CONCAT ('%',#{name},'%' )
+        </if>
+        <if test="type != null and type!=''">
+            AND type =#{type}
+        </if>
+    </select>
 </mapper>

@@ -2,6 +2,7 @@ package com.sinfeeloo.inventory.mapper;
 
 import com.sinfeeloo.inventory.entity.Employee;
 import java.util.List;
+import java.util.Map;
 
 public interface EmployeeMapper {
     /**
@@ -45,4 +46,7 @@ public interface EmployeeMapper {
      */
     int insert(Employee record);
 
+    long selectEmployeeListCount(Map<String, Object> searchMap);
+
+    List<Employee> selectEmployeeListByPage(Map<String, Object> searchMap);
 }

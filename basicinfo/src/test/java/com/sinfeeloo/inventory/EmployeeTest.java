@@ -39,16 +39,17 @@ public class EmployeeTest extends BaseTest {
         printResponse(response);
     }
 
-//    @Test
-//    public void getEmployeeList() {
-//        ComResp resp = employeeController.getEmployeeListByPage(
-//                "潍坊",
-//                10,
-//                1,
-//                "id",
-//                "asc");
-//        printResponse(resp);
-//    }
+    @Test
+    public void getEmployeeList() {
+        ComResp resp = employeeController.getEmployeeListByPage(
+                "刘",
+                "",
+                10,
+                1,
+                "id",
+                "asc");
+        printResponse(resp);
+    }
 //
 //
 //    @Test

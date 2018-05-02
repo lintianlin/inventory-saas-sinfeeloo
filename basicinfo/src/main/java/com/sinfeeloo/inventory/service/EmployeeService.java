@@ -1,6 +1,7 @@
 package com.sinfeeloo.inventory.service;
 
 import com.sinfeeloo.inventory.entity.Employee;
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,10 @@ public class EmployeeService {
 
     public void addEmployee(Employee employee) {
         employeeMapper.insert(employee);
+    }
+
+    public void getEmployeeListByPage(Paging<Employee> paging) {
+        paging.setTotal(employeeMapper.selectEmployeeListCount(paging.getSearchMap()));
+        paging.setList(employeeMapper.selectEmployeeListByPage(paging.getSearchMap()));
     }
 }
