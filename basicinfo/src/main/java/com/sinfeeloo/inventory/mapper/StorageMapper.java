@@ -2,6 +2,7 @@ package com.sinfeeloo.inventory.mapper;
 
 import com.sinfeeloo.inventory.entity.Storage;
 import java.util.List;
+import java.util.Map;
 
 public interface StorageMapper {
     /**
@@ -43,4 +44,8 @@ public interface StorageMapper {
      * @mbggenerated Tue Apr 24 17:00:10 CST 2018
      */
     int updateByPrimaryKey(Storage record);
+
+    long selectStorageCount(Map<String, Object> searchMap);
+
+    List<Storage> selectStorageListByPage(Map<String, Object> searchMap);
 }
