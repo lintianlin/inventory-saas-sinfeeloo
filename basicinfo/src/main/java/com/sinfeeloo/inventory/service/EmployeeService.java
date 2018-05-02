@@ -30,4 +30,8 @@ public class EmployeeService {
     public int modifyEmployee(Employee employee) {
         return employeeMapper.updateByPrimaryKey(employee);
     }
+
+    public void deleteEmployee(Employee employee) {
+        employeeMapper.deleteByPrimaryKey(employee);
+    }
 }

@@ -178,6 +178,28 @@ public class EmployeeController extends BaseController {
 
     }
 
+    /**
+     * 删除员工
+     *
+     * @param id
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/deleteEmployee")
+    public ComResp deleteEmployee(@RequestParam(value = "id") Integer id,
+                                  @RequestParam(value = "updater") String updater) {
+
+        try {
+            Employee employee = new Employee();
+            employee.setId(id);
+            employee.setUpdater(updater);
+            employeeService.deleteEmployee(employee);
+            return ComResp.success("删除成功！");
+        } catch (Exception e) {
+            return ComResp.success("删除失败！");
+        }
+
+    }
 
 
 }

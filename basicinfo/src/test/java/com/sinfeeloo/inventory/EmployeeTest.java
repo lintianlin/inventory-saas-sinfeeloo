@@ -69,10 +69,10 @@ public class EmployeeTest extends BaseTest {
         );
         printResponse(response);
     }
-//
-//    @Test
-//    public void deleteEmployee() {
-//        ComResp resp = employeeController.deleteEmployee(2, "admin2");
-//        printResponse(resp);
-//    }
+
+    @Test
+    public void deleteEmployee() {
+        ComResp resp = employeeController.deleteEmployee(7, "admin2");
+        printResponse(resp);
+    }
 }
