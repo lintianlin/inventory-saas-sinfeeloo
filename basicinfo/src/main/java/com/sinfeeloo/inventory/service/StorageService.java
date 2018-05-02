@@ -18,12 +18,41 @@ public class StorageService {
     private StorageMapper storageMapper;
 
 
+    /**
+     * 添加
+     * @param storage
+     */
     public void addStorage(Storage storage) {
         storageMapper.insert(storage);
     }
 
+    /**
+     * 分页
+     * @param paging
+     */
     public void getStorageListByPage(Paging<Storage> paging) {
         paging.setTotal(storageMapper.selectStorageCount(paging.getSearchMap()));
         paging.setList(storageMapper.selectStorageListByPage(paging.getSearchMap()));
+    }
+
+    /**
+     * 修改
+     * @param storage
+     * @return
+     */
+    public int modifyStorage(Storage storage) {
+        return storageMapper.updateByPrimaryKey(storage);
+    }
+
+    /**
+     * 删除
+     * @param id
+     * @param updater
+     */
+    public void deleteStorage(Integer id, String updater) {
+        Storage storage = new Storage();
+        storage.setId(id);
+        storage.setUpdater(updater);
+        storageMapper.deleteByPrimaryKey(storage);
     }
 }

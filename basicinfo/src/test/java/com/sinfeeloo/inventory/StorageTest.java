@@ -45,4 +45,15 @@ public class StorageTest extends BaseTest {
         printResponse(resp);
     }
 
+
+    @Test
+    public void modifyStorage(){
+        ComResp resp = storageController.modifyStorage(5,"潍坊二号仓库",
+                "WFCK002",
+                "潍坊市高新区志远路245号",
+                "主要存储家用电器相关",
+                8,
+                "admin2");
+        printResponse(resp);
+    }
 }

@@ -58,6 +58,16 @@ public class StorageController extends BaseController {
     }
 
 
+    /**
+     * 仓库分页查询
+     *
+     * @param storageName
+     * @param limit
+     * @param page
+     * @param sortCode
+     * @param sortRole
+     * @return
+     */
     @GetMapping(value = "/getStorageListByPage")
     public ComResp getStorageListByPage(@RequestParam(value = "storageName") String storageName,
                                         @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
@@ -79,6 +89,61 @@ public class StorageController extends BaseController {
             return ComResp.error("查询失败！", e);
         }
 
+    }
+
+
+    /**
+     * 修改仓库
+     * @param storageId
+     * @param storageName
+     * @param storageCode
+     * @param storageAddress
+     * @param desc
+     * @param administratorId
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/modifyStorage")
+    public ComResp modifyStorage(@RequestParam(value = "storageId") Integer storageId,
+                                 @RequestParam(value = "storageName") String storageName,
+                                 @RequestParam(value = "storageCode") String storageCode,
+                                 @RequestParam(value = "storageAddress") String storageAddress,
+                                 @RequestParam(value = "desc") String desc,
+                                 @RequestParam(value = "administratorId") Integer administratorId,
+                                 @RequestParam(value = "updater") String updater) {
+
+        try {
+            Storage storage = new Storage();
+            storage.setId(storageId);
+            storage.setName(storageName);
+            storage.setCode(storageCode);
+            storage.setAddress(storageAddress);
+            storage.setDescs(desc);
+            storage.setAdminid(administratorId);
+            storage.setUpdater(updater);
+            int num = storageService.modifyStorage(storage);
+            return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
+        } catch (Exception e) {
+            return ComResp.error("修改失败！", e);
+        }
+    }
+
+
+    /**
+     * 删除仓库
+     * @param storageId
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/deleteStorage")
+    public ComResp deleteStorage(@RequestParam(value = "storageId") Integer storageId,
+                                 @RequestParam(value = "updater") String updater) {
+        try {
+            storageService.deleteStorage(storageId, updater);
+            return ComResp.success("修改成功！");
+        } catch (Exception e) {
+            return ComResp.error("修改失败！", e);
+        }
     }
 
 }
