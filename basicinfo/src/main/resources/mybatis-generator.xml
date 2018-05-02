@@ -42,20 +42,25 @@
 
 
         <!-- 具体要生成的表，如果有多个表，复制这一段，改下表名即可-->
-        <!--商品-->
-        <table tableName="lz_base_goods" domainObjectName="Goods" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"/>
-        <!--仓库-->
-        <table tableName="lz_base_repo" domainObjectName="Storage" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"/>
-        <!--员工-->
-        <table tableName="lz_base_employee" domainObjectName="Employee" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"/>
-        <!--参数-->
-        <table tableName="lz_base_param" domainObjectName="Param" enableCountByExample="false"
+        <!--&lt;!&ndash;商品&ndash;&gt;-->
+        <!--<table tableName="lz_base_goods" domainObjectName="Goods" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"/>-->
+        <!--&lt;!&ndash;仓库&ndash;&gt;-->
+        <!--<table tableName="lz_base_repo" domainObjectName="Storage" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"/>-->
+        <!--&lt;!&ndash;员工&ndash;&gt;-->
+        <!--<table tableName="lz_base_employee" domainObjectName="Employee" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"/>-->
+        <!--&lt;!&ndash;参数&ndash;&gt;-->
+        <!--<table tableName="lz_base_param" domainObjectName="Param" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"/>-->
+
+        <!--图片-->
+        <table tableName="lz_base_image" domainObjectName="Image" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>
 

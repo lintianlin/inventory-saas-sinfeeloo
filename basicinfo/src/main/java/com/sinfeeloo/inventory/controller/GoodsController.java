@@ -27,12 +27,6 @@ public class GoodsController extends BaseController {
 
     @Autowired
     private GoodsService goodsService;
-    /**
-     * 在配置文件中配置的文件保存路径
-     */
-    @Value("${img.location}")
-    private String location;
-
 
     @PostMapping(value = "/addGoods")
     public ComResp addGoods(@RequestParam(value = "goodsName", required = true) String goodsName,
@@ -46,7 +40,7 @@ public class GoodsController extends BaseController {
                             @RequestParam(value = "buyPrice", required = false) String bugPrice,
                             @RequestParam(value = "sellPrice", required = false) String sellPrice,
                             @RequestParam(value = "desc", required = false) String desc,
-                            @RequestParam(value = "picture", required = false) String picture,
+                            @RequestParam(value = "picture", required = false) Integer picture,
                             @RequestParam(value = "updater", required = true) String updater) {
         try {
             Goods goods = new Goods();
@@ -138,7 +132,7 @@ public class GoodsController extends BaseController {
             @RequestParam(value = "buyPrice", required = false) String bugPrice,
             @RequestParam(value = "sellPrice", required = false) String sellPrice,
             @RequestParam(value = "desc", required = false) String desc,
-            @RequestParam(value = "picture", required = false) String picture,
+            @RequestParam(value = "picture", required = false) Integer picture,
             @RequestParam(value = "updater", required = true) String updater) {
         try {
             Goods goods = new Goods();
@@ -205,35 +199,5 @@ public class GoodsController extends BaseController {
         }
     }
 
-
-    @PostMapping("/img/upload")
-    public ComResp uploadImg(@RequestParam("goods-image-file") MultipartFile multipartFile) {
-        if (multipartFile.isEmpty() || StringUtils.isBlank(multipartFile.getOriginalFilename())) {
-            return ComResp.error("图片不能为空！");
-        }
-        String contentType = multipartFile.getContentType();
-        if (!contentType.contains("")) {
-            return ComResp.error("图片处理异常！");
-        }
-        String root_fileName = multipartFile.getOriginalFilename();
-        logger.info("上传图片:name={},type={}", root_fileName, contentType);
-        //处理图片
-//        User currentUser = userService.getCurrentUser();
-        //获取路径
-//        String return_path = ImageUtils.getFilePath(currentUser);
-        String return_path = "return_path/";
-        String filePath = location + return_path;
-        logger.info("图片保存路径={}", filePath);
-        String file_name = null;
-        try {
-            file_name = ImageUtils.saveImg(multipartFile, filePath);
-            String url = return_path + File.separator + file_name;
-            ImageBean imageBean = new ImageBean();
-            imageBean.setUrl(url);
-            return ComResp.success("上传成功！", imageBean);
-        } catch (IOException e) {
-            return ComResp.error("上传失败！", e);
-        }
-    }
 
 }

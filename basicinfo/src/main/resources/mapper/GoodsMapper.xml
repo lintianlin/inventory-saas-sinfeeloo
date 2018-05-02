@@ -23,56 +23,59 @@
         <result column="updatimeStr" jdbcType="VARCHAR" property="updatimeStr"/>
         <result column="updatime" jdbcType="TIMESTAMP" property="updatime"/>
         <result column="state" jdbcType="INTEGER" property="state"/>
-        <result column="picture" jdbcType="LONGVARCHAR" property="picture"/>
+        <result column="picture" jdbcType="INTEGER" property="picture"/>
+        <result column="pictureUrl" jdbcType="VARCHAR" property="pictureUrl"/>
     </resultMap>
 
 
     <!--分页列表-->
     <select id="selectGoodsListByPage" resultMap="BaseResultMap">
         SELECT
-        id,
-        name,
-        code,
-        type,
-        brand,
-        unit,
-        color,
-        standard,
-        material,
-        buyPrice,
-        salePrice,
-        descs,
-        updater,
-        updatime,
+        g.id,
+        g.name,
+        g.code,
+        g.type,
+        g.brand,
+        g.unit,
+        g.color,
+        g.standard,
+        g.material,
+        g.buyPrice,
+        g.salePrice,
+        g.descs,
+        g.updater,
+        g.updatime,
         DATE_FORMAT(
-        updatime,
+        g.updatime,
         '%Y-%m-%d %H:%i:%s'
         ) AS updatimeStr,
-        picture
+        g.picture,
+        i.file_path AS pictureUrl
         FROM
-        lz_base_goods
+        lz_base_goods g
+        LEFT JOIN lz_base_image i ON g.picture=i.id
         WHERE
-        state = 1
+        g.state = 1
         <if test="goodsName != null and goodsName!=''">
-            AND name LIKE CONCAT ('%',#{goodsName},'%' )
+            AND g.name LIKE CONCAT ('%',#{goodsName},'%' )
         </if>
         <if test="goodsCode != null and goodsCode!=''">
-            AND code =#{goodsCode}
+            AND g.code =#{goodsCode}
         </if>
         <if test="goodsType != null and goodsType!=''">
-            AND type =#{goodsType}
+            AND g.type =#{goodsType}
         </if>
         <if test="brand != null and brand!=''">
-            AND brand =#{brand}
+            AND g.brand =#{brand}
         </if>
         <if test="color != null and color!=''">
-            AND color =#{color}
+            AND g.color =#{color}
         </if>
         <if test="standard != null and standard!=''">
-            AND standard =#{standard}
+            AND g.standard =#{standard}
         </if>
         <if test="material != null and material!=''">
-            AND material =#{material}
+            AND g.material =#{material}
         </if>
         ORDER BY ${sortCode} ${sortRole}
         limit #{limit} offset #{offset}
@@ -121,7 +124,7 @@
         #{color,jdbcType=VARCHAR}, #{standard,jdbcType=VARCHAR}, #{material,jdbcType=VARCHAR},
         #{buyprice,jdbcType=VARCHAR}, #{saleprice,jdbcType=VARCHAR}, #{descs,jdbcType=VARCHAR},
         #{updater,jdbcType=VARCHAR}, now(), #{state,jdbcType=INTEGER},
-        #{picture,jdbcType=LONGVARCHAR})
+        #{picture,jdbcType=INTEGER})
     </insert>
     <!--修改-->
     <update id="updateByPrimaryKey" parameterType="com.sinfeeloo.inventory.entity.Goods">
@@ -139,7 +142,7 @@
         descs = #{descs,jdbcType=VARCHAR},
         updater = #{updater,jdbcType=VARCHAR},
         updatime = now(),
-        picture = #{picture,jdbcType=LONGVARCHAR}
+        picture = #{picture,jdbcType=INTEGER}
         where id = #{id,jdbcType=INTEGER}
         AND state = 1
     </update>
@@ -158,31 +161,33 @@
     <!--查询详情-->
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
         SELECT
-		id,
-		NAME,
-		CODE,
-		type,
-		brand,
-		unit,
-		color,
-		standard,
-		material,
-		buyPrice,
-		salePrice,
-		descs,
-		updater,
-		updatime,
+		g.id,
+		g.name,
+		g.CODE,
+		g.type,
+		g.brand,
+		g.unit,
+		g.color,
+		g.standard,
+		g.material,
+		g.buyPrice,
+		g.salePrice,
+		g.descs,
+		g.updater,
+		g.updatime,
 		DATE_FORMAT(
-				updatime,
+				g.updatime,
 				'%Y-%m-%d %H:%i:%s'
 			) AS updatimeStr,
-		picture
+		g.picture,
+		i.file_path AS pictureUrl
         FROM
-            lz_base_goods
+            lz_base_goods g
+        LEFT JOIN lz_base_image i ON g.picture = i.id
         WHERE
-            id = #{id,jdbcType=INTEGER}
+            g.id = #{id,jdbcType=INTEGER}
         AND
-            state = 1
+            g.state = 1
 
     </select>
 

@@ -27,18 +27,18 @@ public class GoodsTest extends BaseTest {
 
     @Test
     public void addGoods() {
-        ComResp response = goodsController.addGoods("美的空调k550",
-                "k550014",
-                "空调",
-                "美的",
+        ComResp response = goodsController.addGoods("海尔洗衣机H835",
+                "H550028",
+                "洗衣机",
+                "海尔",
                 "台",
                 "白色",
-                "50匹",
+                "滚筒",
                 "塑料",
-                "2500",
-                "3000",
+                "3600",
+                "4000",
                 "美的让生活更美丽",
-                "", "admin2");
+                3, "admin2");
         printResponse(response);
     }
 
