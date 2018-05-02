@@ -26,4 +26,8 @@ public class EmployeeService {
         paging.setTotal(employeeMapper.selectEmployeeListCount(paging.getSearchMap()));
         paging.setList(employeeMapper.selectEmployeeListByPage(paging.getSearchMap()));
     }
+
+    public int modifyEmployee(Employee employee) {
+        return employeeMapper.updateByPrimaryKey(employee);
+    }
 }

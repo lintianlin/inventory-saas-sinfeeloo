@@ -50,18 +50,25 @@ public class EmployeeTest extends BaseTest {
                 "asc");
         printResponse(resp);
     }
-//
-//
-//    @Test
-//    public void modifyEmployee() {
-//        ComResp resp = employeeController.modifyEmployee(5, "潍坊二号仓库",
-//                "WFCK002",
-//                "潍坊市高新区志远路245号",
-//                "主要存储家用电器相关",
-//                8,
-//                "admin2");
-//        printResponse(resp);
-//    }
+
+
+    @Test
+    public void modifyEmployee() {
+        ComResp response = employeeController.modifyEmployee(
+                10,
+                "白居易",
+                "lby210",
+                "370283199211010121",
+                "18810578028",
+                1,
+                "1992-11-01",
+                "北京市海淀区五道口财智国际大厦9999",
+                "lbdxlwb@sina.co",
+                "采购人员",
+                "admin2"
+        );
+        printResponse(response);
+    }
 //
 //    @Test
 //    public void deleteEmployee() {

@@ -83,7 +83,17 @@ public class EmployeeController extends BaseController {
 
     }
 
-
+    /**
+     * 分页查询
+     *
+     * @param name
+     * @param type
+     * @param limit
+     * @param page
+     * @param sortCode
+     * @param sortRole
+     * @return
+     */
     @GetMapping(value = "/getEmployeeListByPage")
     public ComResp getEmployeeListByPage(@RequestParam(value = "name", required = false) String name,
                                          @RequestParam(value = "type", required = false) String type,
@@ -106,4 +116,68 @@ public class EmployeeController extends BaseController {
         }
 
     }
+
+
+    /**
+     * 修改员工
+     *
+     * @param id
+     * @param name
+     * @param code
+     * @param idCard
+     * @param mobile
+     * @param sex
+     * @param birthday
+     * @param address
+     * @param email
+     * @param roleType
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/modifyEmployee")
+    public ComResp modifyEmployee(@RequestParam(value = "id") Integer id,
+                                  @RequestParam(value = "name") String name,
+                                  @RequestParam(value = "code") String code,
+                                  @RequestParam(value = "idCard", required = false) String idCard,
+                                  @RequestParam(value = "mobile") String mobile,
+                                  @RequestParam(value = "sex") Integer sex,
+                                  @RequestParam(value = "birthday", required = false) String birthday,
+                                  @RequestParam(value = "address", required = false) String address,
+                                  @RequestParam(value = "email", required = false) String email,
+                                  @RequestParam(value = "roleType") String roleType,
+                                  @RequestParam(value = "updater") String updater) {
+
+        try {
+
+            if (!PhoneFormatCheckUtils.isPhoneLegal(mobile)) {
+                return ComResp.error("手机号格式不正确！");
+            }
+            if (sex != 1 && sex != 2) {
+                return ComResp.error("性别不正确！");
+            }
+            if (!CommonUtils.isEmail(email)) {
+                return ComResp.error("邮箱格式不正确！");
+            }
+            Employee employee = new Employee();
+            employee.setId(id);
+            employee.setName(name);
+            employee.setCode(code);
+            employee.setIdcard(idCard);
+            employee.setMobile(mobile);
+            employee.setSex(sex);
+            employee.setBirthday(DateUtils.str2Date(birthday));
+            employee.setEmail(email);
+            employee.setAddress(address);
+            employee.setType(roleType);
+            employee.setUpdater(updater);
+            int num = employeeService.modifyEmployee(employee);
+            return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
+        } catch (Exception e) {
+            return ComResp.success("修改失败！");
+        }
+
+    }
+
+
+
 }
