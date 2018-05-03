@@ -42,13 +42,13 @@
 
 
         <!-- 具体要生成的表，如果有多个表，复制这一段，改下表名即可-->
-        <!--供应商-->
-        <table tableName="lz_purchase_supplier" domainObjectName="Supplier" enableCountByExample="false"
+        <!--客户-->
+        <table tableName="lz_sale_customer" domainObjectName="Customer" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>
 
-        <!--订单-->
-        <table tableName="lz_purchase_order" domainObjectName="PurchaseOrder" enableCountByExample="false"
+        <!--销售订单-->
+        <table tableName="lz_sale_order" domainObjectName="SalesOrder" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>
 
