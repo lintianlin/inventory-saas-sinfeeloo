@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sinfeeloo.inventory</groupId>
-	<artifactId>sales</artifactId>
+	<artifactId>stock</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>sales</name>
-	<description>销售管理</description>
+	<name>stock</name>
+	<description>库存管理</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -31,6 +31,7 @@
 			<artifactId>common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -51,6 +52,7 @@
 			</plugin>
 
 
+
 			<!--自动生成mapper的插件-->
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>
@@ -69,6 +71,7 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
 		</plugins>
 	</build>
 
