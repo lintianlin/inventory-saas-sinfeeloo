@@ -22,12 +22,12 @@ public class CustomerService extends BaseServiceImpl<Customer> {
 
     @Override
     protected List<Customer> selectListByPage(Map<String, Object> searchMap) {
-        return null;
+        return customerMapper.selectCustomerListByPage(searchMap);
     }
 
     @Override
     protected long selectListCount(Map<String, Object> searchMap) {
-        return 0;
+        return customerMapper.selectCustomerListCount(searchMap);
     }
 
     @Override

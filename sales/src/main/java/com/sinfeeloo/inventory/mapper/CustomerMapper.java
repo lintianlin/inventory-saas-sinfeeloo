@@ -2,6 +2,7 @@ package com.sinfeeloo.inventory.mapper;
 
 import com.sinfeeloo.inventory.entity.Customer;
 import java.util.List;
+import java.util.Map;
 
 public interface CustomerMapper {
     /**
@@ -43,4 +44,8 @@ public interface CustomerMapper {
      * @mbggenerated Thu May 03 10:36:23 CST 2018
      */
     int updateByPrimaryKey(Customer record);
+
+    List<Customer> selectCustomerListByPage(Map<String, Object> searchMap);
+
+    long selectCustomerListCount(Map<String, Object> searchMap);
 }
