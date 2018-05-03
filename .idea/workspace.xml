@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225f1113-7c4d-431a-b78e-3561d205ffb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java" afterPath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java" afterPath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java" afterPath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/EmployeeMapper.xml" afterPath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/EmployeeMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml" afterPath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml" afterPath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StorageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/StorageController.java">
+      <file leaf-file-name="ParamController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            <state relative-caret-position="474">
+              <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,24 +38,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/EmployeeTest.java">
+      <file leaf-file-name="ParamTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="74" column="51" lean-forward="false" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
+            <state relative-caret-position="289">
+              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/EmployeeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="188" column="19" lean-forward="false" selection-start-line="188" selection-start-column="19" selection-end-line="188" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -57,25 +51,21 @@
       <file leaf-file-name="ParamService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state relative-caret-position="638">
+              <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParamController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java">
+      <file leaf-file-name="ParamMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="23" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="646">
+              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,30 +73,51 @@
       <file leaf-file-name="ParamMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+            <state relative-caret-position="466">
+              <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
               <folding>
-                <marker date="1525253678419" expanded="true" signature="1233:1296" ph="delete from " />
-                <marker date="1525253678419" expanded="true" signature="1599:1912" ph="update lz_ba... " />
-                <marker date="1525253678419" expanded="true" signature="2221:2336" ph="select id, n... lz_base_param" />
-                <marker date="1525253678419" expanded="true" signature="2602:2679" ph="select id, n... lz_base_param" />
-                <marker date="1525253678419" expanded="true" signature="2788:3057" ph="insert into lz_base_param... " />
+                <marker date="1525311834418" expanded="true" signature="1301:1368" ph="delete from " />
+                <marker date="1525311834418" expanded="true" signature="1698:2029" ph="update lz_ba... " />
+                <marker date="1525311834418" expanded="true" signature="2365:2488" ph="select id, n... lz_base_param" />
+                <marker date="1525311834418" expanded="true" signature="2601:2870" ph="insert into lz_base_param... " />
+                <marker date="1525311834418" expanded="true" signature="2976:3231" ph="SELECT id, N... lz_base_param" />
+                <marker date="1525311834418" expanded="true" signature="2976:3515" ph="SELECT id, n... lz_base_param" />
+                <marker date="1525311834418" expanded="true" signature="3611:3669" ph="SELECT count... lz_base_param" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/EmployeeService.java">
+      <file leaf-file-name="GoodsMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/GoodsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+            <state relative-caret-position="580">
+              <caret line="80" column="39" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="80" selection-end-column="39" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#855#856#0" expanded="true" />
-                <element signature="e#921#922#0" expanded="true" />
-                <element signature="e#974#975#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
+                <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
+                <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
+                <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
+                <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
+                <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
+                <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
+                <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
+                <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ImageMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="534">
+              <caret line="58" column="65" lean-forward="false" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+              <folding>
+                <marker date="1525238293131" expanded="true" signature="1110:1177" ph="delete from " />
+                <marker date="1525238293131" expanded="true" signature="1507:1727" ph="update lz_ba... " />
+                <marker date="1525238293131" expanded="true" signature="2063:2175" ph="select id, f... lz_base_image" />
+                <marker date="1525238293131" expanded="true" signature="2468:2538" ph="select id, f... lz_base_image" />
+                <marker date="1525238293131" expanded="true" signature="2725:2939" ph="insert into lz_base_image... " />
               </folding>
             </state>
           </provider>
@@ -115,27 +126,18 @@
       <file leaf-file-name="StorageMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="79" column="13" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="79" selection-end-column="13" />
+            <state relative-caret-position="602">
+              <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
               <folding>
                 <marker date="1525247028935" expanded="true" signature="1637:1777" ph="select id, n... lz_base_repo" />
                 <marker date="1525247028935" expanded="true" signature="2070:2168" ph="select id, n... lz_base_repo" />
                 <marker date="1525247028935" expanded="true" signature="2287:2655" ph="insert into lz_base_repo... " />
                 <marker date="1525247028935" expanded="true" signature="2765:3163" ph="SELECT r.id,... lz_base_repo" />
-                <marker date="1525247028935" expanded="true" signature="3397:3454" ph="SELECT count... lz_base_repo" />
-                <marker date="1525247028935" expanded="true" signature="3749:4127" ph="update lz_ba... " />
-                <marker date="1525247028935" expanded="true" signature="4258:4436" ph="update lz_ba... " />
+                <marker date="1525247028935" expanded="true" signature="2765:3379" ph="SELECT r.id,... lz_base_repo" />
+                <marker date="1525247028935" expanded="true" signature="3478:3535" ph="SELECT count... lz_base_repo" />
+                <marker date="1525247028935" expanded="true" signature="3830:4208" ph="update lz_ba... " />
+                <marker date="1525247028935" expanded="true" signature="4339:4517" ph="update lz_ba... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/EmployeeMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -143,15 +145,16 @@
       <file leaf-file-name="EmployeeMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/EmployeeMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="123" column="18" lean-forward="false" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
+            <state relative-caret-position="514">
+              <caret line="82" column="39" lean-forward="false" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
               <folding>
                 <marker date="1525253204764" expanded="true" signature="1754:1934" ph="select id, n... lz_base_employee" />
                 <marker date="1525253204764" expanded="true" signature="2054:2587" ph="insert into lz_base_employee... " />
                 <marker date="1525253204764" expanded="true" signature="2692:3044" ph="SELECT id, N... lz_base_employee" />
-                <marker date="1525253204764" expanded="true" signature="3344:3405" ph="SELECT count... lz_base_employee" />
-                <marker date="1525253204764" expanded="true" signature="3770:4321" ph="update lz_ba... " />
-                <marker date="1525253204764" expanded="true" signature="4453:4635" ph="update lz_ba... " />
+                <marker date="1525253204764" expanded="true" signature="2692:3327" ph="SELECT id, N... lz_base_employee" />
+                <marker date="1525253204764" expanded="true" signature="3425:3486" ph="SELECT count... lz_base_employee" />
+                <marker date="1525253204764" expanded="true" signature="3851:4402" ph="update lz_ba... " />
+                <marker date="1525253204764" expanded="true" signature="4534:4716" ph="update lz_ba... " />
               </folding>
             </state>
           </provider>
@@ -173,10 +176,12 @@
       <find>deleteByPrimaryKey</find>
       <find>selectByPrimaryKey</find>
       <find>storageController</find>
+      <find>Employee</find>
     </findStrings>
     <replaceStrings>
       <replace>ComResp</replace>
       <replace>employeeController</replace>
+      <replace>Param</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -190,8 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/RoleTest.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/RoleController.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java" />
@@ -224,7 +227,6 @@
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/GoodsController.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/GoodsTest.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/entity/Storage.java" />
-        <option value="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/StorageMapper.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/StorageService.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/StorageTest.java" />
@@ -235,19 +237,17 @@
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/utils/CommonUtils.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/EmployeeMapper.java" />
-        <option value="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/EmployeeMapper.xml" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/EmployeeController.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/EmployeeTest.java" />
-        <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java" />
-        <option value="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java" />
+        <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java" />
+        <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java" />
+        <option value="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/EmployeeMapper.xml" />
+        <option value="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml" />
+        <option value="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml" />
+        <option value="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java" />
       </list>
     </option>
-  </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="GoodsTest.getGoodsListByPage" />
-    </enabled-run-configurations>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -324,10 +324,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -656,6 +654,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -709,38 +709,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeTest.deleteEmployee">
+  <component name="RunManager" selected="JUnit.ParamTest.getParamList">
     <configuration name="BasicinfoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinfeeloo.inventory.BasicinfoApplication" />
       <option name="SHOW_IN_DASHBOARD" value="true" />
       <module name="basicinfo" />
       <envs />
-    </configuration>
-    <configuration name="EmployeeTest.addEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.sinfeeloo.inventory.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="basicinfo" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sinfeeloo.inventory" />
-      <option name="MAIN_CLASS_NAME" value="com.sinfeeloo.inventory.EmployeeTest" />
-      <option name="METHOD_NAME" value="addEmployee" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="EmployeeTest.deleteEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -831,7 +806,7 @@
       <module name="management" />
       <envs />
     </configuration>
-    <configuration name="StorageTest.deleteStorage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParamTest.addParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.sinfeeloo.inventory.*" />
@@ -842,8 +817,33 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.sinfeeloo.inventory" />
-      <option name="MAIN_CLASS_NAME" value="com.sinfeeloo.inventory.StorageTest" />
-      <option name="METHOD_NAME" value="deleteStorage" />
+      <option name="MAIN_CLASS_NAME" value="com.sinfeeloo.inventory.ParamTest" />
+      <option name="METHOD_NAME" value="addParam" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ParamTest.getParamList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sinfeeloo.inventory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="basicinfo" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sinfeeloo.inventory" />
+      <option name="MAIN_CLASS_NAME" value="com.sinfeeloo.inventory.ParamTest" />
+      <option name="METHOD_NAME" value="getParamList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -947,19 +947,19 @@
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.ManagementApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.InventorySaasSinfeelooApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.BasicinfoApplication" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StorageTest.deleteStorage" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeTest.addEmployee" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.EmployeeTest.getEmployeeList" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.EmployeeTest.modifyEmployee" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.EmployeeTest.deleteEmployee" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeTest.getEmployeeList" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeTest.modifyEmployee" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.EmployeeTest.deleteEmployee" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.ParamTest.addParam" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.ParamTest.getParamList" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeTest.deleteEmployee" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeTest.modifyEmployee" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeTest.getEmployeeList" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeTest.addEmployee" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StorageTest.deleteStorage" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ParamTest.getParamList" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ParamTest.addParam" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeTest.deleteEmployee" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeTest.modifyEmployee" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeTest.getEmployeeList" />
       </list>
     </recent_temporary>
   </component>
@@ -984,14 +984,12 @@
       <workItem from="1524877228465" duration="18575000" />
       <workItem from="1525223395566" duration="1899000" />
       <workItem from="1525227831587" duration="12176000" />
-      <workItem from="1525246365907" duration="7492000" />
+      <workItem from="1525246365907" duration="7567000" />
+      <workItem from="1525308267619" duration="2512000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeTest_addEmployee - 2018.05.02 at 16h 39m 16s.xml">
-      <configuration name="EmployeeTest.addEmployee" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EmployeeTest_addEmployee - 2018.05.02 at 16h 40m 24s.xml">
       <configuration name="EmployeeTest.addEmployee" configurationId="JUnit" />
     </history-entry>
@@ -1010,6 +1008,9 @@
     <history-entry file="EmployeeTest_modifyEmployee - 2018.05.02 at 17h 20m 54s.xml">
       <configuration name="EmployeeTest.modifyEmployee" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ParamTest_addParam - 2018.05.03 at 09h 34m 40s.xml">
+      <configuration name="ParamTest.addParam" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="StorageTest_deleteStorage - 2018.05.02 at 15h 53m 07s.xml">
       <configuration name="StorageTest.deleteStorage" configurationId="JUnit" />
     </history-entry>
@@ -1021,7 +1022,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104580000" />
+    <option name="totallyTimeSpent" value="107167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1045,21 +1046,21 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15973742" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38074398" sideWeight="0.49786323" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08760684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43763676" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09409191" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28118163" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1619256" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20459402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20673077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31509846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31509846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1112,23 +1113,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4092">
-          <caret line="221" column="31" lean-forward="false" selection-start-line="221" selection-start-column="31" selection-end-line="221" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/utils/ImageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/management/src/main/java/com/sinfeeloo/inventory/ManagementApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1285,20 +1269,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ImageMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="58" column="65" lean-forward="false" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
-          <folding>
-            <marker date="1525238293131" expanded="true" signature="1110:1177" ph="delete from " />
-            <marker date="1525238293131" expanded="true" signature="1507:1727" ph="update lz_ba... " />
-            <marker date="1525238293131" expanded="true" signature="2063:2175" ph="select id, f... lz_base_image" />
-            <marker date="1525238293131" expanded="true" signature="2468:2538" ph="select id, f... lz_base_image" />
-            <marker date="1525238293131" expanded="true" signature="2725:2939" ph="insert into lz_base_image... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ImageMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-44">
@@ -1361,23 +1331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="60" column="13" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="60" selection-end-column="13" />
-          <folding>
-            <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
-            <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/entity/Storage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -1391,14 +1344,6 @@
             <element signature="e#8627#8628#0" expanded="false" />
             <element signature="e#8669#8670#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/GoodsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="110" column="44" lean-forward="true" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,8 +1361,8 @@
           <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="false" />
+            <element signature="e#1059#1060#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1434,7 +1379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="79" column="23" lean-forward="false" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1442,7 +1386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="278" column="20" lean-forward="true" selection-start-line="278" selection-start-column="20" selection-end-line="278" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1450,7 +1393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="360" column="16" lean-forward="false" selection-start-line="360" selection-start-column="16" selection-end-line="360" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1482,99 +1424,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/EmployeeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="123" column="18" lean-forward="false" selection-start-line="123" selection-start-column="18" selection-end-line="123" selection-end-column="18" />
-          <folding>
-            <marker date="1525253204764" expanded="true" signature="1754:1934" ph="select id, n... lz_base_employee" />
-            <marker date="1525253204764" expanded="true" signature="2054:2587" ph="insert into lz_base_employee... " />
-            <marker date="1525253204764" expanded="true" signature="2692:3044" ph="SELECT id, N... lz_base_employee" />
-            <marker date="1525253204764" expanded="true" signature="3344:3405" ph="SELECT count... lz_base_employee" />
-            <marker date="1525253204764" expanded="true" signature="3770:4321" ph="update lz_ba... " />
-            <marker date="1525253204764" expanded="true" signature="4453:4635" ph="update lz_ba... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/EmployeeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
+        <state relative-caret-position="990">
           <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="79" column="13" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="79" selection-end-column="13" />
-          <folding>
-            <marker date="1525247028935" expanded="true" signature="1637:1777" ph="select id, n... lz_base_repo" />
-            <marker date="1525247028935" expanded="true" signature="2070:2168" ph="select id, n... lz_base_repo" />
-            <marker date="1525247028935" expanded="true" signature="2287:2655" ph="insert into lz_base_repo... " />
-            <marker date="1525247028935" expanded="true" signature="2765:3163" ph="SELECT r.id,... lz_base_repo" />
-            <marker date="1525247028935" expanded="true" signature="3397:3454" ph="SELECT count... lz_base_repo" />
-            <marker date="1525247028935" expanded="true" signature="3749:4127" ph="update lz_ba... " />
-            <marker date="1525247028935" expanded="true" signature="4258:4436" ph="update lz_ba... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/EmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
+        <state relative-caret-position="550">
           <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/EmployeeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="74" column="51" lean-forward="false" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
-          <folding>
-            <marker date="1525253678419" expanded="true" signature="1233:1296" ph="delete from " />
-            <marker date="1525253678419" expanded="true" signature="1599:1912" ph="update lz_ba... " />
-            <marker date="1525253678419" expanded="true" signature="2221:2336" ph="select id, n... lz_base_param" />
-            <marker date="1525253678419" expanded="true" signature="2602:2679" ph="select id, n... lz_base_param" />
-            <marker date="1525253678419" expanded="true" signature="2788:3057" ph="insert into lz_base_param... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/StorageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#855#856#0" expanded="false" />
+            <element signature="e#921#922#0" expanded="false" />
+            <element signature="e#974#975#0" expanded="false" />
+            <element signature="e#1033#1034#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1589,13 +1456,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java">
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/EmployeeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="250">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/StorageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="110" column="51" lean-forward="true" selection-start-line="107" selection-start-column="12" selection-end-line="110" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/EmployeeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="82" column="39" lean-forward="false" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+          <folding>
+            <marker date="1525253204764" expanded="true" signature="1754:1934" ph="select id, n... lz_base_employee" />
+            <marker date="1525253204764" expanded="true" signature="2054:2587" ph="insert into lz_base_employee... " />
+            <marker date="1525253204764" expanded="true" signature="2692:3044" ph="SELECT id, N... lz_base_employee" />
+            <marker date="1525253204764" expanded="true" signature="2692:3327" ph="SELECT id, N... lz_base_employee" />
+            <marker date="1525253204764" expanded="true" signature="3425:3486" ph="SELECT count... lz_base_employee" />
+            <marker date="1525253204764" expanded="true" signature="3851:4402" ph="update lz_ba... " />
+            <marker date="1525253204764" expanded="true" signature="4534:4716" ph="update lz_ba... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/GoodsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="80" column="39" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="80" selection-end-column="39" />
+          <folding>
+            <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
+            <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
+            <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
+            <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
+            <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
+            <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
+            <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
+            <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ImageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="58" column="65" lean-forward="false" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
+          <folding>
+            <marker date="1525238293131" expanded="true" signature="1110:1177" ph="delete from " />
+            <marker date="1525238293131" expanded="true" signature="1507:1727" ph="update lz_ba... " />
+            <marker date="1525238293131" expanded="true" signature="2063:2175" ph="select id, f... lz_base_image" />
+            <marker date="1525238293131" expanded="true" signature="2468:2538" ph="select id, f... lz_base_image" />
+            <marker date="1525238293131" expanded="true" signature="2725:2939" ph="insert into lz_base_image... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
+          <folding>
+            <marker date="1525247028935" expanded="true" signature="1637:1777" ph="select id, n... lz_base_repo" />
+            <marker date="1525247028935" expanded="true" signature="2070:2168" ph="select id, n... lz_base_repo" />
+            <marker date="1525247028935" expanded="true" signature="2287:2655" ph="insert into lz_base_repo... " />
+            <marker date="1525247028935" expanded="true" signature="2765:3163" ph="SELECT r.id,... lz_base_repo" />
+            <marker date="1525247028935" expanded="true" signature="2765:3379" ph="SELECT r.id,... lz_base_repo" />
+            <marker date="1525247028935" expanded="true" signature="3478:3535" ph="SELECT count... lz_base_repo" />
+            <marker date="1525247028935" expanded="true" signature="3830:4208" ph="update lz_ba... " />
+            <marker date="1525247028935" expanded="true" signature="4339:4517" ph="update lz_ba... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="91" column="15" lean-forward="false" selection-start-line="91" selection-start-column="15" selection-end-line="91" selection-end-column="15" />
+          <folding>
+            <marker date="1525311834418" expanded="true" signature="1301:1368" ph="delete from " />
+            <marker date="1525311834418" expanded="true" signature="1698:2029" ph="update lz_ba... " />
+            <marker date="1525311834418" expanded="true" signature="2365:2488" ph="select id, n... lz_base_param" />
+            <marker date="1525311834418" expanded="true" signature="2601:2870" ph="insert into lz_base_param... " />
+            <marker date="1525311834418" expanded="true" signature="2976:3231" ph="SELECT id, N... lz_base_param" />
+            <marker date="1525311834418" expanded="true" signature="2976:3515" ph="SELECT id, n... lz_base_param" />
+            <marker date="1525311834418" expanded="true" signature="3611:3669" ph="SELECT count... lz_base_param" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="80" column="37" lean-forward="false" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

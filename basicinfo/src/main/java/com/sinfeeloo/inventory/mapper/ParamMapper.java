@@ -2,6 +2,7 @@ package com.sinfeeloo.inventory.mapper;
 
 import com.sinfeeloo.inventory.entity.Param;
 import java.util.List;
+import java.util.Map;
 
 public interface ParamMapper {
     /**
@@ -43,4 +44,8 @@ public interface ParamMapper {
      * @mbggenerated Tue Apr 24 17:00:10 CST 2018
      */
     int updateByPrimaryKey(Param record);
+
+    long selectParamListCount(Map<String, Object> searchMap);
+
+    List<Param> selectParamListByPage(Map<String, Object> searchMap);
 }

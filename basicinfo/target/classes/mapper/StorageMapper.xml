@@ -78,6 +78,8 @@
         <if test="storageName != null and storageName!=''">
             AND r.name LIKE CONCAT ('%',#{storageName},'%' )
         </if>
+        ORDER BY ${sortCode} ${sortRole}
+        limit #{limit} offset #{offset}
     </select>
 
     <!--分页查询库存数量-->

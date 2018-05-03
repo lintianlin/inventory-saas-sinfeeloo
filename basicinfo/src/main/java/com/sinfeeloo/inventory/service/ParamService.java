@@ -1,5 +1,6 @@
 package com.sinfeeloo.inventory.service;
 
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.Param;
 import com.sinfeeloo.inventory.mapper.ParamMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,10 @@ public class ParamService {
      */
     public void addParam(Param param){
        paramMapper.insert(param);
+    }
+
+    public void getParamListByPage(Paging<Param> paging) {
+        paging.setTotal(paramMapper.selectParamListCount(paging.getSearchMap()));
+        paging.setList(paramMapper.selectParamListByPage(paging.getSearchMap()));
     }
 }

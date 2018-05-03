@@ -79,6 +79,8 @@
         <if test="type != null and type!=''">
             AND type =#{type}
         </if>
+        ORDER BY ${sortCode} ${sortRole}
+        limit #{limit} offset #{offset}
     </select>
 
     <!--分页-->
