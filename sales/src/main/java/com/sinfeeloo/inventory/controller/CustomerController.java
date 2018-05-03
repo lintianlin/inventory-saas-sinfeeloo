@@ -23,6 +23,7 @@ public class CustomerController extends BaseController {
 
     /**
      * 添加
+     *
      * @param name
      * @param linkman
      * @param mobile
@@ -58,6 +59,7 @@ public class CustomerController extends BaseController {
 
     /**
      * 分页查询
+     *
      * @param name
      * @param limit
      * @param page
@@ -82,4 +84,66 @@ public class CustomerController extends BaseController {
             return queryError(e);
         }
     }
+
+
+    /**
+     * 修改
+     *
+     * @param name
+     * @param linkman
+     * @param mobile
+     * @param address
+     * @param descs
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/modify")
+    public ComResp modify(@RequestParam(value = "id") Integer id,
+                          @RequestParam(value = "name") String name,
+                          @RequestParam(value = "linkman") String linkman,
+                          @RequestParam(value = "mobile") String mobile,
+                          @RequestParam(value = "address") String address,
+                          @RequestParam(value = "descs", required = false) String descs,
+                          @RequestParam(value = "updater") String updater) {
+
+        try {
+            Customer customer = new Customer();
+            customer.setId(id);
+            customer.setName(name);
+            customer.setLinkman(linkman);
+            customer.setMobile(mobile);
+            customer.setAddress(address);
+            customer.setDescs(descs);
+            customer.setUpdater(updater);
+            int num = customerService.update(customer);
+            return modifyResult(num);
+        } catch (Exception e) {
+            return modifyError(e);
+        }
+
+    }
+
+
+    /**
+     * 修改
+     *
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/delete")
+    public ComResp delete(@RequestParam(value = "id") Integer id,
+                          @RequestParam(value = "updater") String updater) {
+
+        try {
+            Customer customer = new Customer();
+            customer.setId(id);
+            customer.setUpdater(updater);
+            customerService.delete(customer);
+            return deleteSuccess();
+        } catch (Exception e) {
+            return deleteError(e);
+        }
+    }
+
+
 }

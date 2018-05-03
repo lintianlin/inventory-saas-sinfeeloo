@@ -37,11 +37,11 @@ public class CustomerService extends BaseServiceImpl<Customer> {
 
     @Override
     public int update(Customer customer) {
-        return 0;
+        return customerMapper.updateByPrimaryKey(customer);
     }
 
     @Override
     public int delete(Customer customer) {
-        return 0;
+        return customerMapper.deleteByPrimaryKey(customer);
     }
 }

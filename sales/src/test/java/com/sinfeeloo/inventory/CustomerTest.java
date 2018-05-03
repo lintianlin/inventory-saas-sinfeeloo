@@ -44,29 +44,25 @@ public class CustomerTest extends BaseTest {
                 "asc");
         printResponse(resp);
     }
-//
-//
-//    @Test
-//    public void modifyCustomer() {
-//        ComResp response = employeeController.modifyCustomer(
-//                10,
-//                "白居易",
-//                "lby210",
-//                "370283199211010121",
-//                "18810578028",
-//                1,
-//                "1992-11-01",
-//                "北京市海淀区五道口财智国际大厦9999",
-//                "lbdxlwb@sina.co",
-//                "采购人员",
-//                "admin2"
-//        );
-//        printResponse(response);
-//    }
-//
-//    @Test
-//    public void deleteCustomer() {
-//        ComResp resp = employeeController.deleteCustomer(7, "admin2");
-//        printResponse(resp);
-//    }
+
+
+    @Test
+    public void modifyCustomer() {
+        ComResp response = employeeController.modify(
+                4,
+                "北京思贤国际",
+                "刘德华",
+                "18810578028",
+                "北京市五道口财智国际大厦17",
+                "牛逼的公司",
+                "admin2"
+        );
+        printResponse(response);
+    }
+
+    @Test
+    public void deleteCustomer() {
+        ComResp resp = employeeController.delete(1, "admin2");
+        printResponse(resp);
+    }
 }
