@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225f1113-7c4d-431a-b78e-3561d205ffb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java" afterPath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/entity/Param.java" afterPath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/entity/Param.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java" afterPath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java" afterPath="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml" afterPath="$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/main/resources/mybatis-generator.xml" afterPath="$PROJECT_DIR$/basicinfo/src/main/resources/mybatis-generator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java" afterPath="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/purchase/src/main/resources/mybatis-generator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,6 +15,7 @@
     <ignored path="$PROJECT_DIR$/management/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
     <ignored path="$PROJECT_DIR$/system/target/" />
+    <ignored path="$PROJECT_DIR$/purchase/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,149 +25,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ParamController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/purchase/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="129" column="33" lean-forward="false" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybatis-generator.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mybatis-generator.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="59" column="47" lean-forward="true" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+            <state relative-caret-position="500">
+              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParamTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java">
+      <file leaf-file-name="mybatis-generator.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/mybatis-generator.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="530">
+              <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParamService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParamMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/mapper/ParamMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="31" column="9" lean-forward="false" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParamMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ParamMapper.xml">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
-              <folding>
-                <marker date="1525313553294" expanded="true" signature="1563:1699" ph="select id, n... lz_base_param" />
-                <marker date="1525313553294" expanded="true" signature="1813:2189" ph="insert into lz_base_param... " />
-                <marker date="1525313553294" expanded="true" signature="2295:2666" ph="SELECT id, N... lz_base_param" />
-                <marker date="1525313553294" expanded="true" signature="2295:2950" ph="SELECT id, n... lz_base_param" />
-                <marker date="1525313553294" expanded="true" signature="3046:3104" ph="SELECT count... lz_base_param" />
-                <marker date="1525313553294" expanded="true" signature="3468:3755" ph="update lz_ba... " />
-                <marker date="1525313553294" expanded="true" signature="3883:4064" ph="update lz_ba... " />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Param.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/entity/Param.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicinfo/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="295" column="36" lean-forward="false" selection-start-line="295" selection-start-column="36" selection-end-line="295" selection-end-column="36" />
-              <folding>
-                <element signature="e#8486#8487#0" expanded="true" />
-                <element signature="e#8540#8541#0" expanded="true" />
-                <element signature="e#8586#8587#0" expanded="true" />
-                <element signature="e#8626#8627#0" expanded="true" />
-                <element signature="e#8662#8663#0" expanded="true" />
-                <element signature="e#8720#8721#0" expanded="true" />
-                <element signature="e#8770#8771#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoodsMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/GoodsMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="80" column="39" lean-forward="true" selection-start-line="79" selection-start-column="8" selection-end-line="80" selection-end-column="39" />
-              <folding>
-                <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
-                <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
-                <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
-                <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
-                <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
-                <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
-                <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
-                <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/ImageMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="58" column="65" lean-forward="false" selection-start-line="58" selection-start-column="65" selection-end-line="58" selection-end-column="65" />
-              <folding>
-                <marker date="1525238293131" expanded="true" signature="1110:1177" ph="delete from " />
-                <marker date="1525238293131" expanded="true" signature="1507:1727" ph="update lz_ba... " />
-                <marker date="1525238293131" expanded="true" signature="2063:2175" ph="select id, f... lz_base_image" />
-                <marker date="1525238293131" expanded="true" signature="2468:2538" ph="select id, f... lz_base_image" />
-                <marker date="1525238293131" expanded="true" signature="2725:2939" ph="insert into lz_base_image... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StorageMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/StorageMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
-              <folding>
-                <marker date="1525312236876" expanded="true" signature="1637:1777" ph="select id, n... lz_base_repo" />
-                <marker date="1525312236876" expanded="true" signature="2070:2168" ph="select id, n... lz_base_repo" />
-                <marker date="1525312236876" expanded="true" signature="2287:2655" ph="insert into lz_base_repo... " />
-                <marker date="1525312236876" expanded="true" signature="2765:3163" ph="SELECT r.id,... lz_base_repo" />
-                <marker date="1525312236876" expanded="true" signature="2765:3379" ph="SELECT r.id,... lz_base_repo" />
-                <marker date="1525312236876" expanded="true" signature="3478:3535" ph="SELECT count... lz_base_repo" />
-                <marker date="1525312236876" expanded="true" signature="3830:4208" ph="update lz_ba... " />
-                <marker date="1525312236876" expanded="true" signature="4339:4517" ph="update lz_ba... " />
-              </folding>
+            <state relative-caret-position="376">
+              <caret line="31" column="21" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -207,9 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/system/src/test/java/com/sinfeeloo/inventory/UserTest.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/system/src/main/java/com/sinfeeloo/inventory/service/UserService.java" />
         <option value="$PROJECT_DIR$/system/src/main/resources/mapper/UserMapper.xml" />
@@ -258,6 +158,9 @@
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java" />
         <option value="$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java" />
+        <option value="$PROJECT_DIR$/purchase/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/purchase/pom.xml" />
+        <option value="$PROJECT_DIR$/purchase/src/main/resources/mybatis-generator.xml" />
       </list>
     </option>
   </component>
@@ -386,281 +289,50 @@
               <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="inventory" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -700,11 +372,11 @@
       <recent name="com.sinfeeloo.inventory.base" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\testspace2\inventory-saas-sinfeeloo\purchase\src\main\resources" />
       <recent name="F:\testspace2\inventory-saas-sinfeeloo\system\src\main\java\com\sinfeeloo\inventory\config" />
       <recent name="F:\testspace2\inventory-saas-sinfeeloo\system\src\main\resources" />
       <recent name="F:\testspace2\inventory-saas-sinfeeloo" />
       <recent name="F:\testspace2\inventory-saas-sinfeeloo\common\src\main\java\com\sinfeeloo\inventory\utils" />
-      <recent name="F:\testspace2\inventory-saas-sinfeeloo\basicinfo\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -868,6 +540,13 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration name="PurchaseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sinfeeloo.inventory.PurchaseApplication" />
+      <option name="SHOW_IN_DASHBOARD" value="true" />
+      <module name="purchase" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -955,7 +634,7 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="8">
+    <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.ManagementApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.InventorySaasSinfeelooApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.BasicinfoApplication" />
@@ -964,6 +643,7 @@
       <item index="5" class="java.lang.String" itemvalue="JUnit.ParamTest.getParamList" />
       <item index="6" class="java.lang.String" itemvalue="JUnit.ParamTest.modifyParam" />
       <item index="7" class="java.lang.String" itemvalue="JUnit.ParamTest.deleteParam" />
+      <item index="8" class="java.lang.String" itemvalue="Spring Boot.PurchaseApplication" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -997,7 +677,7 @@
       <workItem from="1525223395566" duration="1899000" />
       <workItem from="1525227831587" duration="12176000" />
       <workItem from="1525246365907" duration="7567000" />
-      <workItem from="1525308267619" duration="4038000" />
+      <workItem from="1525308267619" duration="4764000" />
     </task>
     <servers />
   </component>
@@ -1034,7 +714,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108693000" />
+    <option name="totallyTimeSpent" value="109419000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1059,9 +739,9 @@
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38074398" sideWeight="0.49786323" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08760684" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.392779" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34135666" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21663019" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.072210066" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20673077" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1125,28 +805,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/function/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/nio/file/Paths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="82" column="23" lean-forward="false" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1211,14 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1226">
-          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/entity/ImageBean.java" />
     <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/entity/Image.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1254,14 +904,6 @@
           <folding>
             <element signature="e#412#413#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1558,17 +1200,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mybatis-generator.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="59" column="47" lean-forward="true" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/service/ParamService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="288">
           <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1603,20 +1237,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mybatis-generator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="59" column="47" lean-forward="true" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/controller/ParamController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="129" column="33" lean-forward="false" selection-start-line="129" selection-start-column="33" selection-end-line="129" selection-end-column="33" />
+        <state relative-caret-position="186">
+          <caret line="122" column="7" lean-forward="true" selection-start-line="122" selection-start-column="7" selection-end-line="122" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/test/java/com/sinfeeloo/inventory/ParamTest.java">
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basicinfo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/mybatis-generator.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="45" column="67" lean-forward="false" selection-start-line="45" selection-start-column="67" selection-end-line="45" selection-end-column="67" />
           <folding />
         </state>
       </provider>

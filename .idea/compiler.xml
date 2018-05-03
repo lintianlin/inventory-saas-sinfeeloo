@@ -9,6 +9,7 @@
         <module name="basicinfo" />
         <module name="common" />
         <module name="management" />
+        <module name="purchase" />
         <module name="system" />
       </profile>
     </annotationProcessing>
@@ -17,6 +18,7 @@
       <module name="common" target="1.8" />
       <module name="inventory-saas-sinfeeloo" target="1.8" />
       <module name="management" target="1.8" />
+      <module name="purchase" target="1.8" />
       <module name="system" target="1.7" />
     </bytecodeTargetLevel>
   </component>
