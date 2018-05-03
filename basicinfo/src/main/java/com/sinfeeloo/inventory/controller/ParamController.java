@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: mhj
- * @Desc:
+ * @Desc:参数管理
  * @Date: 2018/5/2 17:31
  */
 @RestController
@@ -53,6 +53,7 @@ public class ParamController {
 
     /**
      * 分页查询参数
+     *
      * @param name
      * @param type
      * @param limit
@@ -85,4 +86,58 @@ public class ParamController {
         }
 
     }
+
+
+    /**
+     * 修改参数
+     *
+     * @param id
+     * @param type
+     * @param name
+     * @param desc
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/modifyParam")
+    public ComResp modifyParam(@RequestParam(value = "id") Integer id,
+                               @RequestParam(value = "type") String type,
+                               @RequestParam(value = "name") String name,
+                               @RequestParam(value = "desc") String desc,
+                               @RequestParam(value = "updater") String updater) {
+
+        try {
+            Param param = new Param();
+            param.setId(id);
+            param.setType(type);
+            param.setName(name);
+            param.setDescs(desc);
+            param.setUpdater(updater);
+            int num = paramService.modifyParam(param);
+            return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
+        } catch (Exception e) {
+            return ComResp.error("修改失败！", e);
+        }
+
+    }
+
+    /**
+     * 删除
+     *
+     * @param id
+     * @param updater
+     * @return
+     */
+    @PostMapping(value = "/deleteParam")
+    public ComResp deleteParam(@RequestParam(value = "id") Integer id,
+                               @RequestParam(value = "updater") String updater) {
+
+        try {
+            paramService.deleteParam(id, updater);
+            return ComResp.success("删除成功！");
+        } catch (Exception e) {
+            return ComResp.error("删除失败！", e);
+        }
+
+    }
+
 }

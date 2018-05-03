@@ -21,14 +21,38 @@ public class ParamService {
 
     /**
      * 添加参数
+     *
      * @param param
      */
-    public void addParam(Param param){
-       paramMapper.insert(param);
+    public void addParam(Param param) {
+        paramMapper.insert(param);
     }
 
     public void getParamListByPage(Paging<Param> paging) {
         paging.setTotal(paramMapper.selectParamListCount(paging.getSearchMap()));
         paging.setList(paramMapper.selectParamListByPage(paging.getSearchMap()));
+    }
+
+    /**
+     * 修改
+     *
+     * @param param
+     * @return
+     */
+    public int modifyParam(Param param) {
+        return paramMapper.updateByPrimaryKey(param);
+    }
+
+    /**
+     * 删除
+     *
+     * @param id
+     * @param updater
+     */
+    public void deleteParam(Integer id, String updater) {
+        Param param = new Param();
+        param.setId(id);
+        param.setUpdater(updater);
+        paramMapper.deleteByPrimaryKey(param);
     }
 }

@@ -55,14 +55,14 @@
                <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
                <!--selectByExampleQueryId="false"/>-->
         <!--&lt;!&ndash;参数&ndash;&gt;-->
-        <!--<table tableName="lz_base_param" domainObjectName="Param" enableCountByExample="false"-->
-               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-               <!--selectByExampleQueryId="false"/>-->
-
-        <!--图片-->
-        <table tableName="lz_base_image" domainObjectName="Image" enableCountByExample="false"
+        <table tableName="lz_base_param" domainObjectName="Param" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"/>
+
+        <!--图片-->
+        <!--<table tableName="lz_base_image" domainObjectName="Image" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"/>-->
 
     </context>
 </generatorConfiguration>

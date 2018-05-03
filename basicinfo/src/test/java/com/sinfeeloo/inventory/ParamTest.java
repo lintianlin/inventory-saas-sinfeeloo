@@ -45,28 +45,22 @@ public class ParamTest extends BaseTest {
         printResponse(resp);
     }
 
-//
-//    @Test
-//    public void modifyParam() {
-//        ComResp response = paramController.modifyParam(
-//                10,
-//                "白居易",
-//                "lby210",
-//                "370283199211010121",
-//                "18810578028",
-//                1,
-//                "1992-11-01",
-//                "北京市海淀区五道口财智国际大厦9999",
-//                "lbdxlwb@sina.co",
-//                "采购人员",
-//                "admin2"
-//        );
-//        printResponse(response);
-//    }
-//
-//    @Test
-//    public void deleteParam() {
-//        ComResp resp = paramController.deleteParam(7, "admin2");
-//        printResponse(resp);
-//    }
+
+    @Test
+    public void modifyParam() {
+        ComResp response = paramController.modifyParam(
+                49,
+                "计量单位",
+                "吨",
+                "一吨",
+                "admin2"
+        );
+        printResponse(response);
+    }
+
+    @Test
+    public void deleteParam() {
+        ComResp resp = paramController.deleteParam(49, "admin2");
+        printResponse(resp);
+    }
 }
