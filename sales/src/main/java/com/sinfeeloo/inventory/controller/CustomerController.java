@@ -3,12 +3,10 @@ package com.sinfeeloo.inventory.controller;
 import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Customer;
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: mhj
@@ -46,5 +44,23 @@ public class CustomerController extends BaseController {
             return addError(e);
         }
 
+    }
+
+    @GetMapping(value = "/getCustomerListByPage")
+    public ComResp getCustomerByPage(@RequestParam(value = "name", required = false) String name,
+                                     @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
+                                     @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
+                                     @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
+                                     @RequestParam(value = "sortRole", required = false, defaultValue = "ASC") String sortRole) {
+
+        Paging<Customer> paging = new Paging<>(page, limit);
+        try {
+            paging.putSearch("name", name);
+            putCommonPageSearchMap(paging, limit, page, sortCode, sortRole);
+            customerService.getListByPage(paging);
+            return addSuccess();
+        } catch (Exception e) {
+            return addError(e);
+        }
     }
 }
