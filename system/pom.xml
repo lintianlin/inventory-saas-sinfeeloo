@@ -9,7 +9,7 @@
     <name>system</name>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-
+    <description>系统管理</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

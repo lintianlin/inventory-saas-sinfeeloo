@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>basicinfo</name>
-    <description>Demo project for Spring Boot</description>
+    <description>基础信息管理</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

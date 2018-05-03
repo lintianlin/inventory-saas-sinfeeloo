@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/analysis/analysis.iml" filepath="$PROJECT_DIR$/analysis/analysis.iml" />
       <module fileurl="file://$PROJECT_DIR$/basicinfo/basicinfo.iml" filepath="$PROJECT_DIR$/basicinfo/basicinfo.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/inventory-saas-sinfeeloo.iml" filepath="$PROJECT_DIR$/inventory-saas-sinfeeloo.iml" />

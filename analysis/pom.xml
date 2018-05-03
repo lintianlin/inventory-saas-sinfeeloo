@@ -4,23 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sinfeeloo.inventory</groupId>
-	<artifactId>inventory-saas-sinfeeloo</artifactId>
+	<artifactId>analysis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<modules>
-		<module>common</module>
-		<module>management</module>
-		<module>basicinfo</module>
-        <module>system</module>
-        <module>purchase</module>
-        <module>sales</module>
-        <module>stock</module>
-        <module>analysis</module>
-    </modules>
-
-	<name>inventory-saas-sinfeeloo</name>
-	<description>华森Saas进销存系统</description>
+	<name>analysis</name>
+	<description>统计分析</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -36,6 +25,12 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>com.sinfeeloo.inventory</groupId>
+			<artifactId>common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -46,8 +41,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-
 	</dependencies>
 
 	<build>
