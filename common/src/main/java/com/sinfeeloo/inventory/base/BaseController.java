@@ -56,7 +56,7 @@ public abstract class BaseController {
     }
 
     protected ComResp deleteError(Exception e) {
-        return ComResp.success("删除失败！", e);
+        return ComResp.error("删除失败！", e);
     }
 
     protected ComResp querySuccess(Paging paging) {
