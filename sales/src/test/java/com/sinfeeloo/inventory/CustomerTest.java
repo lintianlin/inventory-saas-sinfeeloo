@@ -34,17 +34,16 @@ public class CustomerTest extends BaseTest {
         printResponse(response);
     }
 
-//    @Test
-//    public void getCustomerList() {
-//        ComResp resp = employeeController.getCustomerListByPage(
-//                "刘",
-//                "",
-//                10,
-//                1,
-//                "id",
-//                "asc");
-//        printResponse(resp);
-//    }
+    @Test
+    public void getCustomerList() {
+        ComResp resp = employeeController.getCustomerByPage(
+                "三",
+                10,
+                1,
+                "id",
+                "asc");
+        printResponse(resp);
+    }
 //
 //
 //    @Test

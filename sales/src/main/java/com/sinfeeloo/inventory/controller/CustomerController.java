@@ -21,6 +21,16 @@ public class CustomerController extends BaseController {
     private CustomerService customerService;
 
 
+    /**
+     * 添加
+     * @param name
+     * @param linkman
+     * @param mobile
+     * @param address
+     * @param descs
+     * @param updater
+     * @return
+     */
     @PostMapping(value = "/add")
     public ComResp add(@RequestParam(value = "name") String name,
                        @RequestParam(value = "linkman") String linkman,
@@ -46,6 +56,15 @@ public class CustomerController extends BaseController {
 
     }
 
+    /**
+     * 分页查询
+     * @param name
+     * @param limit
+     * @param page
+     * @param sortCode
+     * @param sortRole
+     * @return
+     */
     @GetMapping(value = "/getCustomerListByPage")
     public ComResp getCustomerByPage(@RequestParam(value = "name", required = false) String name,
                                      @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
@@ -58,9 +77,9 @@ public class CustomerController extends BaseController {
             paging.putSearch("name", name);
             putCommonPageSearchMap(paging, limit, page, sortCode, sortRole);
             customerService.getListByPage(paging);
-            return addSuccess();
+            return querySuccess(paging);
         } catch (Exception e) {
-            return addError(e);
+            return queryError(e);
         }
     }
 }
