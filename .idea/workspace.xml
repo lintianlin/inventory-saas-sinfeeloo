@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225f1113-7c4d-431a-b78e-3561d205ffb8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/CustomerMapper.java" afterPath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/CustomerMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/CustomerService.java" afterPath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/CustomerService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml" afterPath="$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/CustomerService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="382">
@@ -45,8 +45,8 @@
       <file leaf-file-name="CustomerMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/CustomerMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+            <state relative-caret-position="452">
+              <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -64,16 +64,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sales/src/test/java/com/sinfeeloo/inventory/CustomerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SalesApplication.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/SalesApplication.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,47 +74,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sales/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicinfoApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/java/com/sinfeeloo/inventory/BasicinfoApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerMapper.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CustomerMapper.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="74" column="65" lean-forward="false" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
+            <state relative-caret-position="324">
+              <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
               <folding>
-                <marker date="1525337929577" expanded="true" signature="1383:1449" ph="delete from " />
-                <marker date="1525337929577" expanded="true" signature="1755:2165" ph="update lz_sa... " />
-                <marker date="1525337929577" expanded="true" signature="2474:2612" ph="select id, n... lz_sale_customer" />
-                <marker date="1525337929577" expanded="true" signature="2878:2978" ph="select id, n... lz_sale_customer" />
-                <marker date="1525337929577" expanded="true" signature="3088:3450" ph="insert into lz_sale_customer... " />
+                <marker date="1525339455292" expanded="true" signature="1457:1527" ph="delete from " />
+                <marker date="1525339455292" expanded="true" signature="1860:2292" ph="update lz_sa... " />
+                <marker date="1525339455292" expanded="true" signature="2628:2774" ph="select id, n... lz_sale_customer" />
+                <marker date="1525339455292" expanded="true" signature="2894:3284" ph="insert into lz_sale_customer... " />
+                <marker date="1525339455292" expanded="true" signature="3376:3670" ph="SELECT id, N... lz_sale_customer" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoodsMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/GoodsMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="60" selection-end-column="13" />
+              <folding>
+                <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
+                <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
+                <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
+                <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
+                <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
+                <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
+                <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
+                <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
               </folding>
             </state>
           </provider>
@@ -217,13 +196,13 @@
         <option value="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java" />
         <option value="$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml" />
         <option value="$PROJECT_DIR$/purchase/src/test/java/com/sinfeeloo/inventory/PurchaseOrderTest.java" />
-        <option value="$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml" />
         <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/sales/src/test/java/com/sinfeeloo/inventory/CustomerTest.java" />
         <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/SalesApplication.java" />
         <option value="$PROJECT_DIR$/sales/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/CustomerService.java" />
         <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/CustomerMapper.java" />
+        <option value="$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml" />
       </list>
     </option>
   </component>
@@ -356,6 +335,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
@@ -815,7 +803,7 @@
       <workItem from="1525223395566" duration="1899000" />
       <workItem from="1525227831587" duration="12176000" />
       <workItem from="1525246365907" duration="7567000" />
-      <workItem from="1525308267619" duration="27455000" />
+      <workItem from="1525308267619" duration="27794000" />
     </task>
     <servers />
   </component>
@@ -852,7 +840,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132110000" />
+    <option name="totallyTimeSpent" value="132449000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1124,23 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/GoodsMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="80" column="39" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="80" selection-end-column="39" />
-          <folding>
-            <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
-            <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1378,20 +1349,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="74" column="65" lean-forward="false" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
-          <folding>
-            <marker date="1525337929577" expanded="true" signature="1383:1449" ph="delete from " />
-            <marker date="1525337929577" expanded="true" signature="1755:2165" ph="update lz_sa... " />
-            <marker date="1525337929577" expanded="true" signature="2474:2612" ph="select id, n... lz_sale_customer" />
-            <marker date="1525337929577" expanded="true" signature="2878:2978" ph="select id, n... lz_sale_customer" />
-            <marker date="1525337929577" expanded="true" signature="3088:3450" ph="insert into lz_sale_customer... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sales/src/test/java/com/sinfeeloo/inventory/CustomerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -1408,10 +1365,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/SalesApplication.java">
+    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/CustomerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
+        <state relative-caret-position="382">
+          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1424,10 +1397,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/SalesApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="110">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -1444,24 +1417,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/CustomerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+        <state relative-caret-position="452">
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/CustomerService.java">
+    <entry file="file://$PROJECT_DIR$/basicinfo/src/main/resources/mapper/GoodsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+        <state relative-caret-position="122">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="60" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-            <element signature="e#1051#1052#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
+            <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
+            <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
+            <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
+            <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
+            <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
+            <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
+            <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
+            <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+          <folding>
+            <marker date="1525339455292" expanded="true" signature="1457:1527" ph="delete from " />
+            <marker date="1525339455292" expanded="true" signature="1860:2292" ph="update lz_sa... " />
+            <marker date="1525339455292" expanded="true" signature="2628:2774" ph="select id, n... lz_sale_customer" />
+            <marker date="1525339455292" expanded="true" signature="2894:3284" ph="insert into lz_sale_customer... " />
+            <marker date="1525339455292" expanded="true" signature="3376:3670" ph="SELECT id, N... lz_sale_customer" />
           </folding>
         </state>
       </provider>
