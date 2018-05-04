@@ -33,12 +33,12 @@ public class StockService extends BaseServiceImpl<Stock> {
 
     @Override
     protected List<Stock> selectListByPage(Map<String, Object> searchMap) {
-        return null;
+        return stockMapper.selectStockListByPage(searchMap);
     }
 
     @Override
     protected long selectListCount(Map<String, Object> searchMap) {
-        return 0;
+        return stockMapper.selectStockListCount(searchMap);
     }
 
     @Override

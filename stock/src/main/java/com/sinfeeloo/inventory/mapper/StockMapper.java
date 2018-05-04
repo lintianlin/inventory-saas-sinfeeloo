@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.entity.Stock;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 public interface StockMapper {
     /**
@@ -48,4 +49,8 @@ public interface StockMapper {
 
 
     Stock selectByGoodsIdAndRepoId(@Param(value = "goodsId") Integer goodsId, @Param(value = "repoId") Integer repoId);
+
+    List<Stock> selectStockListByPage(Map<String, Object> searchMap);
+
+    long selectStockListCount(Map<String, Object> searchMap);
 }

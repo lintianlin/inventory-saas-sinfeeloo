@@ -1,15 +1,10 @@
 package com.sinfeeloo.inventory.controller;
 
 import com.sinfeeloo.inventory.base.BaseController;
-import com.sinfeeloo.inventory.entity.ComResp;
-import com.sinfeeloo.inventory.entity.PurchaseOrder;
-import com.sinfeeloo.inventory.entity.SalesOrder;
+import com.sinfeeloo.inventory.entity.*;
 import com.sinfeeloo.inventory.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 
@@ -26,8 +21,31 @@ public class StockController extends BaseController {
     private StockService stockService;
 
 
+    @GetMapping(value = "/getStockListByPage")
+    public ComResp getStockListByPage(@RequestParam(value = "goodsName", required = false) String goodsName,
+                                      @RequestParam(value = "repoId", required = false) Integer repoId,
+                                      @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
+                                      @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
+                                      @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
+                                      @RequestParam(value = "sortRole", required = false, defaultValue = "ASC") String sortRole) {
+
+        Paging<Stock> paging = new Paging<>(page, limit);
+        try {
+            paging.putSearch("goodsName", goodsName);
+            paging.putSearch("repoId", repoId);
+            putCommonPageSearchMap(paging, limit, page, sortCode, sortRole);
+            stockService.getListByPage(paging);
+            return querySuccess(paging);
+        } catch (Exception e) {
+            return queryError(e);
+        }
+
+    }
+
+
     /**
      * 审核采购单
+     *
      * @param id
      * @param checkAccount
      * @param checkState
@@ -66,6 +84,7 @@ public class StockController extends BaseController {
 
     /**
      * 审核销售单
+     *
      * @param id
      * @param checkAccount
      * @param checkState

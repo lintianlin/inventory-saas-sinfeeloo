@@ -29,4 +29,18 @@ public class StockTests extends BaseTest {
         printResponse(comResp);
     }
 
+
+    @Test
+    public void getStockListByPage(){
+        ComResp comResp = stockController.getStockListByPage(
+                "",
+                0,
+                10,
+                1,
+                "id",
+                "asc"
+                );
+        printResponse(comResp);
+    }
+
 }
