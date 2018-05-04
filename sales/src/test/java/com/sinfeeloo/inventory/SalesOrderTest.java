@@ -29,6 +29,7 @@ public class SalesOrderTest extends BaseTest {
                 "北京思贤国际",
                 5,
                 100,
+                1,
                 "3600",
                 "360000",
                 8,

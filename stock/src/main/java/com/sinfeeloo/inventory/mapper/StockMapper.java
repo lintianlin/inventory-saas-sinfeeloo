@@ -1,6 +1,8 @@
 package com.sinfeeloo.inventory.mapper;
 
 import com.sinfeeloo.inventory.entity.Stock;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface StockMapper {
@@ -43,4 +45,7 @@ public interface StockMapper {
      * @mbggenerated Thu May 03 10:43:21 CST 2018
      */
     int updateByPrimaryKey(Stock record);
+
+
+    Stock selectByGoodsIdAndRepoId(@Param(value = "goodsId") Integer goodsId, @Param(value = "repoId") Integer repoId);
 }

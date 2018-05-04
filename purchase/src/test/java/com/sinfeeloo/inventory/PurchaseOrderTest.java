@@ -29,6 +29,7 @@ public class PurchaseOrderTest extends BaseTest {
                 "宏泰供应商",
                 5,
                 100,
+                1,
                 "3600",
                 "360000",
                 8,
@@ -84,7 +85,7 @@ public class PurchaseOrderTest extends BaseTest {
 
     @Test
     public void chechOrder() {
-        ComResp resp = purchaseOrderController.check(25, "刘德华", 4, "admin2");
+        ComResp resp = purchaseOrderController.check(25, "刘德华", 3, "admin2");
         printResponse(resp);
     }
 }
