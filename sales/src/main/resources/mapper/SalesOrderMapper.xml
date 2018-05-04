@@ -111,7 +111,7 @@
   </select>
 
 
-  <!--分页查询-->
+  <!--销售订单分页查询-->
   <select id="selectOrderListByPage" resultMap="BaseResultMap">
     SELECT
     o.id,
@@ -191,7 +191,7 @@
     ORDER BY ${sortCode} ${sortRole}
     limit #{limit} offset #{offset}
   </select>
-  <!--分页数量-->
+  <!--销售分页数量-->
   <select id="selectOrderListCount" resultType="long">
     SELECT
     count(1)
@@ -222,6 +222,147 @@
     </if>
     <if test="checkState != null and checkState!=''">
       AND o.checkState =#{checkState}
+    </if>
+    <if test="startTime != null and startTime!=''">
+      AND o.taketime <![CDATA[ >= ]]> #{startTime}
+    </if>
+    <if test="endTime != null and endTime!=''">
+      AND o.taketime <![CDATA[ <= ]]> #{endTime}
+    </if>
+  </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--审核：销售订单分页查询-->
+  <select id="selectCheckOrderListByPage" resultMap="BaseResultMap">
+    SELECT
+    o.id,
+    o.goodsId,
+    g.`name` AS goodsName,
+    o.customerId,
+    o.customerName,
+    o.repoId,
+    r.`name` AS storageName,
+    o.orderNumber,
+    o.count,
+    o.unitPrice,
+    o.totalPrice,
+    o.employeeId,
+    e.`name` AS operator,
+    o.descs,
+    o.checkState,
+    o.checkResult,
+    o.checkAccount,
+    o.checktime,
+    DATE_FORMAT(
+    o.checktime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS checktimeStr,
+    o.taketime,
+    DATE_FORMAT(
+    o.taketime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS taketimeStr,
+    o.creater,
+    o.creatime,
+    DATE_FORMAT(
+    o.creatime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS creatimeStr,
+    o.updater,
+    o.updatime,
+    DATE_FORMAT(
+    o.updatime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS updatimeStr,
+    o.type
+    FROM
+    lz_sale_order o
+    LEFT JOIN lz_base_goods g ON o.goodsId = g.id
+    LEFT JOIN lz_base_repo r ON o.repoId = r.id
+    LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+    WHERE
+    o.state = 1
+    AND o.checkState = 4
+    <if test="goodsName != null and goodsName!=''">
+      AND g.`name` LIKE CONCAT ('%',#{goodsName},'%' )
+    </if>
+    <if test="type != null and type!=''">
+      AND o.type =#{type}
+    </if>
+    <if test="orderNumber != null and orderNumber!=''">
+      AND o.orderNumber =#{orderNumber}
+    </if>
+    <if test="customerName != null and customerName!=''">
+      AND o.customerName LIKE CONCAT ('%',#{customerName},'%' )
+    </if>
+    <if test="repoId != null and repoId!=''">
+      AND o.repoId =#{repoId}
+    </if>
+    <if test="operator != null and operator!=''">
+      AND (o.employeeId LIKE CONCAT ('%',#{operator},'%' ) OR e.`name` LIKE CONCAT ('%',#{operator},'%' ))
+    </if>
+    <if test="startTime != null and startTime!=''">
+      AND o.taketime <![CDATA[ >= ]]> #{startTime}
+    </if>
+    <if test="endTime != null and endTime!=''">
+      AND o.taketime <![CDATA[ <= ]]> #{endTime}
+    </if>
+    ORDER BY ${sortCode} ${sortRole}
+    limit #{limit} offset #{offset}
+  </select>
+
+
+  <!--审核：销售分页数量-->
+  <select id="selectCheckOrderListCount" resultType="long">
+    SELECT
+    count(1)
+    FROM
+    lz_sale_order o
+    LEFT JOIN lz_base_goods g ON o.goodsId = g.id
+    LEFT JOIN lz_base_repo r ON o.repoId = r.id
+    LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+    WHERE
+    o.state = 1
+    AND o.checkState = 4
+    <if test="goodsName != null and goodsName!=''">
+      AND g.`name` LIKE CONCAT ('%',#{goodsName},'%' )
+    </if>
+    <if test="type != null and type!=''">
+      AND o.type =#{type}
+    </if>
+    <if test="orderNumber != null and orderNumber!=''">
+      AND o.orderNumber =#{orderNumber}
+    </if>
+    <if test="customerName != null and customerName!=''">
+      AND o.customerName LIKE CONCAT ('%',#{customerName},'%' )
+    </if>
+    <if test="repoId != null and repoId!=''">
+      AND o.repoId =#{repoId}
+    </if>
+    <if test="operator != null and operator!=''">
+      AND (o.employeeId LIKE CONCAT ('%',#{operator},'%' ) OR e.`name` LIKE CONCAT ('%',#{operator},'%' ))
     </if>
     <if test="startTime != null and startTime!=''">
       AND o.taketime <![CDATA[ >= ]]> #{startTime}

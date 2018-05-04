@@ -1,6 +1,7 @@
 package com.sinfeeloo.inventory.service;
 
 import com.sinfeeloo.inventory.base.BaseServiceImpl;
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.PurchaseOrder;
 import com.sinfeeloo.inventory.mapper.PurchaseOrderMapper;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -50,21 +51,35 @@ public class PurchaseOrderService extends BaseServiceImpl<PurchaseOrder> {
 
     /**
      * 获得唯一的进货单号
+     *
      * @return
      */
-    public String getPurchaseOrderNumber(){
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
-        String time=sdf.format(new Date());
+    public String getPurchaseOrderNumber() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        String time = sdf.format(new Date());
         String randomString = RandomStringUtils.randomNumeric(8);
-        return "P"+time+randomString;
+        return "P" + time + randomString;
     }
 
     /**
      * 审核
+     *
      * @param order
      * @return
      */
     public int check(PurchaseOrder order) {
         return purchaseOrderMapper.updateCheckState(order);
+    }
+
+
+    /**
+     * 分采购单审核列表分页
+     *
+     * @param paging
+     */
+    public void getCheckListByPage(Paging<PurchaseOrder> paging) {
+        paging.setTotal(purchaseOrderMapper.selectCheckOrderListCount(paging.getSearchMap()));
+        paging.setList(purchaseOrderMapper.selectCheckOrderListByPage(paging.getSearchMap()));
+
     }
 }

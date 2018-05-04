@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225f1113-7c4d-431a-b78e-3561d205ffb8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/Stock2Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchase/src/test/java/com/sinfeeloo/inventory/PurchaseOrderTest.java" afterPath="$PROJECT_DIR$/purchase/src/test/java/com/sinfeeloo/inventory/PurchaseOrderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/test/java/com/sinfeeloo/inventory/SalesOrderTest.java" afterPath="$PROJECT_DIR$/sales/src/test/java/com/sinfeeloo/inventory/SalesOrderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/pom.xml" afterPath="$PROJECT_DIR$/stock/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/StockApplication.java" afterPath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/StockApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java" afterPath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/stock/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/src/main/resources/mapper/StockMapper.xml" afterPath="$PROJECT_DIR$/stock/src/main/resources/mapper/StockMapper.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockApplicationTests.java" afterPath="$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java" afterPath="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/mapper/PurchaseOrderMapper.java" afterPath="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/mapper/PurchaseOrderMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/service/PurchaseOrderService.java" afterPath="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/service/PurchaseOrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml" afterPath="$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/SalesOrderController.java" afterPath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/SalesOrderController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/SalesOrderMapper.java" afterPath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/SalesOrderMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/SalesOrderService.java" afterPath="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/SalesOrderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sales/src/main/resources/mapper/SalesOrderMapper.xml" afterPath="$PROJECT_DIR$/sales/src/main/resources/mapper/SalesOrderMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,34 +30,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StockService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java">
+      <file leaf-file-name="PurchaseOrderMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-988">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="652">
+              <caret line="241" column="42" lean-forward="false" selection-start-line="241" selection-start-column="16" selection-end-line="241" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1036#1037#0" expanded="true" />
-                <element signature="e#1063#1064#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1170#1171#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
-                <element signature="e#1313#1314#0" expanded="true" />
-                <element signature="e#1337#1338#0" expanded="true" />
-                <element signature="e#1389#1390#0" expanded="true" />
-                <element signature="e#1413#1414#0" expanded="true" />
+                <marker date="1525413875755" expanded="true" signature="2863:3887" ph="insert into lz_purchase_order... " />
+                <marker date="1525413875755" expanded="true" signature="4020:4607" ph="update lz_pu... " />
+                <marker date="1525413875755" expanded="true" signature="4020:4629" ph="update lz_pu... " />
+                <marker date="1525413875755" expanded="true" signature="4767:5182" ph="update lz_pu... " />
+                <marker date="1525413875755" expanded="true" signature="5283:6436" ph="select id, g... lz_purchase_order" />
+                <marker date="1525413875755" expanded="true" signature="5283:7651" ph="SELECT o.id,... lz_purchase_order" />
+                <marker date="1525413875755" expanded="true" signature="7751:7981" ph="SELECT count... lz_purchase_order" />
+                <marker date="1525413875755" expanded="true" signature="9285:9468" ph="update lz_pu... " />
+                <marker date="1525413875755" expanded="true" signature="9590:9904" ph="select id, g... lz_purchase_order" />
+                <marker date="1525413875755" expanded="true" signature="10032:12306" ph="SELECT o.id,... lz_purchase_order" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java">
+      <file leaf-file-name="PurchaseOrderMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/mapper/PurchaseOrderMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state relative-caret-position="498">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PurchaseOrderController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1241">
+              <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SalesOrderMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sales/src/main/resources/mapper/SalesOrderMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1971">
+              <caret line="257" column="40" lean-forward="false" selection-start-line="257" selection-start-column="14" selection-end-line="257" selection-end-column="40" />
+              <folding>
+                <marker date="1525414546937" expanded="true" signature="2732:3703" ph="insert into lz_sale_order... " />
+                <marker date="1525414546937" expanded="true" signature="3827:4382" ph="update lz_sa... " />
+                <marker date="1525414546937" expanded="true" signature="3827:4400" ph="update lz_sa... " />
+                <marker date="1525414546937" expanded="true" signature="4523:4682" ph="update lz_sa... " />
+                <marker date="1525414546937" expanded="true" signature="4807:5178" ph="update lz_sa... " />
+                <marker date="1525414546937" expanded="true" signature="5292:5587" ph="select id, g... lz_sale_order" />
+                <marker date="1525414546937" expanded="true" signature="5688:7722" ph="SELECT o.id,... lz_sale_order" />
+                <marker date="1525414546937" expanded="true" signature="9177:11134" ph="SELECT o.id,... lz_sale_order" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,89 +95,49 @@
       <file leaf-file-name="SalesOrderMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/SalesOrderMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+            <state relative-caret-position="88">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java">
+      <file leaf-file-name="SalesOrderController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/SalesOrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-196">
-              <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-              <folding>
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1223#1224#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StockTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="50" lean-forward="false" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stock2Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/Stock2Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state relative-caret-position="2509">
+              <caret line="257" column="0" lean-forward="false" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/pom.xml">
+      <file leaf-file-name="SalesOrderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/SalesOrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="559">
+              <caret line="77" column="59" lean-forward="false" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/src/main/resources/application.properties">
+      <file leaf-file-name="BaseServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="440">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/StockApplication.java">
+      <file leaf-file-name="PurchaseOrderService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/service/PurchaseOrderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
-              <folding>
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#403#404#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="696">
+              <caret line="83" column="5" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,6 +168,7 @@
       <find>purchaseOrderService</find>
       <find>@Transactional</find>
       <find>Supplier</find>
+      <find>selectCheckOrderListByPage</find>
     </findStrings>
     <replaceStrings>
       <replace>ComResp</replace>
@@ -233,8 +220,6 @@
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/utils/DateUtils.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseController.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/mapper/PurchaseOrderMapper.java" />
-        <option value="$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml" />
         <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/SalesApplication.java" />
         <option value="$PROJECT_DIR$/sales/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/sales/src/test/java/com/sinfeeloo/inventory/CustomerTest.java" />
@@ -243,15 +228,9 @@
         <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/CustomerMapper.java" />
         <option value="$PROJECT_DIR$/sales/src/main/resources/mapper/CustomerMapper.xml" />
         <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/entity/SalesOrder.java" />
-        <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/SalesOrderMapper.java" />
-        <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/SalesOrderService.java" />
-        <option value="$PROJECT_DIR$/sales/src/main/resources/mapper/SalesOrderMapper.xml" />
-        <option value="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java" />
-        <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/SalesOrderController.java" />
         <option value="$PROJECT_DIR$/purchase/src/test/java/com/sinfeeloo/inventory/PurchaseOrderTest.java" />
         <option value="$PROJECT_DIR$/sales/src/test/java/com/sinfeeloo/inventory/SalesOrderTest.java" />
         <option value="$PROJECT_DIR$/stock/pom.xml" />
-        <option value="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/service/PurchaseOrderService.java" />
         <option value="$PROJECT_DIR$/stock/src/main/resources/mapper/StockMapper.xml" />
         <option value="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java" />
         <option value="$PROJECT_DIR$/stock/src/main/resources/application.properties" />
@@ -260,6 +239,14 @@
         <option value="$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/Stock2Test.java" />
         <option value="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java" />
         <option value="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java" />
+        <option value="$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/mapper/PurchaseOrderMapper.java" />
+        <option value="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/service/PurchaseOrderService.java" />
+        <option value="$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java" />
+        <option value="$PROJECT_DIR$/sales/src/main/resources/mapper/SalesOrderMapper.xml" />
+        <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/SalesOrderMapper.java" />
+        <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/SalesOrderService.java" />
+        <option value="$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/SalesOrderController.java" />
       </list>
     </option>
   </component>
@@ -395,6 +382,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -404,6 +401,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
@@ -428,6 +434,88 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="inventory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="sales" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
@@ -911,7 +999,7 @@
       <workItem from="1525227831587" duration="12176000" />
       <workItem from="1525246365907" duration="7567000" />
       <workItem from="1525308267619" duration="28909000" />
-      <workItem from="1525393769806" duration="15059000" />
+      <workItem from="1525393769806" duration="16637000" />
     </task>
     <servers />
   </component>
@@ -948,7 +1036,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148623000" />
+    <option name="totallyTimeSpent" value="150201000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -982,10 +1070,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.098468274" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25164112" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14155982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38183808" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25480768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14442013" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3380744" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1194,14 +1282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/CustomerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-308">
@@ -1240,42 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="209" column="13" lean-forward="false" selection-start-line="91" selection-start-column="4" selection-end-line="209" selection-end-column="13" />
-          <folding>
-            <marker date="1525336424606" expanded="true" signature="2863:3887" ph="insert into lz_purchase_order... " />
-            <marker date="1525336424606" expanded="true" signature="4020:4607" ph="update lz_pu... " />
-            <marker date="1525336424606" expanded="true" signature="4020:4629" ph="update lz_pu... " />
-            <marker date="1525336424606" expanded="true" signature="4767:5182" ph="update lz_pu... " />
-            <marker date="1525336424606" expanded="true" signature="5279:6432" ph="select id, g... lz_purchase_order" />
-            <marker date="1525336424606" expanded="true" signature="5279:7647" ph="SELECT o.id,... lz_purchase_order" />
-            <marker date="1525336424606" expanded="true" signature="7743:7973" ph="SELECT count... lz_purchase_order" />
-            <marker date="1525336424606" expanded="true" signature="9277:9460" ph="update lz_pu... " />
-            <marker date="1525336424606" expanded="true" signature="9582:9896" ph="select id, g... lz_purchase_order" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/SalesOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="57" column="17" lean-forward="false" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1056#1057#0" expanded="false" />
-            <element signature="e#1110#1111#0" expanded="false" />
-            <element signature="e#1175#1176#0" expanded="false" />
-            <element signature="e#1248#1249#0" expanded="false" />
-            <element signature="e#1313#1314#0" expanded="false" />
-            <element signature="e#1386#1387#0" expanded="false" />
-            <element signature="e#1802#1803#0" expanded="false" />
-            <element signature="e#1865#1866#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/entity/SalesOrder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -1283,32 +1327,6 @@
           <folding>
             <element signature="e#7476#7477#0" expanded="true" />
             <element signature="e#7520#7521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/resources/mapper/SalesOrderMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="74" column="22" lean-forward="false" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-          <folding>
-            <marker date="1525397442915" expanded="true" signature="2732:3703" ph="insert into lz_sale_order... " />
-            <marker date="1525397442915" expanded="true" signature="3827:4382" ph="update lz_sa... " />
-            <marker date="1525397442915" expanded="true" signature="3827:4400" ph="update lz_sa... " />
-            <marker date="1525397442915" expanded="true" signature="4523:4682" ph="update lz_sa... " />
-            <marker date="1525397442915" expanded="true" signature="4807:5178" ph="update lz_sa... " />
-            <marker date="1525397442915" expanded="true" signature="5292:5587" ph="select id, g... lz_sale_order" />
-            <marker date="1525397442915" expanded="true" signature="5684:7718" ph="SELECT o.id,... lz_sale_order" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/SalesOrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="236" column="44" lean-forward="false" selection-start-line="236" selection-start-column="44" selection-end-line="236" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1325,35 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="193" column="5" lean-forward="true" selection-start-line="165" selection-start-column="4" selection-end-line="193" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/service/PurchaseOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="e#1847#1848#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/mapper/PurchaseOrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1506,14 +1495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/SalesOrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -1555,11 +1536,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
-          <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
+        <state relative-caret-position="398">
+          <caret line="91" column="46" lean-forward="true" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="241" column="42" lean-forward="false" selection-start-line="241" selection-start-column="16" selection-end-line="241" selection-end-column="42" />
+          <folding>
+            <marker date="1525413875755" expanded="true" signature="2863:3887" ph="insert into lz_purchase_order... " />
+            <marker date="1525413875755" expanded="true" signature="4020:4607" ph="update lz_pu... " />
+            <marker date="1525413875755" expanded="true" signature="4020:4629" ph="update lz_pu... " />
+            <marker date="1525413875755" expanded="true" signature="4767:5182" ph="update lz_pu... " />
+            <marker date="1525413875755" expanded="true" signature="5283:6436" ph="select id, g... lz_purchase_order" />
+            <marker date="1525413875755" expanded="true" signature="5283:7651" ph="SELECT o.id,... lz_purchase_order" />
+            <marker date="1525413875755" expanded="true" signature="7751:7981" ph="SELECT count... lz_purchase_order" />
+            <marker date="1525413875755" expanded="true" signature="9285:9468" ph="update lz_pu... " />
+            <marker date="1525413875755" expanded="true" signature="9590:9904" ph="select id, g... lz_purchase_order" />
+            <marker date="1525413875755" expanded="true" signature="10032:12306" ph="SELECT o.id,... lz_purchase_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/mapper/PurchaseOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/service/PurchaseOrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/service/SalesOrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="77" column="59" lean-forward="false" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/mapper/SalesOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/src/main/resources/mapper/SalesOrderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1971">
+          <caret line="257" column="40" lean-forward="false" selection-start-line="257" selection-start-column="14" selection-end-line="257" selection-end-column="40" />
+          <folding>
+            <marker date="1525414546937" expanded="true" signature="2732:3703" ph="insert into lz_sale_order... " />
+            <marker date="1525414546937" expanded="true" signature="3827:4382" ph="update lz_sa... " />
+            <marker date="1525414546937" expanded="true" signature="3827:4400" ph="update lz_sa... " />
+            <marker date="1525414546937" expanded="true" signature="4523:4682" ph="update lz_sa... " />
+            <marker date="1525414546937" expanded="true" signature="4807:5178" ph="update lz_sa... " />
+            <marker date="1525414546937" expanded="true" signature="5292:5587" ph="select id, g... lz_sale_order" />
+            <marker date="1525414546937" expanded="true" signature="5688:7722" ph="SELECT o.id,... lz_sale_order" />
+            <marker date="1525414546937" expanded="true" signature="9177:11134" ph="SELECT o.id,... lz_sale_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/src/main/java/com/sinfeeloo/inventory/controller/SalesOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2509">
+          <caret line="257" column="0" lean-forward="false" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

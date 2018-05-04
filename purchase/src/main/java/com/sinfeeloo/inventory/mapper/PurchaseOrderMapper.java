@@ -42,6 +42,23 @@ public interface PurchaseOrderMapper {
     List<PurchaseOrder> selectOrderListByPage(Map<String, Object> searchMap);
 
     long selectOrderListCount(Map<String, Object> searchMap);
+
+
+    /**
+     * 采购单审核列表
+     * @param searchMap
+     * @return
+     */
+    List<PurchaseOrder> selectCheckOrderListByPage(Map<String, Object> searchMap);
+
+    /**
+     * 采购单审核列表数量
+     * @param searchMap
+     * @return
+     */
+    long selectCheckOrderListCount(Map<String, Object> searchMap);
+
+
     /**
      * 删除
      * @param purchaseOrder
@@ -55,4 +72,7 @@ public interface PurchaseOrderMapper {
      * @return
      */
     int updateCheckState(PurchaseOrder order);
+
+
+
 }

@@ -1,6 +1,7 @@
 package com.sinfeeloo.inventory.service;
 
 import com.sinfeeloo.inventory.base.BaseServiceImpl;
+import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.SalesOrder;
 import com.sinfeeloo.inventory.mapper.SalesOrderMapper;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -65,5 +66,17 @@ public class SalesOrderService extends BaseServiceImpl<SalesOrder> {
      */
     public int check(SalesOrder order) {
         return salesOrderMapper.updateCheckState(order);
+    }
+
+
+    /**
+     * 分销售单审核列表分页
+     *
+     * @param paging
+     */
+    public void getCheckListByPage(Paging<SalesOrder> paging) {
+        paging.setTotal(salesOrderMapper.selectCheckOrderListCount(paging.getSearchMap()));
+        paging.setList(salesOrderMapper.selectCheckOrderListByPage(paging.getSearchMap()));
+
     }
 }

@@ -34,6 +34,13 @@ public interface SalesOrderMapper {
     long selectOrderListCount(Map<String, Object> searchMap);
 
 
+
+    //审核分页列表
+    List<SalesOrder> selectCheckOrderListByPage(Map<String, Object> searchMap);
+    //审核分页数量
+    long selectCheckOrderListCount(Map<String, Object> searchMap);
+
+
     /**
      * 删除
      * @param purchaseOrder

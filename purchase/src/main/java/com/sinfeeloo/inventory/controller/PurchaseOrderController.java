@@ -193,4 +193,52 @@ public class PurchaseOrderController extends BaseController {
         }
     }
 
+
+    /**
+     * 审核采购单列表分页
+     * @param type
+     * @param orderNumber
+     * @param goodsName
+     * @param supplierName
+     * @param respId
+     * @param operator
+     * @param startTime
+     * @param endTime
+     * @param limit
+     * @param page
+     * @param sortCode
+     * @param sortRole
+     * @return
+     */
+    @GetMapping(value = "/getCheckOrderListByPage")
+    public ComResp getCheckOrderListByPage(@RequestParam(value = "type", required = false) Integer type,
+                                      @RequestParam(value = "orderNumber", required = false) String orderNumber,
+                                      @RequestParam(value = "goodsName", required = false) String goodsName,
+                                      @RequestParam(value = "supplierName", required = false) String supplierName,
+                                      @RequestParam(value = "respId", required = false) Integer respId,
+                                      @RequestParam(value = "operator", required = false) String operator,
+                                      @RequestParam(value = "startTime", required = false) String startTime,
+                                      @RequestParam(value = "endTime", required = false) String endTime,
+                                      @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
+                                      @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
+                                      @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
+                                      @RequestParam(value = "sortRole", required = false, defaultValue = "ASC") String sortRole) {
+        Paging<PurchaseOrder> paging = new Paging<>(page, limit);
+        try {
+            paging.putSearch("goodsName", goodsName);
+            paging.putSearch("type", type);
+            paging.putSearch("orderNumber", orderNumber);
+            paging.putSearch("supplierName", supplierName);
+            paging.putSearch("repoId", respId);
+            paging.putSearch("operator", operator);
+            paging.putSearch("startTime", startTime);
+            paging.putSearch("endTime", endTime);
+            putCommonPageSearchMap(paging, limit, page, sortCode, sortRole);
+            purchaseOrderService.getCheckListByPage(paging);
+            return querySuccess(paging);
+        } catch (Exception e) {
+            return queryError(e);
+        }
+    }
+
 }
