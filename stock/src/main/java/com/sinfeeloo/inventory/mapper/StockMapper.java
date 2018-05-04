@@ -53,4 +53,6 @@ public interface StockMapper {
     List<Stock> selectStockListByPage(Map<String, Object> searchMap);
 
     long selectStockListCount(Map<String, Object> searchMap);
+
+    int updateForPriceById(Stock stock);
 }

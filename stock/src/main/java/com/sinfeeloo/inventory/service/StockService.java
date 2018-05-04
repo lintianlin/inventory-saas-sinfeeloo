@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -93,7 +94,7 @@ public class StockService extends BaseServiceImpl<Stock> {
             stock.setTotalbuyprice(purchaseOrder.getTotalprice());
             stock.setAvgbuyprice(purchaseOrder.getUnitprice());
             stock.setState(1);
-            int num =stockMapper.insert(stock);
+            int num = stockMapper.insert(stock);
             //更新订单表
             if (num > 0) {//更新库存表成功
                 return purchaseOrderMapper.updateCheckState(order);
@@ -139,5 +140,24 @@ public class StockService extends BaseServiceImpl<Stock> {
         } else {//如果这个仓库中没有这个商品
             return -1;
         }
+    }
+
+    /**
+     * 修改价格
+     *
+     * @param id
+     * @param avgBuyPrice
+     * @param salePrice
+     * @return
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public int modifyPrice(Integer id, String avgBuyPrice, String salePrice) {
+        Stock temp = stockMapper.selectByPrimaryKey(id);
+        Stock stock = new Stock();
+        stock.setId(id);
+        stock.setAvgbuyprice(new BigDecimal(avgBuyPrice));
+        stock.setSaleprice(new BigDecimal(salePrice));
+        stock.setTotalsaleprice(stock.getSaleprice().multiply(new BigDecimal(temp.getTotalcount())));
+        return stockMapper.updateForPriceById(stock);
     }
 }

@@ -6,6 +6,7 @@ import com.sinfeeloo.inventory.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -121,5 +122,27 @@ public class StockController extends BaseController {
         } catch (Exception e) {
             return ComResp.error("审核失败！", e);
         }
+    }
+
+
+    /**
+     * 修改价格
+     * @param id
+     * @param avgBuyPrice
+     * @param salePrice
+     * @return
+     */
+    @PostMapping(value = "/modifyPrice")
+    public ComResp modifyPrice(@RequestParam(value = "id") Integer id,
+                               @RequestParam(value = "avgBuyPrice") String avgBuyPrice,
+                               @RequestParam(value = "salePrice")String salePrice){
+
+        try{
+            int num = stockService.modifyPrice(id,avgBuyPrice,salePrice);
+            return modifyResult(num);
+        }catch (Exception e){
+            return modifyError(e);
+        }
+
     }
 }
