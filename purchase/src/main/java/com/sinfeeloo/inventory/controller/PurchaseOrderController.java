@@ -24,11 +24,27 @@ public class PurchaseOrderController extends BaseController {
     private PurchaseOrderService purchaseOrderService;
 
 
+    /**
+     * 添加订单
+     * @param goodsId
+     * @param supplierId
+     * @param supplierName
+     * @param respId
+     * @param type  判断是什么类型的订单：  进货单    退货单
+     * @param count
+     * @param unitPrice
+     * @param totalPrice
+     * @param operatorId
+     * @param descs
+     * @param updater
+     * @return
+     */
     @PostMapping(value = "/add")
     public ComResp add(@RequestParam(value = "goodsId") Integer goodsId,
                        @RequestParam(value = "supplierId") Integer supplierId,
                        @RequestParam(value = "supplierName") String supplierName,
                        @RequestParam(value = "respId", required = false) Integer respId,
+                       @RequestParam(value = "type") Integer type,
                        @RequestParam(value = "count") Integer count,
                        @RequestParam(value = "unitPirce") String unitPrice,
                        @RequestParam(value = "totalPrice", required = false) String totalPrice,
@@ -48,7 +64,7 @@ public class PurchaseOrderController extends BaseController {
             order.setTotalprice(new BigDecimal(totalPrice));
             order.setEmployeeid(operatorId);
             order.setDescs(descs);
-            order.setType(1);
+            order.setType(type);
             order.setState(1);
             order.setCheckstate(1);
             order.setCheckresult("未审核");

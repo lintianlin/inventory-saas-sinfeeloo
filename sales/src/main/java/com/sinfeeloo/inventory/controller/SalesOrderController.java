@@ -31,6 +31,7 @@ public class SalesOrderController extends BaseController {
      * @param customerName
      * @param respId
      * @param count
+     * @param type   判断是什么类型的订单：  销售单    退货单
      * @param unitPrice
      * @param totalPrice
      * @param operatorId
@@ -43,6 +44,7 @@ public class SalesOrderController extends BaseController {
                        @RequestParam(value = "customerId") Integer customerId,
                        @RequestParam(value = "customerName") String customerName,
                        @RequestParam(value = "respId", required = false) Integer respId,
+                       @RequestParam(value = "type") Integer type,
                        @RequestParam(value = "count") Integer count,
                        @RequestParam(value = "unitPirce") String unitPrice,
                        @RequestParam(value = "totalPrice", required = false) String totalPrice,
@@ -62,13 +64,12 @@ public class SalesOrderController extends BaseController {
             order.setTotalprice(new BigDecimal(totalPrice));
             order.setEmployeeid(operatorId);
             order.setDescs(descs);
-            order.setType(1);
+            order.setType(type);
             order.setState(1);
             order.setCheckstate(1);
             order.setCheckresult("未审核");
             order.setUpdater(updater);
             order.setCreater(updater);
-
             salesOrderService.add(order);
             return addSuccess();
         } catch (Exception e) {
