@@ -127,6 +127,7 @@ public class StockController extends BaseController {
 
     /**
      * 修改价格
+     *
      * @param id
      * @param avgBuyPrice
      * @param salePrice
@@ -135,13 +136,42 @@ public class StockController extends BaseController {
     @PostMapping(value = "/modifyPrice")
     public ComResp modifyPrice(@RequestParam(value = "id") Integer id,
                                @RequestParam(value = "avgBuyPrice") String avgBuyPrice,
-                               @RequestParam(value = "salePrice")String salePrice){
+                               @RequestParam(value = "salePrice") String salePrice) {
 
-        try{
-            int num = stockService.modifyPrice(id,avgBuyPrice,salePrice);
+        try {
+            int num = stockService.modifyPrice(id, avgBuyPrice, salePrice);
             return modifyResult(num);
-        }catch (Exception e){
+        } catch (Exception e) {
             return modifyError(e);
+        }
+
+    }
+
+
+    /**
+     * 调拨
+     *
+     * @param id
+     * @param allotNum
+     * @param toStorageId
+     * @return
+     */
+    @PostMapping(value = "/allot")
+    public ComResp allot(@RequestParam(value = "id") Integer id,
+                         @RequestParam(value = "allotNum") Integer allotNum,
+                         @RequestParam(value = "toStorageId") Integer toStorageId) {
+        try {
+            int num = stockService.allot(id, allotNum, toStorageId);
+            if (num > 0) {
+                ComResp.success("调拨成功！");
+            } else if (num < 0) {
+                ComResp.error("库存不足！");
+            } else {
+                ComResp.error("调拨失败！");
+            }
+            return modifyResult(num);
+        } catch (Exception e) {
+            return ComResp.error("调拨失败！", e);
         }
 
     }

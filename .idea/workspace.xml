@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="225f1113-7c4d-431a-b78e-3561d205ffb8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java" afterPath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java" afterPath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java" afterPath="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java" />
@@ -26,13 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StockController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StockController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="135" column="42" lean-forward="false" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
+            <state relative-caret-position="551">
+              <caret line="169" column="39" lean-forward="false" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+              <folding>
+                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#1223#1224#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+                <element signature="e#1409#1410#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,8 +57,8 @@
       <file leaf-file-name="StockTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+            <state relative-caret-position="594">
+              <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,16 +66,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StockService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StockService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="150" column="89" lean-forward="false" selection-start-line="150" selection-start-column="89" selection-end-line="150" selection-end-column="89" />
+            <state relative-caret-position="483">
+              <caret line="213" column="27" lean-forward="true" selection-start-line="213" selection-start-column="27" selection-end-line="213" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1331#1332#0" expanded="true" />
-                <element signature="e#1372#1373#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BigDecimal.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/math/BigDecimal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="1480" column="22" lean-forward="false" selection-start-line="1480" selection-start-column="22" selection-end-line="1480" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,8 +91,8 @@
       <file leaf-file-name="StockMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="671">
-              <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+            <state relative-caret-position="88">
+              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -77,18 +101,19 @@
       <file leaf-file-name="StockMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/src/main/resources/mapper/StockMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="80" column="11" lean-forward="true" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+            <state relative-caret-position="212">
+              <caret line="40" column="69" lean-forward="false" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
               <folding>
-                <marker date="1525424499967" expanded="true" signature="2206:2268" ph="delete from " />
-                <marker date="1525424499967" expanded="true" signature="2585:3182" ph="insert into lz_stock... " />
-                <marker date="1525424499967" expanded="true" signature="3511:4136" ph="update lz_st... " />
-                <marker date="1525424499967" expanded="true" signature="4266:4549" ph="update lz_st... " />
-                <marker date="1525424499967" expanded="true" signature="4885:5088" ph="select id, g... lz_stock" />
-                <marker date="1525424499967" expanded="true" signature="5212:5516" ph="select id, g... lz_stock" />
-                <marker date="1525424499967" expanded="true" signature="5618:6214" ph="select id, g... lz_stock" />
-                <marker date="1525424499967" expanded="true" signature="5618:6527" ph="SELECT s.id,... lz_stock" />
-                <marker date="1525424499967" expanded="true" signature="6624:6733" ph="SELECT count... FROM" />
+                <marker date="1525685742127" expanded="true" signature="2206:2268" ph="delete from " />
+                <marker date="1525685742127" expanded="true" signature="2383:2955" ph="insert into lz_stock... " />
+                <marker date="1525685742127" expanded="true" signature="3284:3909" ph="update lz_st... " />
+                <marker date="1525685742127" expanded="true" signature="4039:4322" ph="update lz_st... " />
+                <marker date="1525685742127" expanded="true" signature="4450:4739" ph="update lz_st... " />
+                <marker date="1525685742127" expanded="true" signature="5077:5280" ph="select id, g... lz_stock" />
+                <marker date="1525685742127" expanded="true" signature="5404:5708" ph="select id, g... lz_stock" />
+                <marker date="1525685742127" expanded="true" signature="5810:6406" ph="select id, g... lz_stock" />
+                <marker date="1525685742127" expanded="true" signature="5810:6719" ph="SELECT s.id,... lz_stock" />
+                <marker date="1525685742127" expanded="true" signature="6816:6925" ph="SELECT count... FROM" />
               </folding>
             </state>
           </provider>
@@ -97,7 +122,7 @@
       <file leaf-file-name="Stock.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/entity/Stock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="3894">
               <caret line="190" column="19" lean-forward="false" selection-start-line="190" selection-start-column="19" selection-end-line="190" selection-end-column="19" />
               <folding>
                 <element signature="e#5314#5315#0" expanded="true" />
@@ -134,7 +159,7 @@
       <file leaf-file-name="PurchaseOrderMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
+            <state relative-caret-position="5478">
               <caret line="249" column="32" lean-forward="false" selection-start-line="249" selection-start-column="8" selection-end-line="249" selection-end-column="32" />
               <folding>
                 <marker date="1525413875755" expanded="true" signature="2863:3887" ph="insert into lz_purchase_order... " />
@@ -152,23 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PurchaseOrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="224" column="127" lean-forward="false" selection-start-line="221" selection-start-column="38" selection-end-line="224" selection-end-column="127" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BaseServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -201,6 +214,7 @@
       <find>@Transactional</find>
       <find>Supplier</find>
       <find>selectCheckOrderListByPage</find>
+      <find>insert</find>
     </findStrings>
     <replaceStrings>
       <replace>ComResp</replace>
@@ -276,9 +290,9 @@
         <option value="$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockTests.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseServiceImpl.java" />
         <option value="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java" />
+        <option value="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java" />
         <option value="$PROJECT_DIR$/stock/src/main/resources/mapper/StockMapper.xml" />
         <option value="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java" />
-        <option value="$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java" />
       </list>
     </option>
   </component>
@@ -350,16 +364,60 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
               <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="inventory-saas-sinfeeloo" type="462c0819:PsiDirectoryNode" />
+              <item name="basicinfo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="inventory" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="inventory-saas-sinfeeloo" type="b2602c69:ProjectViewProjectNode" />
@@ -543,6 +601,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -905,7 +964,9 @@
       <workItem from="1525227831587" duration="12176000" />
       <workItem from="1525246365907" duration="7567000" />
       <workItem from="1525308267619" duration="28909000" />
-      <workItem from="1525393769806" duration="20663000" />
+      <workItem from="1525393769806" duration="21809000" />
+      <workItem from="1525653233326" duration="1320000" />
+      <workItem from="1525672064129" duration="3520000" />
     </task>
     <servers />
   </component>
@@ -942,7 +1003,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154227000" />
+    <option name="totallyTimeSpent" value="160213000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -958,35 +1019,35 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15973742" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13514957" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31509846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20131291" sideWeight="0.49786323" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41356674" sideWeight="0.49786323" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15973742" sideWeight="0.50213677" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14551422" sideWeight="0.49786323" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13461539" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22319475" sideWeight="0.49786323" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11050328" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25480768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2439825" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2361111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3380744" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31509846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3380744" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1037,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="50" column="30" lean-forward="false" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1052,9 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,26 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="17" column="56" lean-forward="false" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#600#601#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-            <element signature="e#1023#1024#0" expanded="false" />
-            <element signature="e#1089#1090#0" expanded="false" />
-            <element signature="e#1147#1148#0" expanded="false" />
-            <element signature="e#1213#1214#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/math/BigDecimal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1299">
-          <caret line="804" column="11" lean-forward="false" selection-start-line="804" selection-start-column="11" selection-end-line="804" selection-end-column="11" />
-          <folding>
-            <element signature="e#34114#34115#0" expanded="false" />
-            <element signature="e#34170#34171#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1111,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="21" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,16 +1162,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1760">
           <caret line="80" column="39" lean-forward="false" selection-start-line="79" selection-start-column="8" selection-end-line="80" selection-end-column="39" />
-          <folding>
-            <marker date="1525239112904" expanded="true" signature="1903:2429" ph="SELECT id, n... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="1903:3261" ph="SELECT id, n... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="3358:4185" ph="SELECT count... lz_base_goods" />
-            <marker date="1525239112904" expanded="true" signature="4287:4956" ph="insert into lz_base_goods... " />
-            <marker date="1525239112904" expanded="true" signature="5083:5759" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="5083:5781" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="5909:6074" ph="update lz_ba... " />
-            <marker date="1525239112904" expanded="true" signature="6212:6687" ph="SELECT id, N... lz_base_goods" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,14 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
           <caret line="99" column="12" lean-forward="false" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
-          <folding>
-            <marker date="1525394143822" expanded="true" signature="1485:1631" ph="select id, n... lz_sale_customer" />
-            <marker date="1525394143822" expanded="true" signature="1751:2141" ph="insert into lz_sale_customer... " />
-            <marker date="1525394143822" expanded="true" signature="2233:2527" ph="SELECT id, N... lz_sale_customer" />
-            <marker date="1525394143822" expanded="true" signature="2233:2720" ph="SELECT id, N... lz_sale_customer" />
-            <marker date="1525394143822" expanded="true" signature="3141:3527" ph="update lz_sa... " />
-            <marker date="1525394143822" expanded="true" signature="3658:3840" ph="update lz_sa... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1175,7 +1192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-308">
           <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,11 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1217#1218#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1195,9 +1206,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="140" column="31" lean-forward="false" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1205,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
           <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,10 +1220,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="260" column="16" lean-forward="false" selection-start-line="260" selection-start-column="16" selection-end-line="260" selection-end-column="16" />
-          <folding>
-            <element signature="e#7476#7477#0" expanded="true" />
-            <element signature="e#7520#7521#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,7 +1227,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="86" column="30" lean-forward="true" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,7 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,10 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="390" column="22" lean-forward="false" selection-start-line="390" selection-start-column="22" selection-end-line="390" selection-end-column="22" />
-          <folding>
-            <element signature="e#11667#11668#0" expanded="false" />
-            <element signature="e#11700#11701#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1251,23 +1248,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="49" column="49" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockApplicationTests.java" />
     <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,7 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-858">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1299,9 +1286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1309,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,19 +1325,8 @@
         <state relative-caret-position="154">
           <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
           <folding>
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1223#1224#0" expanded="false" />
+            <element signature="e#345#346#0" expanded="false" />
+            <element signature="e#403#404#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1363,7 +1335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="498">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1371,7 +1342,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="83" column="5" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="83" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1379,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="559">
           <caret line="77" column="59" lean-forward="false" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1387,16 +1356,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1971">
           <caret line="257" column="40" lean-forward="false" selection-start-line="257" selection-start-column="14" selection-end-line="257" selection-end-column="40" />
-          <folding>
-            <marker date="1525414546937" expanded="true" signature="2732:3703" ph="insert into lz_sale_order... " />
-            <marker date="1525414546937" expanded="true" signature="3827:4382" ph="update lz_sa... " />
-            <marker date="1525414546937" expanded="true" signature="3827:4400" ph="update lz_sa... " />
-            <marker date="1525414546937" expanded="true" signature="4523:4682" ph="update lz_sa... " />
-            <marker date="1525414546937" expanded="true" signature="4807:5178" ph="update lz_sa... " />
-            <marker date="1525414546937" expanded="true" signature="5292:5587" ph="select id, g... lz_sale_order" />
-            <marker date="1525414546937" expanded="true" signature="5688:7722" ph="SELECT o.id,... lz_sale_order" />
-            <marker date="1525414546937" expanded="true" signature="9177:11134" ph="SELECT o.id,... lz_sale_order" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1404,7 +1363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1341">
           <caret line="163" column="47" lean-forward="false" selection-start-line="163" selection-start-column="47" selection-end-line="163" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1412,13 +1370,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/purchase/src/main/java/com/sinfeeloo/inventory/controller/PurchaseOrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
+        <state relative-caret-position="4730">
           <caret line="224" column="127" lean-forward="false" selection-start-line="221" selection-start-column="38" selection-end-line="224" selection-end-column="127" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1445,7 +1402,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/purchase/src/main/resources/mapper/PurchaseOrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
+        <state relative-caret-position="5478">
           <caret line="249" column="32" lean-forward="false" selection-start-line="249" selection-start-column="8" selection-end-line="249" selection-end-column="32" />
           <folding>
             <marker date="1525413875755" expanded="true" signature="2863:3887" ph="insert into lz_purchase_order... " />
@@ -1462,63 +1419,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock/src/main/resources/mapper/StockMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="80" column="11" lean-forward="true" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
-          <folding>
-            <marker date="1525424499967" expanded="true" signature="2206:2268" ph="delete from " />
-            <marker date="1525424499967" expanded="true" signature="2585:3182" ph="insert into lz_stock... " />
-            <marker date="1525424499967" expanded="true" signature="3511:4136" ph="update lz_st... " />
-            <marker date="1525424499967" expanded="true" signature="4266:4549" ph="update lz_st... " />
-            <marker date="1525424499967" expanded="true" signature="4885:5088" ph="select id, g... lz_stock" />
-            <marker date="1525424499967" expanded="true" signature="5212:5516" ph="select id, g... lz_stock" />
-            <marker date="1525424499967" expanded="true" signature="5618:6214" ph="select id, g... lz_stock" />
-            <marker date="1525424499967" expanded="true" signature="5618:6527" ph="SELECT s.id,... lz_stock" />
-            <marker date="1525424499967" expanded="true" signature="6624:6733" ph="SELECT count... FROM" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="56" column="26" lean-forward="false" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="135" column="42" lean-forward="false" selection-start-line="135" selection-start-column="42" selection-end-line="135" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/entity/Stock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="3894">
           <caret line="190" column="19" lean-forward="false" selection-start-line="190" selection-start-column="19" selection-end-line="190" selection-end-column="19" />
           <folding>
             <element signature="e#5314#5315#0" expanded="true" />
@@ -1551,14 +1462,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/math/BigDecimal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="150" column="89" lean-forward="false" selection-start-line="150" selection-start-column="89" selection-end-line="150" selection-end-column="89" />
+        <state relative-caret-position="248">
+          <caret line="1480" column="22" lean-forward="false" selection-start-line="1480" selection-start-column="22" selection-end-line="1480" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/src/test/java/com/sinfeeloo/inventory/StockTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="e#1372#1373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/service/StockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="213" column="27" lean-forward="true" selection-start-line="213" selection-start-column="27" selection-end-line="213" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/mapper/StockMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/src/main/resources/mapper/StockMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="40" column="69" lean-forward="false" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+          <folding>
+            <marker date="1525685742127" expanded="true" signature="2206:2268" ph="delete from " />
+            <marker date="1525685742127" expanded="true" signature="2383:2955" ph="insert into lz_stock... " />
+            <marker date="1525685742127" expanded="true" signature="3284:3909" ph="update lz_st... " />
+            <marker date="1525685742127" expanded="true" signature="4039:4322" ph="update lz_st... " />
+            <marker date="1525685742127" expanded="true" signature="4450:4739" ph="update lz_st... " />
+            <marker date="1525685742127" expanded="true" signature="5077:5280" ph="select id, g... lz_stock" />
+            <marker date="1525685742127" expanded="true" signature="5404:5708" ph="select id, g... lz_stock" />
+            <marker date="1525685742127" expanded="true" signature="5810:6406" ph="select id, g... lz_stock" />
+            <marker date="1525685742127" expanded="true" signature="5810:6719" ph="SELECT s.id,... lz_stock" />
+            <marker date="1525685742127" expanded="true" signature="6816:6925" ph="SELECT count... FROM" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/sinfeeloo/inventory/base/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+          <folding>
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stock/src/main/java/com/sinfeeloo/inventory/controller/StockController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="169" column="39" lean-forward="false" selection-start-line="169" selection-start-column="39" selection-end-line="169" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -160,4 +160,59 @@ public class StockService extends BaseServiceImpl<Stock> {
         stock.setTotalsaleprice(stock.getSaleprice().multiply(new BigDecimal(temp.getTotalcount())));
         return stockMapper.updateForPriceById(stock);
     }
+
+    /**
+     * 调拨
+     *
+     * @param id
+     * @param allotNum
+     * @param toStorageId
+     * @return
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public int allot(Integer id, Integer allotNum, Integer toStorageId) {
+        //先通过id查询出对应的存储记录
+        Stock temp = stockMapper.selectByPrimaryKey(id);
+        //如果调拨的数量大于库存数量
+        if (allotNum > temp.getTotalcount()) {
+            return -1;//库存不足
+        }
+        //修改里面的库存数量（减去调拨数量）
+        temp.setTotalcount(temp.getTotalcount() - allotNum);
+        //修改库存总值
+        temp.setTotalbuyprice(temp.getBuyprice().multiply(new BigDecimal(temp.getTotalcount())));
+        //修改销售总值
+        temp.setTotalsaleprice(temp.getSaleprice().multiply(new BigDecimal(temp.getTotalcount())));
+        //更新当前这条记录
+        stockMapper.updateForAllotById(temp);
+
+        //查询一个这个仓库中是否有这个商品
+        Stock haveThisStock = stockMapper.selectByGoodsIdAndRepoId(temp.getGoodsid(), toStorageId);
+        if (null != haveThisStock) {//如果仓库中有这个商品
+            //如果有这个商品，则数量相加
+            haveThisStock.setTotalcount(haveThisStock.getTotalcount()+allotNum);
+            //修改库存总值
+            haveThisStock.setTotalbuyprice(haveThisStock.getBuyprice().multiply(new BigDecimal(haveThisStock.getTotalcount())));
+            //修改销售总值
+            haveThisStock.setTotalsaleprice(haveThisStock.getSaleprice().multiply(new BigDecimal(haveThisStock.getTotalcount())));
+            //更新当前这条记录
+            stockMapper.updateForAllotById(haveThisStock);
+            return 1;
+        } else {//如果对应的仓库中没有这个商品
+            //新建一条新的存储记录
+            Stock newStock = new Stock();
+            newStock.setGoodsid(temp.getGoodsid());
+            newStock.setRepoid(toStorageId);
+            newStock.setTotalcount(allotNum);
+            newStock.setSalecount(0);
+            newStock.setBuyprice(temp.getBuyprice());
+            newStock.setAvgbuyprice(temp.getAvgbuyprice());
+            newStock.setSaleprice(temp.getSaleprice());
+            newStock.setTotalsaleprice(temp.getSaleprice().multiply(new BigDecimal(allotNum)));
+            newStock.setTotalbuyprice(temp.getBuyprice().multiply(new BigDecimal(allotNum)));
+            newStock.setState(1);
+            stockMapper.insert(newStock);
+            return 1;
+        }
+    }
 }

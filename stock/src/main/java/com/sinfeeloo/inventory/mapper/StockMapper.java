@@ -55,4 +55,6 @@ public interface StockMapper {
     long selectStockListCount(Map<String, Object> searchMap);
 
     int updateForPriceById(Stock stock);
+
+    int updateForAllotById(Stock temp);
 }
