@@ -77,7 +77,7 @@ public class MenuController {
      * @return
      */
     @GetMapping(value = "/getMenuList")
-    public ComResp getMenuList(@RequestParam(value = "id") Integer id) {
+    public ComResp getMenuList(@RequestParam(value = "userId") Integer id) {
         try {
             User user = userService.getUsersMenuByUserId(id);
             if (null == user) {

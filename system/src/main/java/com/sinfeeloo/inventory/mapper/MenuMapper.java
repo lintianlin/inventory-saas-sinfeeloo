@@ -55,8 +55,17 @@ public interface MenuMapper {
 
     /**
      * 查询根节点下面所有的子节点
+     *
      * @param upid
      * @return
      */
     List<Menu> selectByUpId(Integer upid);
+
+    /**
+     * 查询根节点
+     *
+     * @param upid
+     * @return
+     */
+    List<Menu> selectRootMenuByPrimaryKey(Integer upid);
 }

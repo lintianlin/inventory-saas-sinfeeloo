@@ -73,7 +73,7 @@ public class UserTest extends BaseTest {
 
     @Test
     public void modifyPwd(){
-        ComResp resp = userController.modifyPassword(14,"123456","654321","654321");
+        ComResp resp = userController.modifyPassword(14,"123456","654321");
         printResponse(resp);
     }
 }

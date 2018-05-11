@@ -27,7 +27,7 @@
 
     <!--通过账户查询用户-->
     <select id="selectByAccount" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select id, account, password, roleId, roleName, employeeId, updater, updatime, state,
+        select id, account,password,  roleId, roleName, employeeId, updater, updatime, state,
         isLocked, lockTime
         from lz_sys_user
         where account = #{account,jdbcType=VARCHAR}

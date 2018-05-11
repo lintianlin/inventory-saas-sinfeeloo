@@ -60,7 +60,7 @@ public class UserController extends BaseController {
     @PostMapping(value = "/login")
     public MyResponse login(@RequestParam(value = "account") String account,
                             @RequestParam(value = "password") String password) {
-        MyResponse<String> response = new MyResponse();
+        MyResponse<User> response = new MyResponse();
         try {
             if (StringUtils.isBlank(account)) {
                 response.isError("用户名不能为空");
@@ -70,11 +70,12 @@ public class UserController extends BaseController {
                 response.isError("密码不能为空");
                 return response;
             }
-
             User user = userService.login(account, password);
             if (null != user) {
+                //不显示密码
+                user.setPassword("");
                 response.isSuccess("登陆成功!");
-                response.setData(user.getToken());
+                response.setData(user);
             } else {
                 response.isError("用户不存在！");
             }
@@ -209,8 +210,7 @@ public class UserController extends BaseController {
     @PostMapping(value = "/modifyPassword")
     public ComResp modifyPassword(@RequestParam(value = "id", required = true) Integer id,
                                   @RequestParam(value = "oldPwd", required = true) String oldPwd,
-                                  @RequestParam(value = "newPwd", required = true) String newPwd,
-                                  @RequestParam(value = "confirmPwd", required = true) String confirmPwd) {
+                                  @RequestParam(value = "newPwd", required = true) String newPwd) {
 
         try {
 
@@ -219,12 +219,6 @@ public class UserController extends BaseController {
             }
             if (StringUtils.isBlank(newPwd)) {
                 return ComResp.error("新密码不能为空！");
-            }
-            if (StringUtils.isBlank(confirmPwd)) {
-                return ComResp.error("确认密码不能为空！");
-            }
-            if (!newPwd.equals(confirmPwd)) {
-                return ComResp.error("两次输入的密码不一致！");
             }
             //检查原始密码是否正确
             if (!userService.checkUserPwd(id, oldPwd)) {

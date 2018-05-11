@@ -14,6 +14,7 @@
         <result column="isLeaf" jdbcType="INTEGER" property="isleaf"/>
         <result column="state" jdbcType="INTEGER" property="state"/>
         <result column="updater" jdbcType="VARCHAR" property="updater"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
         <result column="updatime" jdbcType="TIMESTAMP" property="updatime"/>
     </resultMap>
 
@@ -24,6 +25,14 @@
     WHERE (name=#{name,jdbcType=VARCHAR} OR path = #{path,jdbcType=VARCHAR})
     AND state = 1
   </select>
+
+    <!--通过父菜单id查出所有的子菜单-->
+    <select id="selectChildrenMenuByUpId" resultMap="BaseResultMap">
+        SELECT *
+        FROM lz_sys_menu
+        WHERE upId=#{upId,jdbcType=INTEGER}
+        AND state = 1
+    </select>
 
     <!--添加菜单-->
     <insert id="insert" parameterType="com.sinfeeloo.inventory.entity.Menu">
@@ -38,17 +47,26 @@
 
     <!--查询所有未删除的菜单-->
     <select id="selectAll" resultMap="BaseResultMap">
-        select id, name, upId, path, isLeaf, state, updater, updatime
+        select id, name, upId, path, isLeaf, state, updater, updatime,icon
         from lz_sys_menu
         WHERE state = 1
     </select>
 
     <!--通过id查询菜单-->
     <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-        select id, name, upId, path, isLeaf, state, updater, updatime
+        select id, name, upId, path, isLeaf, state, updater, updatime,icon
         from lz_sys_menu
         where id = #{id,jdbcType=INTEGER}
         AND state = 1
+    </select>
+
+    <!--通过id查询根菜单-->
+    <select id="selectRootMenuByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select id, name, upId, path, isLeaf, state, updater, updatime,icon
+        from lz_sys_menu
+        where id = #{id,jdbcType=INTEGER}
+        AND state = 1
+        AND isLeaf = 0
     </select>
 
 

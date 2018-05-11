@@ -57,7 +57,16 @@ public class MenuService {
             if (null != ids && ids.length > 0) {
                 for (int i = 0; i < ids.length; i++) {
                     Menu menu = menuMapper.selectByPrimaryKey(Integer.parseInt(ids[i]));
-                    menuList.add(menu);
+                    if (0 == menu.getIsleaf()) {//判断是否是根节点
+                        menuList.add(menu);
+                    } else {//如果不是根节点
+                        for (int j = 0; j < menuList.size(); j++) {
+                            //如果子菜单的父节点id等于根节点的id，则说明是他的孩子
+                            if(menu.getUpid()==menuList.get(j).getId()){
+                                menuList.get(j).getChildren().add(menu);
+                            }
+                        }
+                    }
                 }
             }
             return menuList;
