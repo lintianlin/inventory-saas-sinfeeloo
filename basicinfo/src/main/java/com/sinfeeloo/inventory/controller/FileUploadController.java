@@ -43,9 +43,9 @@ public class FileUploadController extends BaseController {
             fileUploadService.store(file, image);
             //保存到数据库
             fileUploadService.addImage(image);
-            return ComResp.success("上传成功！", image);
+            return ComResp.success("上传成功！",image);
         } catch (Exception e) {
-            return ComResp.success("上传失败！", e);
+            return ComResp.error("上传失败！", e);
         }
     }
 

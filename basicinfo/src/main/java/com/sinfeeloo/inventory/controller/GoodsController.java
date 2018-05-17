@@ -31,8 +31,8 @@ public class GoodsController extends BaseController {
     @PostMapping(value = "/addGoods")
     public ComResp addGoods(@RequestParam(value = "goodsName", required = true) String goodsName,
                             @RequestParam(value = "goodsCode", required = true) String goodsCode,
-                            @RequestParam(value = "goodsType", required = true) String goodsType,
-                            @RequestParam(value = "brand", required = false, defaultValue = "") String brand,
+                            @RequestParam(value = "typeId", required = true) Integer typeId,
+                            @RequestParam(value = "brandId", required = false) Integer brandId,
                             @RequestParam(value = "unit", required = false, defaultValue = "") String unit,
                             @RequestParam(value = "color", required = false) String color,
                             @RequestParam(value = "standard", required = false) String standard,
@@ -46,8 +46,8 @@ public class GoodsController extends BaseController {
             Goods goods = new Goods();
             goods.setName(goodsName);
             goods.setCode(goodsCode);
-            goods.setType(goodsType);
-            goods.setBrand(brand);
+            goods.setTypeid(typeId);
+            goods.setBrandid(brandId);
             goods.setUnit(unit);
             goods.setColor(color);
             goods.setStandard(standard);
@@ -72,8 +72,8 @@ public class GoodsController extends BaseController {
      *
      * @param goodsName
      * @param goodsCode
-     * @param goodsType
-     * @param brand
+     * @param typeId
+     * @param brandId
      * @param color
      * @param standard
      * @param material
@@ -87,8 +87,8 @@ public class GoodsController extends BaseController {
     public ComResp getGoodsListByPage(
             @RequestParam(value = "goodsName", required = false) String goodsName,
             @RequestParam(value = "goodsCode", required = false) String goodsCode,
-            @RequestParam(value = "goodsType", required = false) String goodsType,
-            @RequestParam(value = "brand", required = false) String brand,
+            @RequestParam(value = "typeId", required = false) Integer typeId,
+            @RequestParam(value = "brandId", required = false) Integer brandId,
             @RequestParam(value = "color", required = false) String color,
             @RequestParam(value = "standard", required = false) String standard,
             @RequestParam(value = "material", required = false) String material,
@@ -100,8 +100,8 @@ public class GoodsController extends BaseController {
         try {
             paging.putSearch("goodsName", goodsName);
             paging.putSearch("goodsCode", goodsCode);
-            paging.putSearch("goodsType", goodsType);
-            paging.putSearch("brand", brand);
+            paging.putSearch("typeid", typeId);
+            paging.putSearch("brandid", brandId);
             paging.putSearch("color", color);
             paging.putSearch("standard", standard);
             paging.putSearch("material", material);
@@ -123,8 +123,8 @@ public class GoodsController extends BaseController {
             @RequestParam(value = "id", required = true) Integer id,
             @RequestParam(value = "goodsName", required = true) String goodsName,
             @RequestParam(value = "goodsCode", required = true) String goodsCode,
-            @RequestParam(value = "goodsType", required = true) String goodsType,
-            @RequestParam(value = "brand", required = false, defaultValue = "") String brand,
+            @RequestParam(value = "typeId", required = true) Integer typeId,
+            @RequestParam(value = "brandId", required = false) Integer brandId,
             @RequestParam(value = "unit", required = false, defaultValue = "") String unit,
             @RequestParam(value = "color", required = false) String color,
             @RequestParam(value = "standard", required = false) String standard,
@@ -139,8 +139,8 @@ public class GoodsController extends BaseController {
             goods.setId(id);
             goods.setName(goodsName);
             goods.setCode(goodsCode);
-            goods.setType(goodsType);
-            goods.setBrand(brand);
+            goods.setTypeid(typeId);
+            goods.setBrandid(brandId);
             goods.setUnit(unit);
             goods.setColor(color);
             goods.setStandard(standard);

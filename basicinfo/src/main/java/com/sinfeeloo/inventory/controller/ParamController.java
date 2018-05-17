@@ -23,21 +23,22 @@ public class ParamController {
     /**
      * 添加参数
      *
-     * @param type
      * @param name
      * @param desc
      * @param creater
      * @return
      */
     @PostMapping(value = "/addParam")
-    public ComResp addParam(@RequestParam(value = "type") String type,
+    public ComResp addParam(@RequestParam(value = "typeName") String typeName,
+                            @RequestParam(value = "typeId") Integer typeId,
                             @RequestParam(value = "name") String name,
                             @RequestParam(value = "desc") String desc,
                             @RequestParam(value = "creater") String creater) {
 
         try {
             Param param = new Param();
-            param.setType(type);
+            param.setTypename(typeName);
+            param.setTypeid(typeId);
             param.setName(name);
             param.setDescs(desc);
             param.setCreater(creater);
@@ -55,7 +56,7 @@ public class ParamController {
      * 分页查询参数
      *
      * @param name
-     * @param type
+     * @param typeName
      * @param limit
      * @param page
      * @param sortCode
@@ -64,7 +65,8 @@ public class ParamController {
      */
     @GetMapping(value = "/getParamListByPage")
     public ComResp getParamListByPage(@RequestParam(value = "name", required = false) String name,
-                                      @RequestParam(value = "type", required = false) String type,
+                                      @RequestParam(value = "typeName", required = false) String typeName,
+                                      @RequestParam(value = "typeId", required = false) Integer typeId,
                                       @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
                                       @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
                                       @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
@@ -74,7 +76,8 @@ public class ParamController {
 
         try {
             paging.putSearch("name", name);
-            paging.putSearch("type", type);
+            paging.putSearch("typename", typeName);
+            paging.putSearch("typeid", typeId);
             paging.putSearch("limit", limit);
             paging.putSearch("page", page);
             paging.putSearch("sortCode", sortCode);
@@ -92,7 +95,6 @@ public class ParamController {
      * 修改参数
      *
      * @param id
-     * @param type
      * @param name
      * @param desc
      * @param updater
@@ -100,7 +102,8 @@ public class ParamController {
      */
     @PostMapping(value = "/modifyParam")
     public ComResp modifyParam(@RequestParam(value = "id") Integer id,
-                               @RequestParam(value = "type") String type,
+                               @RequestParam(value = "typeName") String typeName,
+                               @RequestParam(value = "typeId") Integer typeId,
                                @RequestParam(value = "name") String name,
                                @RequestParam(value = "desc") String desc,
                                @RequestParam(value = "updater") String updater) {
@@ -108,7 +111,8 @@ public class ParamController {
         try {
             Param param = new Param();
             param.setId(id);
-            param.setType(type);
+            param.setTypename(typeName);
+            param.setTypeid(typeId);
             param.setName(name);
             param.setDescs(desc);
             param.setUpdater(updater);

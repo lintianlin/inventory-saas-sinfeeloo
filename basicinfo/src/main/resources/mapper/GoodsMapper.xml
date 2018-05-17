@@ -10,8 +10,10 @@
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
         <result column="code" jdbcType="VARCHAR" property="code"/>
-        <result column="type" jdbcType="VARCHAR" property="type"/>
-        <result column="brand" jdbcType="VARCHAR" property="brand"/>
+        <result column="typeid" jdbcType="INTEGER" property="typeid"/>
+        <result column="typeName" jdbcType="VARCHAR" property="typeName"/>
+        <result column="brandid" jdbcType="INTEGER" property="brandid"/>
+        <result column="brandName" jdbcType="INTEGER" property="brandName"/>
         <result column="unit" jdbcType="VARCHAR" property="unit"/>
         <result column="color" jdbcType="VARCHAR" property="color"/>
         <result column="standard" jdbcType="VARCHAR" property="standard"/>
@@ -34,8 +36,8 @@
         g.id,
         g.name,
         g.code,
-        g.type,
-        g.brand,
+        g.typeid,
+        g.brandid,
         g.unit,
         g.color,
         g.standard,
@@ -50,10 +52,14 @@
         '%Y-%m-%d %H:%i:%s'
         ) AS updatimeStr,
         g.picture,
-        i.file_path AS pictureUrl
+        i.file_path AS pictureUrl,
+        p.name AS brandName,
+        pt.name AS typeName
         FROM
         lz_base_goods g
         LEFT JOIN lz_base_image i ON g.picture=i.id
+        LEFT JOIN lz_base_param p ON g.brandid = p.id
+        LEFT JOIN lz_base_param pt ON g.typeid = pt.id
         WHERE
         g.state = 1
         <if test="goodsName != null and goodsName!=''">
@@ -62,11 +68,11 @@
         <if test="goodsCode != null and goodsCode!=''">
             AND g.code =#{goodsCode}
         </if>
-        <if test="goodsType != null and goodsType!=''">
-            AND g.type =#{goodsType}
+        <if test="typeid != null and typeid!=''">
+            AND g.typeid =#{typeid}
         </if>
-        <if test="brand != null and brand!=''">
-            AND g.brand =#{brand}
+        <if test="brandid != null and brandid!=''">
+            AND g.brandid =#{brandid}
         </if>
         <if test="color != null and color!=''">
             AND g.color =#{color}
@@ -95,11 +101,11 @@
         <if test="goodsCode != null and goodsCode!=''">
             AND code =#{goodsCode}
         </if>
-        <if test="goodsType != null and goodsType!=''">
-            AND type =#{goodsType}
+        <if test="typeid != null and typeid!=''">
+            AND typeid =#{typeid}
         </if>
-        <if test="brand != null and brand!=''">
-            AND brand =#{brand}
+        <if test="brandid != null and brandid!=''">
+            AND brandid =#{brandid}
         </if>
         <if test="color != null and color!=''">
             AND color =#{color}
@@ -114,13 +120,13 @@
 
     <insert id="insert" parameterType="com.sinfeeloo.inventory.entity.Goods">
         insert into lz_base_goods (id, name, code,
-        type, brand, unit,
+        typeid, brandid, unit,
         color, standard, material,
         buyPrice, salePrice, descs,
         updater, updatime, state,
         picture)
         values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{code,jdbcType=VARCHAR},
-        #{type,jdbcType=VARCHAR}, #{brand,jdbcType=VARCHAR}, #{unit,jdbcType=VARCHAR},
+        #{typeid,jdbcType=INTEGER}, #{brandid,jdbcType=INTEGER}, #{unit,jdbcType=VARCHAR},
         #{color,jdbcType=VARCHAR}, #{standard,jdbcType=VARCHAR}, #{material,jdbcType=VARCHAR},
         #{buyprice,jdbcType=VARCHAR}, #{saleprice,jdbcType=VARCHAR}, #{descs,jdbcType=VARCHAR},
         #{updater,jdbcType=VARCHAR}, now(), #{state,jdbcType=INTEGER},
@@ -131,8 +137,8 @@
         update lz_base_goods
         set name = #{name,jdbcType=VARCHAR},
         code = #{code,jdbcType=VARCHAR},
-        type = #{type,jdbcType=VARCHAR},
-        brand = #{brand,jdbcType=VARCHAR},
+        typeid = #{typeid,jdbcType=INTEGER},
+        brandid = #{brandid,jdbcType=INTEGER},
         unit = #{unit,jdbcType=VARCHAR},
         color = #{color,jdbcType=VARCHAR},
         standard = #{standard,jdbcType=VARCHAR},
@@ -164,8 +170,8 @@
 		g.id,
 		g.name,
 		g.CODE,
-		g.type,
-		g.brand,
+		g.typeid,
+		g.brandid,
 		g.unit,
 		g.color,
 		g.standard,

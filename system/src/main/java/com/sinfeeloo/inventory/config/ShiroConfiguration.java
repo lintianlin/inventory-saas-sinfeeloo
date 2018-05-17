@@ -93,8 +93,8 @@ public class ShiroConfiguration {
         //设置  拦截链
         Map<String, String> filterChainDefinitionMap = new HashMap<>();
         filterChainDefinitionMap.put("/**", "statelessAuthcFilter");//其他 都拦截 statelessAuthcFilter
-        filterChainDefinitionMap.put("/team/teamLogin.do", "anon");
         filterChainDefinitionMap.put("/user/login", "anon");
+        filterChainDefinitionMap.put("/images/tmp/*", "anon");
 
         factoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return factoryBean;

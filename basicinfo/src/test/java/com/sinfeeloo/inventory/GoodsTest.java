@@ -27,28 +27,29 @@ public class GoodsTest extends BaseTest {
 
     @Test
     public void addGoods() {
-        ComResp response = goodsController.addGoods("海尔洗衣机H835",
-                "H550028",
-                "洗衣机",
-                "海尔",
-                "台",
-                "白色",
-                "滚筒",
-                "塑料",
-                "3600",
-                "4000",
-                "美的让生活更美丽",
-                3, "admin2");
-        printResponse(response);
-    }
+            ComResp response = goodsController.addGoods("西门子电冰箱G63-5781",
+                    "M63-5781",
+                    53,
+                    57,
+                    "台",
+                    "太空灰",
+                    "快速制冷型",
+                    "塑料",
+                    "5000",
+                    "6060",
+                    "西门子世界知名品牌",
+                    2, "admin2");
+            printResponse(response);
+        }
+
 
     @Test
     public void getGoodsListByPage() {
         ComResp resp = goodsController.getGoodsListByPage(
                 "美",
                 "",
-                "",
-                "",
+                0,
+                50,
                 "",
                 "",
                 "",

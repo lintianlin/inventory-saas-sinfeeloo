@@ -25,9 +25,10 @@ public class ParamTest extends BaseTest {
     @Test
     public void addParam() {
         ComResp response = paramController.addParam(
-                "计量单位",
-                "台",
-                "一台",
+                "品牌",
+                1,
+                "西门子",
+                "品牌",
                 "admin2"
                 );
         printResponse(response);
@@ -37,7 +38,8 @@ public class ParamTest extends BaseTest {
     public void getParamList() {
         ComResp resp = paramController.getParamListByPage(
                 "",
-                "",
+                "品牌",
+                0,
                 10,
                 1,
                 "id",
@@ -49,10 +51,11 @@ public class ParamTest extends BaseTest {
     @Test
     public void modifyParam() {
         ComResp response = paramController.modifyParam(
-                49,
-                "计量单位",
-                "吨",
-                "一吨",
+                50,
+                "品牌",
+                1,
+                "海信",
+                "修改品牌",
                 "admin2"
         );
         printResponse(response);
@@ -60,7 +63,7 @@ public class ParamTest extends BaseTest {
 
     @Test
     public void deleteParam() {
-        ComResp resp = paramController.deleteParam(49, "admin2");
+        ComResp resp = paramController.deleteParam(50, "admin2");
         printResponse(resp);
     }
 }
