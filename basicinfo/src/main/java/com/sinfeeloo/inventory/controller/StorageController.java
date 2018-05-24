@@ -31,7 +31,6 @@ public class StorageController extends BaseController {
      * @param storageAddress
      * @param desc
      * @param administratorId
-     * @param updater
      * @return
      */
     @PostMapping(value = "/addStorage")
@@ -40,7 +39,7 @@ public class StorageController extends BaseController {
                               @RequestParam(value = "storageAddress") String storageAddress,
                               @RequestParam(value = "desc") String desc,
                               @RequestParam(value = "administratorId") Integer administratorId,
-                              @RequestParam(value = "updater") String updater) {
+                              @RequestAttribute User user) {
 
         try {
             Storage storage = new Storage();
@@ -49,7 +48,7 @@ public class StorageController extends BaseController {
             storage.setAddress(storageAddress);
             storage.setDescs(desc);
             storage.setAdminid(administratorId);
-            storage.setUpdater(updater);
+            storage.setUpdater(user.getEmployeeName());
             storage.setState(1);
             storageService.addStorage(storage);
             return ComResp.success("添加成功！");
@@ -95,23 +94,23 @@ public class StorageController extends BaseController {
 
     /**
      * 修改仓库
+     *
      * @param storageId
      * @param storageName
      * @param storageCode
      * @param storageAddress
      * @param desc
      * @param administratorId
-     * @param updater
      * @return
      */
     @PostMapping(value = "/modifyStorage")
-    public ComResp modifyStorage(@RequestParam(value = "storageId") Integer storageId,
+    public ComResp modifyStorage(@RequestParam(value = "id") Integer storageId,
                                  @RequestParam(value = "storageName") String storageName,
                                  @RequestParam(value = "storageCode") String storageCode,
                                  @RequestParam(value = "storageAddress") String storageAddress,
                                  @RequestParam(value = "desc") String desc,
                                  @RequestParam(value = "administratorId") Integer administratorId,
-                                 @RequestParam(value = "updater") String updater) {
+                                 @RequestAttribute User user) {
 
         try {
             Storage storage = new Storage();
@@ -121,7 +120,7 @@ public class StorageController extends BaseController {
             storage.setAddress(storageAddress);
             storage.setDescs(desc);
             storage.setAdminid(administratorId);
-            storage.setUpdater(updater);
+            storage.setUpdater(user.getEmployeeName());
             int num = storageService.modifyStorage(storage);
             return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
         } catch (Exception e) {
@@ -132,6 +131,7 @@ public class StorageController extends BaseController {
 
     /**
      * 删除仓库
+     *
      * @param storageId
      * @return
      */
@@ -144,6 +144,24 @@ public class StorageController extends BaseController {
         } catch (Exception e) {
             return ComResp.error("删除失败！", e);
         }
+    }
+
+
+    /**
+     * 仓库详情查询
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/getStorageDetail")
+    public ComResp getStorageDetail(@RequestParam(value = "id") Integer id) {
+        try {
+            Storage storage = storageService.getById(id);
+            return ComResp.success("查询成功！", storage);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！", e);
+        }
+
     }
 
 }

@@ -55,4 +55,8 @@ public class StorageService {
         storage.setUpdater(updater);
         storageMapper.deleteByPrimaryKey(storage);
     }
+
+    public Storage getById(Integer id){
+        return storageMapper.selectByPrimaryKey(id);
+    }
 }
