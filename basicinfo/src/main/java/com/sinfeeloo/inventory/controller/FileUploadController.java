@@ -7,15 +7,15 @@ import com.sinfeeloo.inventory.service.FileUploadService;
 import com.sinfeeloo.inventory.utils.UUIDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
-@Controller
+@RestController
 @RequestMapping(value = "/image")
 public class FileUploadController extends BaseController {
 
@@ -43,7 +43,7 @@ public class FileUploadController extends BaseController {
             fileUploadService.store(file, image);
             //保存到数据库
             fileUploadService.addImage(image);
-            return ComResp.success("上传成功！",image);
+            return ComResp.success("上传成功！", image);
         } catch (Exception e) {
             return ComResp.error("上传失败！", e);
         }
