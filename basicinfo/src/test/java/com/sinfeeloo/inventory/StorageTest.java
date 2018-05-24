@@ -3,6 +3,7 @@ package com.sinfeeloo.inventory;
 import com.sinfeeloo.inventory.base.BaseTest;
 import com.sinfeeloo.inventory.controller.StorageController;
 import com.sinfeeloo.inventory.entity.ComResp;
+import com.sinfeeloo.inventory.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,7 +59,9 @@ public class StorageTest extends BaseTest {
 
     @Test
     public void deleteStorage() {
-        ComResp resp = storageController.deleteStorage(2, "admin2");
+        User user = new User();
+        user.setEmployeeName("李白");
+        ComResp resp = storageController.deleteStorage(2, user);
         printResponse(resp);
     }
 }

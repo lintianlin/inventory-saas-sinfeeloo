@@ -30,6 +30,11 @@
             <artifactId>common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.sinfeeloo.inventory</groupId>
+            <artifactId>system</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <!--spring-boot相关-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

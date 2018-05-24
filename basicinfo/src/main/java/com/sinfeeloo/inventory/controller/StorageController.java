@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.Storage;
+import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -132,14 +133,13 @@ public class StorageController extends BaseController {
     /**
      * 删除仓库
      * @param storageId
-     * @param updater
      * @return
      */
     @PostMapping(value = "/deleteStorage")
-    public ComResp deleteStorage(@RequestParam(value = "storageId") Integer storageId,
-                                 @RequestParam(value = "updater") String updater) {
+    public ComResp deleteStorage(@RequestParam(value = "id") Integer storageId,
+                                 @RequestAttribute User user) {
         try {
-            storageService.deleteStorage(storageId, updater);
+            storageService.deleteStorage(storageId, user.getEmployeeName());
             return ComResp.success("删除成功！");
         } catch (Exception e) {
             return ComResp.error("删除失败！", e);

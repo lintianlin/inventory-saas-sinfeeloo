@@ -163,17 +163,16 @@ public class GoodsController extends BaseController {
      * 删除商品
      *
      * @param id
-     * @param updater
      * @return
      */
     @PostMapping(value = "/deleteGoods")
     public ComResp deleteGoods(@RequestParam(value = "id") Integer id,
-                               @RequestParam(value = "updater") String updater) {
+                               @RequestAttribute User user) {
 
         try {
             Goods goods = new Goods();
             goods.setId(id);
-            goods.setUpdater(updater);
+            goods.setUpdater(user.getEmployeeName());
             goodsService.deleteGoods(goods);
             return ComResp.success("删除成功！");
         } catch (Exception e) {

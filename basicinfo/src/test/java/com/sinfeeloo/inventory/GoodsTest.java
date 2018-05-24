@@ -5,6 +5,7 @@ import com.sinfeeloo.inventory.controller.GoodsController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Goods;
 import com.sinfeeloo.inventory.entity.MyResponse;
+import com.sinfeeloo.inventory.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,20 +28,20 @@ public class GoodsTest extends BaseTest {
 
     @Test
     public void addGoods() {
-            ComResp response = goodsController.addGoods("西门子电冰箱G63-5781",
-                    "M63-5781",
-                    53,
-                    57,
-                    "台",
-                    "太空灰",
-                    "快速制冷型",
-                    "塑料",
-                    "5000",
-                    "6060",
-                    "西门子世界知名品牌",
-                    2, "admin2");
-            printResponse(response);
-        }
+        ComResp response = goodsController.addGoods("西门子电冰箱G63-5781",
+                "M63-5781",
+                53,
+                57,
+                "台",
+                "太空灰",
+                "快速制冷型",
+                "塑料",
+                "5000",
+                "6060",
+                "西门子世界知名品牌",
+                2, "admin2");
+        printResponse(response);
+    }
 
 
     @Test
@@ -62,8 +63,10 @@ public class GoodsTest extends BaseTest {
 
     @Test
     public void deleteGoods() {
-        ComResp resp = goodsController.deleteGoods(1, "admin2");
-        printResponse(resp);
+        User user = new User();
+        user.setEmployeeName("马先声");
+//        ComResp resp = goodsController.deleteGoods(1, user);
+//        printResponse(resp);
     }
 
     @Test
