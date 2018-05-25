@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.base.BaseTest;
 import com.sinfeeloo.inventory.controller.EmployeeController;
 import com.sinfeeloo.inventory.controller.EmployeeController;
 import com.sinfeeloo.inventory.entity.ComResp;
+import com.sinfeeloo.inventory.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class EmployeeTest extends BaseTest {
                 "北京市海淀区五道口财智国际大厦9999",
                 "lbdxlwb@sina.co",
                 58,
-                "admin2"
+                new User()
                 );
         printResponse(response);
     }
@@ -66,14 +67,14 @@ public class EmployeeTest extends BaseTest {
                 "北京市海淀区五道口财智国际大厦9999",
                 "lbdxlwb@sina.co",
                 58,
-                "admin2"
+                new User()
         );
         printResponse(response);
     }
 
     @Test
     public void deleteEmployee() {
-        ComResp resp = employeeController.deleteEmployee(7, "admin2");
+        ComResp resp = employeeController.deleteEmployee(7, new User());
         printResponse(resp);
     }
 }

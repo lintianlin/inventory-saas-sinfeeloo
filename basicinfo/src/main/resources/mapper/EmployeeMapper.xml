@@ -50,6 +50,7 @@
         state
         from lz_base_employee
         where id = #{id,jdbcType=INTEGER}
+        AND state = 1
     </select>
 
 

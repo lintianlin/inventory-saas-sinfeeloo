@@ -4,10 +4,12 @@ import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Employee;
 import com.sinfeeloo.inventory.entity.Paging;
+import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.EmployeeService;
 import com.sinfeeloo.inventory.utils.CommonUtils;
 import com.sinfeeloo.inventory.utils.DateUtils;
 import com.sinfeeloo.inventory.utils.PhoneFormatCheckUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,7 +39,6 @@ public class EmployeeController extends BaseController {
      * @param address
      * @param email
      * @param roleType
-     * @param updater
      * @return
      */
     @PostMapping(value = "/addEmployee")
@@ -50,7 +51,7 @@ public class EmployeeController extends BaseController {
                                @RequestParam(value = "address", required = false) String address,
                                @RequestParam(value = "email", required = false) String email,
                                @RequestParam(value = "roleType") Integer roleType,
-                               @RequestParam(value = "updater") String updater) {
+                               @RequestAttribute User user) {
 
         try {
 
@@ -60,7 +61,7 @@ public class EmployeeController extends BaseController {
             if (sex != 1 && sex != 2) {
                 return ComResp.error("性别不正确！");
             }
-            if (!CommonUtils.isEmail(email)) {
+            if (!StringUtils.isBlank(email) && !CommonUtils.isEmail(email)) {
                 return ComResp.error("邮箱格式不正确！");
             }
             Employee employee = new Employee();
@@ -73,7 +74,7 @@ public class EmployeeController extends BaseController {
             employee.setEmail(email);
             employee.setAddress(address);
             employee.setType(roleType);
-            employee.setUpdater(updater);
+            employee.setUpdater(user.getEmployeeName());
             employee.setState(1);
             employeeService.addEmployee(employee);
             return ComResp.success("添加成功！");
@@ -133,7 +134,6 @@ public class EmployeeController extends BaseController {
      * @param address
      * @param email
      * @param roleType
-     * @param updater
      * @return
      */
     @PostMapping(value = "/modifyEmployee")
@@ -147,7 +147,7 @@ public class EmployeeController extends BaseController {
                                   @RequestParam(value = "address", required = false) String address,
                                   @RequestParam(value = "email", required = false) String email,
                                   @RequestParam(value = "roleType") Integer roleType,
-                                  @RequestParam(value = "updater") String updater) {
+                                  @RequestAttribute User user) {
 
         try {
 
@@ -171,7 +171,7 @@ public class EmployeeController extends BaseController {
             employee.setEmail(email);
             employee.setAddress(address);
             employee.setType(roleType);
-            employee.setUpdater(updater);
+            employee.setUpdater(user.getEmployeeName());
             int num = employeeService.modifyEmployee(employee);
             return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
         } catch (Exception e) {
@@ -184,21 +184,37 @@ public class EmployeeController extends BaseController {
      * 删除员工
      *
      * @param id
-     * @param updater
      * @return
      */
     @PostMapping(value = "/deleteEmployee")
     public ComResp deleteEmployee(@RequestParam(value = "id") Integer id,
-                                  @RequestParam(value = "updater") String updater) {
+                                  @RequestAttribute User userr) {
 
         try {
             Employee employee = new Employee();
             employee.setId(id);
-            employee.setUpdater(updater);
+            employee.setUpdater(userr.getEmployeeName());
             employeeService.deleteEmployee(employee);
             return ComResp.success("删除成功！");
         } catch (Exception e) {
             return ComResp.success("删除失败！");
+        }
+
+    }
+
+
+    /**
+     * 员工详情
+     *
+     * @return
+     */
+    @GetMapping(value = "/getEmployeeDetail")
+    public ComResp getEmployeeListByPage(@RequestParam(value = "id", required = false) Integer id) {
+        try {
+            Employee employee = employeeService.getEmployeeDetail(id);
+            return ComResp.success("查询成功！", employee);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！", e);
         }
 
     }
