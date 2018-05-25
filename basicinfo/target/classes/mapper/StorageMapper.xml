@@ -30,6 +30,7 @@
         select id, name, code, address, descs, adminId, updater, updatime, state
         from lz_base_repo
         where id = #{id,jdbcType=INTEGER}
+        AND state = 1
     </select>
     <select id="selectAll" resultMap="BaseResultMap">
         <!--

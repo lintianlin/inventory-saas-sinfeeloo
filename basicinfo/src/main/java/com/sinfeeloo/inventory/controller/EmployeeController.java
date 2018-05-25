@@ -188,12 +188,12 @@ public class EmployeeController extends BaseController {
      */
     @PostMapping(value = "/deleteEmployee")
     public ComResp deleteEmployee(@RequestParam(value = "id") Integer id,
-                                  @RequestAttribute User userr) {
+                                  @RequestAttribute User user) {
 
         try {
             Employee employee = new Employee();
             employee.setId(id);
-            employee.setUpdater(userr.getEmployeeName());
+            employee.setUpdater(user.getEmployeeName());
             employeeService.deleteEmployee(employee);
             return ComResp.success("删除成功！");
         } catch (Exception e) {
