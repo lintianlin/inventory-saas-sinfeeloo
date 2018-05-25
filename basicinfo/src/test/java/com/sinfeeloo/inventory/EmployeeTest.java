@@ -33,7 +33,7 @@ public class EmployeeTest extends BaseTest {
                 "1992-11-01",
                 "北京市海淀区五道口财智国际大厦9999",
                 "lbdxlwb@sina.co",
-                "采购人员",
+                58,
                 "admin2"
                 );
         printResponse(response);
@@ -44,6 +44,7 @@ public class EmployeeTest extends BaseTest {
         ComResp resp = employeeController.getEmployeeListByPage(
                 "刘",
                 "",
+                58,
                 10,
                 1,
                 "id",
@@ -64,7 +65,7 @@ public class EmployeeTest extends BaseTest {
                 "1992-11-01",
                 "北京市海淀区五道口财智国际大厦9999",
                 "lbdxlwb@sina.co",
-                "采购人员",
+                58,
                 "admin2"
         );
         printResponse(response);

@@ -49,7 +49,7 @@ public class EmployeeController extends BaseController {
                                @RequestParam(value = "birthday", required = false) String birthday,
                                @RequestParam(value = "address", required = false) String address,
                                @RequestParam(value = "email", required = false) String email,
-                               @RequestParam(value = "roleType") String roleType,
+                               @RequestParam(value = "roleType") Integer roleType,
                                @RequestParam(value = "updater") String updater) {
 
         try {
@@ -96,7 +96,8 @@ public class EmployeeController extends BaseController {
      */
     @GetMapping(value = "/getEmployeeListByPage")
     public ComResp getEmployeeListByPage(@RequestParam(value = "name", required = false) String name,
-                                         @RequestParam(value = "type", required = false) String type,
+                                         @RequestParam(value = "mobile", required = false) String mobile,
+                                         @RequestParam(value = "type", required = false) Integer type,
                                          @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
                                          @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
                                          @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
@@ -104,6 +105,7 @@ public class EmployeeController extends BaseController {
         Paging<Employee> paging = new Paging<>(page, limit);
         try {
             paging.putSearch("name", name);
+            paging.putSearch("mobile", mobile);
             paging.putSearch("type", type);
             paging.putSearch("limit", limit);
             paging.putSearch("page", page);
@@ -144,7 +146,7 @@ public class EmployeeController extends BaseController {
                                   @RequestParam(value = "birthday", required = false) String birthday,
                                   @RequestParam(value = "address", required = false) String address,
                                   @RequestParam(value = "email", required = false) String email,
-                                  @RequestParam(value = "roleType") String roleType,
+                                  @RequestParam(value = "roleType") Integer roleType,
                                   @RequestParam(value = "updater") String updater) {
 
         try {
