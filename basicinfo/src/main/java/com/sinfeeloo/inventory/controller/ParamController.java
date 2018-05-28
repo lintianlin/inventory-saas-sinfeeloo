@@ -31,16 +31,15 @@ public class ParamController {
      * @return
      */
     @PostMapping(value = "/addParam")
-    public ComResp addParam(@RequestParam(value = "typeName") String typeName,
-                            @RequestParam(value = "typeId") Integer typeId,
-                            @RequestParam(value = "name") String name,
-                            @RequestParam(value = "desc") String desc,
-                            @RequestAttribute User user) {
+    public ComResp addParam(
+            @RequestParam(value = "parentId") Integer parentId,
+            @RequestParam(value = "name") String name,
+            @RequestParam(value = "desc") String desc,
+            @RequestAttribute User user) {
 
         try {
             Param param = new Param();
-            param.setTypename(typeName);
-            param.setTypeid(typeId);
+            param.setParentId(parentId);
             param.setName(name);
             param.setDescs(desc);
             param.setCreater(user.getEmployeeName());
@@ -58,7 +57,6 @@ public class ParamController {
      * 分页查询参数
      *
      * @param name
-     * @param typeName
      * @param limit
      * @param page
      * @param sortCode
@@ -67,8 +65,7 @@ public class ParamController {
      */
     @GetMapping(value = "/getParamListByPage")
     public ComResp getParamListByPage(@RequestParam(value = "name", required = false) String name,
-                                      @RequestParam(value = "typeName", required = false) String typeName,
-                                      @RequestParam(value = "typeId", required = false) Integer typeId,
+                                      @RequestParam(value = "parentId", required = false) Integer parentId,
                                       @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
                                       @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
                                       @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
@@ -78,8 +75,7 @@ public class ParamController {
 
         try {
             paging.putSearch("name", name);
-            paging.putSearch("typename", typeName);
-            paging.putSearch("typeid", typeId);
+            paging.putSearch("parentId", parentId);
             paging.putSearch("limit", limit);
             paging.putSearch("page", page);
             paging.putSearch("sortCode", sortCode);
@@ -103,8 +99,7 @@ public class ParamController {
      */
     @PostMapping(value = "/modifyParam")
     public ComResp modifyParam(@RequestParam(value = "id") Integer id,
-                               @RequestParam(value = "typeName") String typeName,
-                               @RequestParam(value = "typeId") Integer typeId,
+                               @RequestParam(value = "parentId") Integer parentId,
                                @RequestParam(value = "name") String name,
                                @RequestParam(value = "desc") String desc,
                                @RequestAttribute User user) {
@@ -112,8 +107,7 @@ public class ParamController {
         try {
             Param param = new Param();
             param.setId(id);
-            param.setTypename(typeName);
-            param.setTypeid(typeId);
+            param.setParentId(parentId);
             param.setName(name);
             param.setDescs(desc);
             param.setUpdater(user.getEmployeeName());
@@ -145,7 +139,7 @@ public class ParamController {
     }
 
     /**
-     * 删除
+     * 查询参数类型（父参数）
      *
      * @return
      */
@@ -159,5 +153,22 @@ public class ParamController {
         }
 
     }
+
+    /**
+     * 查询参数详情
+     *
+     * @return
+     */
+    @GetMapping(value = "/getById")
+    public ComResp getById(@RequestParam(value = "id") Integer id) {
+        try {
+            Param param = paramService.getById(id);
+            return ComResp.success("查询成功！", param);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！", e);
+        }
+
+    }
+
 
 }

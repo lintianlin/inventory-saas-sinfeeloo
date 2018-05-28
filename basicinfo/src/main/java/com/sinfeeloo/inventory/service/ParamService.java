@@ -60,9 +60,14 @@ public class ParamService {
 
     /**
      * 获取参数类型
+     *
      * @return
      */
-    public List<Param> getParamTypeList(){
+    public List<Param> getParamTypeList() {
         return paramMapper.selectParamType();
+    }
+
+    public Param getById(Integer id) {
+        return paramMapper.selectByPrimaryKey(id);
     }
 }
