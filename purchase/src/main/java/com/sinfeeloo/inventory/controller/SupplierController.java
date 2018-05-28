@@ -107,7 +107,7 @@ public class SupplierController extends BaseController {
         }
     }
 
-    @PostMapping(value = "/getById")
+    @GetMapping(value = "/getById")
     public ComResp getById(@RequestParam(value = "id") Integer id) {
         try {
             Supplier supplier = supplierService.getById(id);
