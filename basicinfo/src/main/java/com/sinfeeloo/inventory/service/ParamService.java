@@ -6,6 +6,8 @@ import com.sinfeeloo.inventory.mapper.ParamMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @Author: mhj
  * @Desc:基础参数管理
@@ -54,5 +56,13 @@ public class ParamService {
         param.setId(id);
         param.setUpdater(updater);
         paramMapper.deleteByPrimaryKey(param);
+    }
+
+    /**
+     * 获取参数类型
+     * @return
+     */
+    public List<Param> getParamTypeList(){
+        return paramMapper.selectParamType();
     }
 }

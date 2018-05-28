@@ -7,6 +7,8 @@ import com.sinfeeloo.inventory.service.ParamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @Author: mhj
  * @Desc:参数管理
@@ -140,6 +142,22 @@ public class ParamController {
             return ComResp.success("删除成功！");
         } catch (Exception e) {
             return ComResp.error("删除失败！", e);
+        }
+
+    }
+
+    /**
+     * 删除
+     *
+     * @return
+     */
+    @GetMapping(value = "/getParamTypeList")
+    public ComResp getParamTypeList() {
+        try {
+            List<Param> paramTypeList = paramService.getParamTypeList();
+            return ComResp.success("查询成功！", paramTypeList);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！", e);
         }
 
     }

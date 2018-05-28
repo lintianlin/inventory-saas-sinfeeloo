@@ -38,4 +38,6 @@ public interface ParamMapper {
     long selectParamListCount(Map<String, Object> searchMap);
 
     List<Param> selectParamListByPage(Map<String, Object> searchMap);
+
+    List<Param> selectParamType();
 }
