@@ -3,6 +3,7 @@ package com.sinfeeloo.inventory.controller;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.Param;
+import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.ParamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,6 @@ public class ParamController {
      *
      * @param name
      * @param desc
-     * @param creater
      * @return
      */
     @PostMapping(value = "/addParam")
@@ -35,7 +35,7 @@ public class ParamController {
                             @RequestParam(value = "typeId") Integer typeId,
                             @RequestParam(value = "name") String name,
                             @RequestParam(value = "desc") String desc,
-                            @RequestParam(value = "creater") String creater) {
+                            @RequestAttribute User user) {
 
         try {
             Param param = new Param();
@@ -43,7 +43,7 @@ public class ParamController {
             param.setTypeid(typeId);
             param.setName(name);
             param.setDescs(desc);
-            param.setCreater(creater);
+            param.setCreater(user.getEmployeeName());
             param.setState(1);
             paramService.addParam(param);
             return ComResp.success("添加成功！");
@@ -99,7 +99,6 @@ public class ParamController {
      * @param id
      * @param name
      * @param desc
-     * @param updater
      * @return
      */
     @PostMapping(value = "/modifyParam")
@@ -108,7 +107,7 @@ public class ParamController {
                                @RequestParam(value = "typeId") Integer typeId,
                                @RequestParam(value = "name") String name,
                                @RequestParam(value = "desc") String desc,
-                               @RequestParam(value = "updater") String updater) {
+                               @RequestAttribute User user) {
 
         try {
             Param param = new Param();
@@ -117,7 +116,7 @@ public class ParamController {
             param.setTypeid(typeId);
             param.setName(name);
             param.setDescs(desc);
-            param.setUpdater(updater);
+            param.setUpdater(user.getEmployeeName());
             int num = paramService.modifyParam(param);
             return num > 0 ? ComResp.success("修改成功！") : ComResp.error("修改失败！");
         } catch (Exception e) {
@@ -130,15 +129,14 @@ public class ParamController {
      * 删除
      *
      * @param id
-     * @param updater
      * @return
      */
     @PostMapping(value = "/deleteParam")
     public ComResp deleteParam(@RequestParam(value = "id") Integer id,
-                               @RequestParam(value = "updater") String updater) {
+                               @RequestAttribute User user) {
 
         try {
-            paramService.deleteParam(id, updater);
+            paramService.deleteParam(id, user.getEmployeeName());
             return ComResp.success("删除成功！");
         } catch (Exception e) {
             return ComResp.error("删除失败！", e);
