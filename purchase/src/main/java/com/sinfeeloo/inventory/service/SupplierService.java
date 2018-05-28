@@ -44,4 +44,8 @@ public class SupplierService extends BaseServiceImpl<Supplier> {
     public int delete(Supplier supplier) {
         return supplierMapper.deleteByPrimaryKey(supplier);
     }
+
+    public Supplier getById(Integer id) {
+        return supplierMapper.selectByPrimaryKey(id);
+    }
 }

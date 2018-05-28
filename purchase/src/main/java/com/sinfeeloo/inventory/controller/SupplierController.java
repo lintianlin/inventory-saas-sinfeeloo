@@ -103,4 +103,14 @@ public class SupplierController extends BaseController {
             return deleteError(e);
         }
     }
+
+    @PostMapping(value = "/getById")
+    public ComResp getById(@RequestParam(value = "id") Integer id) {
+        try {
+            Supplier supplier = supplierService.getById(id);
+            return ComResp.success("查询成功！", supplier);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！", e);
+        }
+    }
 }
