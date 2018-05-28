@@ -82,6 +82,9 @@
         <if test="name != null and name!=''">
             AND name LIKE CONCAT ('%',#{name},'%' )
         </if>
+        <if test="linkman != null and linkman!=''">
+            AND linkman LIKE CONCAT ('%',#{linkman},'%' )
+        </if>
         ORDER BY ${sortCode} ${sortRole}
         limit #{limit} offset #{offset}
     </select>
@@ -95,6 +98,9 @@
         state = 1
         <if test="name != null and name!=''">
             AND name LIKE CONCAT ('%',#{name},'%' )
+        </if>
+        <if test="linkman != null and linkman!=''">
+            AND linkman LIKE CONCAT ('%',#{linkman},'%' )
         </if>
     </select>
 </mapper>

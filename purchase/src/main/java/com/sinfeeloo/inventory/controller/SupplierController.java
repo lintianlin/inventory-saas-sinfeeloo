@@ -48,6 +48,7 @@ public class SupplierController extends BaseController {
 
     @GetMapping(value = "/getSupplierListByPage")
     public ComResp getSupplierListByPage(@RequestParam(value = "name") String name,
+                                         @RequestParam(value = "linkman") String linkman,
                                          @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
                                          @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
                                          @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
@@ -56,6 +57,7 @@ public class SupplierController extends BaseController {
         Paging<Supplier> paging = new Paging<>(page, limit);
         try {
             paging.putSearch("name", name);
+            paging.putSearch("linkman", linkman);
             putCommonPageSearchMap(paging, limit, page, sortCode, sortRole);
             supplierService.getListByPage(paging);
             return querySuccess(paging);
