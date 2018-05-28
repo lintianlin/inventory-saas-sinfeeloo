@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.Supplier;
+import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,7 @@ public class SupplierController extends BaseController {
                                @RequestParam(value = "mobile") String mobile,
                                @RequestParam(value = "address") String address,
                                @RequestParam(value = "desc", required = false) String desc,
-                               @RequestParam(value = "updater") String updater) {
+                               @RequestAttribute User user) {
 
         try {
             Supplier supplier = new Supplier();
@@ -37,7 +38,7 @@ public class SupplierController extends BaseController {
             supplier.setAddress(address);
             supplier.setDescs(desc);
             supplier.setState(1);
-            supplier.setUpdater(updater);
+            supplier.setUpdater(user.getAccount());
             supplierService.add(supplier);
             return addSuccess();
         } catch (Exception e) {
@@ -72,7 +73,7 @@ public class SupplierController extends BaseController {
                                   @RequestParam(value = "mobile") String mobile,
                                   @RequestParam(value = "address") String address,
                                   @RequestParam(value = "desc", required = false) String desc,
-                                  @RequestParam(value = "updater") String updater) {
+                                  @RequestAttribute User user) {
 
         try {
             Supplier supplier = new Supplier();
@@ -82,7 +83,7 @@ public class SupplierController extends BaseController {
             supplier.setMobile(mobile);
             supplier.setAddress(address);
             supplier.setDescs(desc);
-            supplier.setUpdater(updater);
+            supplier.setUpdater(user.getAccount());
             int num = supplierService.update(supplier);
             return modifyResult(num);
         } catch (Exception e) {
@@ -92,11 +93,11 @@ public class SupplierController extends BaseController {
 
     @PostMapping(value = "/deleteSupplier")
     public ComResp deleteSupplier(@RequestParam(value = "id") Integer id,
-                                  @RequestParam(value = "updater") String updater) {
+                                  @RequestAttribute User user) {
         try {
             Supplier supplier = new Supplier();
             supplier.setId(id);
-            supplier.setUpdater(updater);
+            supplier.setUpdater(user.getAccount());
             supplierService.delete(supplier);
             return deleteSuccess();
         } catch (Exception e) {
