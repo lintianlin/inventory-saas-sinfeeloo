@@ -69,7 +69,7 @@ public class StorageController extends BaseController {
      * @return
      */
     @GetMapping(value = "/getStorageListByPage")
-    public ComResp getStorageListByPage(@RequestParam(value = "storageName") String storageName,
+    public ComResp getStorageListByPage(@RequestParam(value = "storageName", required = false) String storageName,
                                         @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
                                         @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
                                         @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,

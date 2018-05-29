@@ -176,7 +176,7 @@ public class PurchaseOrderController extends BaseController {
     public ComResp check(@RequestParam(value = "id") Integer id,
                          @RequestParam(value = "checkAccount") String checkAccount,
                          @RequestParam(value = "checkState") Integer checkState,
-                         @RequestParam(value = "updater") String updater) {
+                         @RequestAttribute User user) {
         try {
             PurchaseOrder order = new PurchaseOrder();
             order.setId(id);
@@ -193,7 +193,7 @@ public class PurchaseOrderController extends BaseController {
             } else {
                 return ComResp.error("审核状态错误！");
             }
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
 
             int num = purchaseOrderService.check(order);
             return modifyResult(num);

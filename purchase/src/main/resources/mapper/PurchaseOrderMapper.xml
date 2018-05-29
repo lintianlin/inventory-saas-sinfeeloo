@@ -133,10 +133,10 @@
         o.type
         FROM
         lz_purchase_order o
-        LEFT JOIN lz_base_goods g ON o.goodsId = g.id
-        LEFT JOIN lz_base_repo r ON o.repoId = r.id
-        LEFT JOIN lz_base_employee e ON o.employeeId = e.id
-        LEFT JOIN lz_purchase_supplier s ON o.supplierId = s.id
+        LEFT JOIN lz_base_goods g ON o.goodsId = g.id AND g.state =1
+        LEFT JOIN lz_base_repo r ON o.repoId = r.id AND r.state =1
+        LEFT JOIN lz_base_employee e ON o.employeeId = e.id AND e.state = 1
+        LEFT JOIN lz_purchase_supplier s ON o.supplierId = s.id AND s.state = 1
         WHERE
         o.state = 1
         <if test="goodsName != null and goodsName!=''">
@@ -146,7 +146,7 @@
             AND o.type =#{type}
         </if>
         <if test="orderNumber != null and orderNumber!=''">
-            AND o.orderNumber =#{orderNumber}
+            AND o.orderNumber LIKE CONCAT ('%',#{orderNumber},'%' )
         </if>
         <if test="supplierName != null and supplierName!=''">
             AND s.name LIKE CONCAT ('%',#{supplierName},'%' )
