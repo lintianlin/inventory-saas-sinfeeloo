@@ -3,6 +3,7 @@ package com.sinfeeloo.inventory;
 import com.sinfeeloo.inventory.base.BaseTest;
 import com.sinfeeloo.inventory.controller.PurchaseOrderController;
 import com.sinfeeloo.inventory.entity.ComResp;
+import com.sinfeeloo.inventory.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,6 @@ public class PurchaseOrderTest extends BaseTest {
         ComResp response = purchaseOrderController.add(
                 9,
                 2,
-                "宏泰供应商",
                 5,
                 100,
                 1,
@@ -34,7 +34,7 @@ public class PurchaseOrderTest extends BaseTest {
                 "360000",
                 8,
                 "哈哈",
-                "admin2"
+                new User()
         );
         printResponse(response);
     }
@@ -72,14 +72,14 @@ public class PurchaseOrderTest extends BaseTest {
                 "380000",
                 8,
                 "哈哈666666",
-                "admin2"
+                new User()
         );
         printResponse(response);
     }
 
     @Test
     public void deletePurchaseOrder() {
-        ComResp resp = purchaseOrderController.delete(1, "admin2");
+        ComResp resp = purchaseOrderController.delete(1, new User());
         printResponse(resp);
     }
 

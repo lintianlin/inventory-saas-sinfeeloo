@@ -82,4 +82,8 @@ public class PurchaseOrderService extends BaseServiceImpl<PurchaseOrder> {
         paging.setList(purchaseOrderMapper.selectCheckOrderListByPage(paging.getSearchMap()));
 
     }
+
+    public PurchaseOrder getById(Integer id) {
+        return purchaseOrderMapper.selectByPrimaryKey(id);
+    }
 }

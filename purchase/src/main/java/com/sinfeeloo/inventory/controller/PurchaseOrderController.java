@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.PurchaseOrder;
+import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.PurchaseOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -35,7 +36,7 @@ public class PurchaseOrderController extends BaseController {
      * @param totalPrice
      * @param operatorId
      * @param descs
-     * @param updater
+     * @param user
      * @return
      */
     @PostMapping(value = "/add")
@@ -48,7 +49,7 @@ public class PurchaseOrderController extends BaseController {
                        @RequestParam(value = "totalPrice", required = false) String totalPrice,
                        @RequestParam(value = "operatorId") Integer operatorId,
                        @RequestParam(value = "descs", required = false) String descs,
-                       @RequestParam(value = "updater") String updater) {
+                       @RequestAttribute User user) {
 
         try {
             PurchaseOrder order = new PurchaseOrder();
@@ -65,8 +66,8 @@ public class PurchaseOrderController extends BaseController {
             order.setState(1);
             order.setCheckstate(1);
             order.setCheckresult("未审核");
-            order.setUpdater(updater);
-            order.setCreater(updater);
+            order.setUpdater(user.getAccount());
+            order.setCreater(user.getAccount());
 
             purchaseOrderService.add(order);
             return addSuccess();
@@ -122,7 +123,7 @@ public class PurchaseOrderController extends BaseController {
                           @RequestParam(value = "totalPrice", required = false) String totalPrice,
                           @RequestParam(value = "operatorId") Integer operatorId,
                           @RequestParam(value = "descs", required = false) String descs,
-                          @RequestParam(value = "updater") String updater) {
+                          @RequestAttribute User user) {
 
         try {
             PurchaseOrder order = new PurchaseOrder();
@@ -136,7 +137,7 @@ public class PurchaseOrderController extends BaseController {
             order.setTotalprice(new BigDecimal(totalPrice));
             order.setEmployeeid(operatorId);
             order.setDescs(descs);
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
             int num = purchaseOrderService.update(order);
             return modifyResult(num);
         } catch (Exception e) {
@@ -147,15 +148,26 @@ public class PurchaseOrderController extends BaseController {
 
     @PostMapping(value = "/delete")
     public ComResp delete(@RequestParam(value = "id") Integer id,
-                          @RequestParam(value = "updater") String updater) {
+                          @RequestAttribute User user) {
         try {
             PurchaseOrder order = new PurchaseOrder();
             order.setId(id);
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
             purchaseOrderService.delete(order);
             return deleteSuccess();
         } catch (Exception e) {
             return deleteError(e);
+        }
+    }
+
+
+    @PostMapping(value = "/getById")
+    public ComResp getById(@RequestParam(value = "id") Integer id) {
+        try {
+            PurchaseOrder purchaseOrder =  purchaseOrderService.getById(id);
+            return ComResp.success("查询成功！",purchaseOrder);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！",e);
         }
     }
 
