@@ -28,7 +28,6 @@ public class PurchaseOrderController extends BaseController {
      * 添加订单
      * @param goodsId
      * @param supplierId
-     * @param supplierName
      * @param respId
      * @param type  判断是什么类型的订单：  进货单    退货单
      * @param count
@@ -42,7 +41,6 @@ public class PurchaseOrderController extends BaseController {
     @PostMapping(value = "/add")
     public ComResp add(@RequestParam(value = "goodsId") Integer goodsId,
                        @RequestParam(value = "supplierId") Integer supplierId,
-                       @RequestParam(value = "supplierName") String supplierName,
                        @RequestParam(value = "respId", required = false) Integer respId,
                        @RequestParam(value = "type") Integer type,
                        @RequestParam(value = "count") Integer count,
@@ -57,7 +55,6 @@ public class PurchaseOrderController extends BaseController {
             order.setOrdernumber(purchaseOrderService.getPurchaseOrderNumber());
             order.setGoodsid(goodsId);
             order.setSupplierid(supplierId);
-            order.setSuppliername(supplierName);
             order.setRepoid(respId);
             order.setCount(count);
             order.setUnitprice(new BigDecimal(unitPrice));

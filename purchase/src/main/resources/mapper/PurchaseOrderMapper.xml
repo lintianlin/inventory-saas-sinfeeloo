@@ -41,7 +41,7 @@
     <!--添加-->
     <insert id="insert" parameterType="com.sinfeeloo.inventory.entity.PurchaseOrder">
         insert into lz_purchase_order (id, goodsId, supplierId,
-          supplierName, repoId, orderNumber,
+           repoId, orderNumber,
           count, unitPrice, totalPrice,
           employeeId, descs, checkState,
           checkResult, checkAccount, checktime,
@@ -49,7 +49,7 @@
           updater, updatime, state,
           type)
         values (#{id,jdbcType=INTEGER}, #{goodsid,jdbcType=INTEGER}, #{supplierid,jdbcType=INTEGER},
-          #{suppliername,jdbcType=VARCHAR}, #{repoid,jdbcType=INTEGER}, #{ordernumber,jdbcType=VARCHAR},
+          #{repoid,jdbcType=INTEGER}, #{ordernumber,jdbcType=VARCHAR},
           #{count,jdbcType=INTEGER}, #{unitprice,jdbcType=DECIMAL}, #{totalprice,jdbcType=DECIMAL},
           #{employeeid,jdbcType=INTEGER}, #{descs,jdbcType=VARCHAR}, #{checkstate,jdbcType=INTEGER},
           #{checkresult,jdbcType=VARCHAR}, #{checkaccount,jdbcType=VARCHAR}, #{checktime,jdbcType=TIMESTAMP},
@@ -62,7 +62,6 @@
         update lz_purchase_order
         set goodsId = #{goodsid,jdbcType=INTEGER},
         supplierId = #{supplierid,jdbcType=INTEGER},
-        supplierName = #{suppliername,jdbcType=VARCHAR},
         repoId = #{repoid,jdbcType=INTEGER},
         count = #{count,jdbcType=INTEGER},
         unitPrice = #{unitprice,jdbcType=DECIMAL},
@@ -96,7 +95,7 @@
         o.goodsId,
         g.`name` AS goodsName,
         o.supplierId,
-        o.supplierName,
+        s.name AS supplierName,
         o.repoId,
         r.`name` AS storageName,
         o.orderNumber,
@@ -137,6 +136,7 @@
         LEFT JOIN lz_base_goods g ON o.goodsId = g.id
         LEFT JOIN lz_base_repo r ON o.repoId = r.id
         LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+        LEFT JOIN lz_purchase_supplier s ON o.supplierId = s.id
         WHERE
         o.state = 1
         <if test="goodsName != null and goodsName!=''">
@@ -149,7 +149,7 @@
             AND o.orderNumber =#{orderNumber}
         </if>
         <if test="supplierName != null and supplierName!=''">
-            AND o.supplierName LIKE CONCAT ('%',#{supplierName},'%' )
+            AND s.name LIKE CONCAT ('%',#{supplierName},'%' )
         </if>
         <if test="repoId != null and repoId!=''">
             AND o.repoId =#{repoId}
@@ -178,6 +178,7 @@
         LEFT JOIN lz_base_goods g ON o.goodsId = g.id
         LEFT JOIN lz_base_repo r ON o.repoId = r.id
         LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+        LEFT JOIN lz_purchase_supplier s ON o.supplierId = s.id
         WHERE
         o.state = 1
         <if test="goodsName != null and goodsName!=''">
@@ -190,7 +191,7 @@
             AND o.orderNumber =#{orderNumber}
         </if>
         <if test="supplierName != null and supplierName!=''">
-            AND o.supplierName LIKE CONCAT ('%',#{supplierName},'%' )
+            AND s.name LIKE CONCAT ('%',#{supplierName},'%' )
         </if>
         <if test="repoId != null and repoId!=''">
             AND o.repoId =#{repoId}
@@ -245,7 +246,7 @@
         o.goodsId,
         g.`name` AS goodsName,
         o.supplierId,
-        o.supplierName,
+        s.name AS supplierName,
         o.repoId,
         r.`name` AS storageName,
         o.orderNumber,
@@ -286,6 +287,7 @@
         LEFT JOIN lz_base_goods g ON o.goodsId = g.id
         LEFT JOIN lz_base_repo r ON o.repoId = r.id
         LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+        LEFT JOIN lz_purchase_supplier s ON o.supplierId = s.id
         WHERE
         o.state = 1
         AND  o.checkState = 4
@@ -299,7 +301,7 @@
             AND o.orderNumber =#{orderNumber}
         </if>
         <if test="supplierName != null and supplierName!=''">
-            AND o.supplierName LIKE CONCAT ('%',#{supplierName},'%' )
+            AND s.name LIKE CONCAT ('%',#{supplierName},'%' )
         </if>
         <if test="repoId != null and repoId!=''">
             AND o.repoId =#{repoId}
@@ -326,6 +328,7 @@
         LEFT JOIN lz_base_goods g ON o.goodsId = g.id
         LEFT JOIN lz_base_repo r ON o.repoId = r.id
         LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+        LEFT JOIN lz_purchase_supplier s ON o.supplierId = s.id
         WHERE
         o.state = 1
         AND  o.checkState = 4
@@ -339,7 +342,7 @@
             AND o.orderNumber =#{orderNumber}
         </if>
         <if test="supplierName != null and supplierName!=''">
-            AND o.supplierName LIKE CONCAT ('%',#{supplierName},'%' )
+            AND s.name LIKE CONCAT ('%',#{supplierName},'%' )
         </if>
         <if test="repoId != null and repoId!=''">
             AND o.repoId =#{repoId}

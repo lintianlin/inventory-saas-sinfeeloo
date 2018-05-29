@@ -39,6 +39,7 @@ public class SupplierTest extends BaseTest {
     public void getSupplierList() {
         ComResp resp = supplierController.getSupplierListByPage(
                 "",
+                "",
                 10,
                 1,
                 "id",
