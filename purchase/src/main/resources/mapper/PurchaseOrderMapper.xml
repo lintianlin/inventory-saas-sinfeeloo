@@ -53,7 +53,7 @@
           #{count,jdbcType=INTEGER}, #{unitprice,jdbcType=DECIMAL}, #{totalprice,jdbcType=DECIMAL},
           #{employeeid,jdbcType=INTEGER}, #{descs,jdbcType=VARCHAR}, #{checkstate,jdbcType=INTEGER},
           #{checkresult,jdbcType=VARCHAR}, #{checkaccount,jdbcType=VARCHAR}, #{checktime,jdbcType=TIMESTAMP},
-          #{taketime,jdbcType=TIMESTAMP}, #{creater,jdbcType=VARCHAR}, now(),
+          now(), #{creater,jdbcType=VARCHAR}, now(),
           #{updater,jdbcType=VARCHAR}, now(), #{state,jdbcType=INTEGER},
           #{type,jdbcType=INTEGER})
   </insert>

@@ -161,7 +161,7 @@ public class PurchaseOrderController extends BaseController {
     }
 
 
-    @PostMapping(value = "/getById")
+    @GetMapping(value = "/getById")
     public ComResp getById(@RequestParam(value = "id") Integer id) {
         try {
             PurchaseOrder purchaseOrder =  purchaseOrderService.getById(id);
