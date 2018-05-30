@@ -224,13 +224,12 @@ public class SalesOrderController extends BaseController {
      */
     @PostMapping(value = "/check")
     public ComResp check(@RequestParam(value = "id") Integer id,
-                         @RequestParam(value = "checkAccount") String checkAccount,
                          @RequestParam(value = "checkState") Integer checkState,
                          @RequestAttribute User user) {
         try {
             SalesOrder order = new SalesOrder();
             order.setId(id);
-            order.setCheckaccount(checkAccount);
+            order.setCheckaccount(user.getAccount());
             order.setCheckstate(checkState);
             if (checkState == 2) {
                 order.setCheckresult("不通过");

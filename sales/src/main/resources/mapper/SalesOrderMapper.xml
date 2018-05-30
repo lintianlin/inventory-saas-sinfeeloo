@@ -306,7 +306,7 @@
     o.goodsId,
     g.`name` AS goodsName,
     o.customerId,
-    o.customerName,
+    cus.`name` AS customerName,
     o.repoId,
     r.`name` AS storageName,
     o.orderNumber,
@@ -347,6 +347,7 @@
     LEFT JOIN lz_base_goods g ON o.goodsId = g.id
     LEFT JOIN lz_base_repo r ON o.repoId = r.id
     LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+    LEFT JOIN lz_sale_customer cus ON o.customerId = cus.id
     WHERE
     o.state = 1
     AND o.checkState = 4
@@ -360,7 +361,7 @@
       AND o.orderNumber =#{orderNumber}
     </if>
     <if test="customerName != null and customerName!=''">
-      AND o.customerName LIKE CONCAT ('%',#{customerName},'%' )
+      AND cus.`name` LIKE CONCAT ('%',#{customerName},'%' )
     </if>
     <if test="repoId != null and repoId!=''">
       AND o.repoId =#{repoId}
@@ -388,6 +389,7 @@
     LEFT JOIN lz_base_goods g ON o.goodsId = g.id
     LEFT JOIN lz_base_repo r ON o.repoId = r.id
     LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+    LEFT JOIN lz_sale_customer cus ON o.customerId = cus.id
     WHERE
     o.state = 1
     AND o.checkState = 4
@@ -401,7 +403,7 @@
       AND o.orderNumber =#{orderNumber}
     </if>
     <if test="customerName != null and customerName!=''">
-      AND o.customerName LIKE CONCAT ('%',#{customerName},'%' )
+      AND cus.`name` LIKE CONCAT ('%',#{customerName},'%' )
     </if>
     <if test="repoId != null and repoId!=''">
       AND o.repoId =#{repoId}
