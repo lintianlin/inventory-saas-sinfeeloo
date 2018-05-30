@@ -3,6 +3,7 @@ package com.sinfeeloo.inventory;
 import com.sinfeeloo.inventory.base.BaseTest;
 import com.sinfeeloo.inventory.controller.SalesOrderController;
 import com.sinfeeloo.inventory.entity.ComResp;
+import com.sinfeeloo.inventory.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,7 @@ public class SalesOrderTest extends BaseTest {
                 "360000",
                 8,
                 "老龄化社会观察：当互联网企业遇到“银发族”员工",
-                "admin2"
+                new User()
         );
         printResponse(response);
     }
@@ -70,20 +71,20 @@ public class SalesOrderTest extends BaseTest {
                 "3800000",
                 8,
                 "科学育儿 | 每个孩子都是解决自己问题的专家",
-                "admin2"
+                new User()
         );
         printResponse(response);
     }
 
     @Test
     public void deleteSalesOrder() {
-        ComResp resp = salesOrderController.delete(1, "admin2");
+        ComResp resp = salesOrderController.delete(1, new User());
         printResponse(resp);
     }
 
     @Test
     public void chechOrder() {
-        ComResp resp = salesOrderController.check(15, "刘德华", 4, "admin2");
+        ComResp resp = salesOrderController.check(15, "刘德华", 4, new User());
         printResponse(resp);
     }
 }
