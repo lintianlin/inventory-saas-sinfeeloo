@@ -47,8 +47,8 @@ public class SupplierController extends BaseController {
     }
 
     @GetMapping(value = "/getSupplierListByPage")
-    public ComResp getSupplierListByPage(@RequestParam(value = "name") String name,
-                                         @RequestParam(value = "linkman") String linkman,
+    public ComResp getSupplierListByPage(@RequestParam(value = "name",required = false) String name,
+                                         @RequestParam(value = "linkman",required = false) String linkman,
                                          @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
                                          @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
                                          @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
