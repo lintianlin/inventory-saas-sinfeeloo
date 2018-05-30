@@ -44,4 +44,8 @@ public class CustomerService extends BaseServiceImpl<Customer> {
     public int delete(Customer customer) {
         return customerMapper.deleteByPrimaryKey(customer);
     }
+
+    public Customer getById(Integer id) {
+        return customerMapper.selectByPrimaryKey(id);
+    }
 }
