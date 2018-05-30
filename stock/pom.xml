@@ -33,6 +33,11 @@
 		</dependency>
 		<dependency>
 			<groupId>com.sinfeeloo.inventory</groupId>
+			<artifactId>system</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sinfeeloo.inventory</groupId>
 			<artifactId>purchase</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>

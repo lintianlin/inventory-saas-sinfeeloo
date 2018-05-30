@@ -51,7 +51,7 @@ public class StockController extends BaseController {
      * @param checkAccount
      * @param checkState
      * @param checkResult
-     * @param updater
+     * @param user
      * @return
      */
     @PostMapping(value = "/checkPurcharOrder")
@@ -59,7 +59,7 @@ public class StockController extends BaseController {
                                      @RequestParam(value = "checkAccount") String checkAccount,
                                      @RequestParam(value = "checkState") Integer checkState,
                                      @RequestParam(value = "checkResult") String checkResult,
-                                     @RequestParam(value = "updater") String updater) {
+                                     @RequestAttribute User user) {
         try {
             PurchaseOrder order = new PurchaseOrder();
             order.setId(id);
@@ -74,7 +74,7 @@ public class StockController extends BaseController {
             } else {
                 return ComResp.error("审核状态错误！");
             }
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
             int num = stockService.checkPurchaseOrder(order);
             return num > 0 ? ComResp.success("审核成功！") : ComResp.error("审核失败！");
         } catch (Exception e) {
@@ -90,7 +90,7 @@ public class StockController extends BaseController {
      * @param checkAccount
      * @param checkState
      * @param checkResult
-     * @param updater
+     * @param user
      * @return
      */
     @PostMapping(value = "/checkSalesOrder")
@@ -98,7 +98,7 @@ public class StockController extends BaseController {
                                    @RequestParam(value = "checkAccount") String checkAccount,
                                    @RequestParam(value = "checkState") Integer checkState,
                                    @RequestParam(value = "checkResult") String checkResult,
-                                   @RequestParam(value = "updater") String updater) {
+                                   @RequestAttribute User user) {
         try {
             SalesOrder order = new SalesOrder();
             order.setId(id);
@@ -113,7 +113,7 @@ public class StockController extends BaseController {
             } else {
                 return ComResp.error("审核状态错误！");
             }
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
             int num = stockService.checkSalesOrder(order);
             if (num < 0) {
                 return ComResp.error("库存不足");

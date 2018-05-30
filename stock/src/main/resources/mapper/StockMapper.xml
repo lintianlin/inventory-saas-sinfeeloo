@@ -140,7 +140,18 @@
         s.updatime
         FROM
         lz_stock s
-        LEFT JOIN lz_base_goods g ON s.goodsId = g.id
+        LEFT JOIN (
+        SELECT
+        gs.id,
+        gs. NAME,
+        gs. CODE,
+        gs.unit,
+        p. NAME AS type,
+        gs.standard
+        FROM
+        lz_base_goods gs
+        LEFT JOIN lz_base_param p ON gs.typeid = p.id
+        ) g ON s.goodsId = g.id
         LEFT JOIN lz_base_repo r ON s.repoId = r.id
         WHERE
         s.state = 1
