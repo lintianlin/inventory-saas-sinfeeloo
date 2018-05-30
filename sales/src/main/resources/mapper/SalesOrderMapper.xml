@@ -54,7 +54,7 @@
       #{count,jdbcType=INTEGER}, #{unitprice,jdbcType=DECIMAL}, #{totalprice,jdbcType=DECIMAL}, 
       #{employeeid,jdbcType=INTEGER}, #{descs,jdbcType=VARCHAR}, #{checkstate,jdbcType=INTEGER}, 
       #{checkresult,jdbcType=VARCHAR}, #{checkaccount,jdbcType=VARCHAR}, #{checktime,jdbcType=TIMESTAMP}, 
-      #{taketime,jdbcType=TIMESTAMP}, #{creater,jdbcType=VARCHAR}, now(),
+      now(), #{creater,jdbcType=VARCHAR}, now(),
       #{updater,jdbcType=VARCHAR}, now(), #{state,jdbcType=INTEGER},
       #{type,jdbcType=INTEGER})
   </insert>
@@ -151,7 +151,7 @@
     LEFT JOIN lz_sale_customer cus ON o.customerId = cus.id
     WHERE
     o.state = 1
-    AND id = #{id,jdbcType=INTEGER}
+    AND o.id = #{id,jdbcType=INTEGER}
   </select>
 
 
@@ -209,11 +209,14 @@
     <if test="goodsName != null and goodsName!=''">
       AND g.`name` LIKE CONCAT ('%',#{goodsName},'%' )
     </if>
+    <if test="customerName != null and customerName!=''">
+      AND cus.`name` LIKE CONCAT ('%',#{customerName},'%' )
+    </if>
     <if test="type != null and type!=''">
       AND o.type =#{type}
     </if>
     <if test="orderNumber != null and orderNumber!=''">
-      AND o.orderNumber =#{orderNumber}
+      AND o.orderNumber LIKE CONCAT ('%',#{orderNumber},'%' )
     </if>
     <if test="repoId != null and repoId!=''">
       AND o.repoId =#{repoId}
@@ -246,6 +249,9 @@
     o.state = 1
     <if test="goodsName != null and goodsName!=''">
       AND g.`name` LIKE CONCAT ('%',#{goodsName},'%' )
+    </if>
+    <if test="customerName != null and customerName!=''">
+      AND cus.`name` LIKE CONCAT ('%',#{customerName},'%' )
     </if>
     <if test="type != null and type!=''">
       AND o.type =#{type}
