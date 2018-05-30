@@ -65,7 +65,6 @@ public class PurchaseOrderTest extends BaseTest {
                 26,
                 9,
                 2,
-                "宏泰供应商",
                 5,
                 100,
                 "3800",

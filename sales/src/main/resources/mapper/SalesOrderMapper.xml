@@ -42,7 +42,7 @@
   <!--添加-->
   <insert id="insert" parameterType="com.sinfeeloo.inventory.entity.SalesOrder" >
     insert into lz_sale_order (id, goodsId, customerId,
-      customerName, repoId, orderNumber, 
+       repoId, orderNumber,
       count, unitPrice, totalPrice, 
       employeeId, descs, checkState, 
       checkResult, checkAccount, checktime, 
@@ -50,7 +50,7 @@
       updater, updatime, state, 
       type)
     values (#{id,jdbcType=INTEGER}, #{goodsid,jdbcType=INTEGER}, #{customerid,jdbcType=INTEGER}, 
-      #{customername,jdbcType=VARCHAR}, #{repoid,jdbcType=INTEGER}, #{ordernumber,jdbcType=VARCHAR}, 
+     #{repoid,jdbcType=INTEGER}, #{ordernumber,jdbcType=VARCHAR},
       #{count,jdbcType=INTEGER}, #{unitprice,jdbcType=DECIMAL}, #{totalprice,jdbcType=DECIMAL}, 
       #{employeeid,jdbcType=INTEGER}, #{descs,jdbcType=VARCHAR}, #{checkstate,jdbcType=INTEGER}, 
       #{checkresult,jdbcType=VARCHAR}, #{checkaccount,jdbcType=VARCHAR}, #{checktime,jdbcType=TIMESTAMP}, 
@@ -64,7 +64,6 @@
     update lz_sale_order
     set goodsId = #{goodsid,jdbcType=INTEGER},
       customerId = #{customerid,jdbcType=INTEGER},
-      customerName = #{customername,jdbcType=VARCHAR},
       repoId = #{repoid,jdbcType=INTEGER},
       count = #{count,jdbcType=INTEGER},
       unitPrice = #{unitprice,jdbcType=DECIMAL},
@@ -103,22 +102,12 @@
   </update>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select id, goodsId, customerId, customerName, repoId, orderNumber, count, unitPrice,
-    totalPrice, employeeId, descs, checkState, checkResult, checkAccount, checktime, 
-    taketime, creater, creatime, updater, updatime, state, type
-    from lz_sale_order
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-
-
-  <!--销售订单分页查询-->
-  <select id="selectOrderListByPage" resultMap="BaseResultMap">
     SELECT
     o.id,
     o.goodsId,
     g.`name` AS goodsName,
     o.customerId,
-    o.customerName,
+    cus.`name` AS customerName,
     o.repoId,
     r.`name` AS storageName,
     o.orderNumber,
@@ -159,6 +148,62 @@
     LEFT JOIN lz_base_goods g ON o.goodsId = g.id
     LEFT JOIN lz_base_repo r ON o.repoId = r.id
     LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+    LEFT JOIN lz_sale_customer cus ON o.customerId = cus.id
+    WHERE
+    o.state = 1
+    AND id = #{id,jdbcType=INTEGER}
+  </select>
+
+
+  <!--销售订单分页查询-->
+  <select id="selectOrderListByPage" resultMap="BaseResultMap">
+    SELECT
+    o.id,
+    o.goodsId,
+    g.`name` AS goodsName,
+    o.customerId,
+    cus.`name` AS customerName,
+    o.repoId,
+    r.`name` AS storageName,
+    o.orderNumber,
+    o.count,
+    o.unitPrice,
+    o.totalPrice,
+    o.employeeId,
+    e.`name` AS operator,
+    o.descs,
+    o.checkState,
+    o.checkResult,
+    o.checkAccount,
+    o.checktime,
+    DATE_FORMAT(
+    o.checktime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS checktimeStr,
+    o.taketime,
+    DATE_FORMAT(
+    o.taketime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS taketimeStr,
+    o.creater,
+    o.creatime,
+    DATE_FORMAT(
+    o.creatime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS creatimeStr,
+    o.updater,
+    o.updatime,
+    DATE_FORMAT(
+    o.updatime,
+    '%Y-%m-%d %H:%i:%s'
+    ) AS updatimeStr,
+    o.type
+    FROM
+    lz_sale_order o
+    LEFT JOIN lz_base_goods g ON o.goodsId = g.id
+    LEFT JOIN lz_base_repo r ON o.repoId = r.id
+    LEFT JOIN lz_base_employee e ON o.employeeId = e.id
+    LEFT JOIN lz_sale_customer cus ON o.customerId = cus.id
     WHERE
     o.state = 1
     <if test="goodsName != null and goodsName!=''">
@@ -169,9 +214,6 @@
     </if>
     <if test="orderNumber != null and orderNumber!=''">
       AND o.orderNumber =#{orderNumber}
-    </if>
-    <if test="customerName != null and customerName!=''">
-      AND o.customerName LIKE CONCAT ('%',#{customerName},'%' )
     </if>
     <if test="repoId != null and repoId!=''">
       AND o.repoId =#{repoId}
@@ -210,9 +252,6 @@
     </if>
     <if test="orderNumber != null and orderNumber!=''">
       AND o.orderNumber =#{orderNumber}
-    </if>
-    <if test="customerName != null and customerName!=''">
-      AND o.customerName LIKE CONCAT ('%',#{customerName},'%' )
     </if>
     <if test="repoId != null and repoId!=''">
       AND o.repoId =#{repoId}

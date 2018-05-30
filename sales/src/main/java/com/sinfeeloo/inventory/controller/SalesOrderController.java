@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Paging;
 import com.sinfeeloo.inventory.entity.SalesOrder;
+import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.SalesOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,21 +29,19 @@ public class SalesOrderController extends BaseController {
      *
      * @param goodsId
      * @param customerId
-     * @param customerName
      * @param respId
      * @param count
-     * @param type   判断是什么类型的订单：  销售单    退货单
+     * @param type       判断是什么类型的订单：  销售单    退货单
      * @param unitPrice
      * @param totalPrice
      * @param operatorId
      * @param descs
-     * @param updater
+     * @param user
      * @return
      */
     @PostMapping(value = "/add")
     public ComResp add(@RequestParam(value = "goodsId") Integer goodsId,
                        @RequestParam(value = "customerId") Integer customerId,
-                       @RequestParam(value = "customerName") String customerName,
                        @RequestParam(value = "respId", required = false) Integer respId,
                        @RequestParam(value = "type") Integer type,
                        @RequestParam(value = "count") Integer count,
@@ -50,14 +49,13 @@ public class SalesOrderController extends BaseController {
                        @RequestParam(value = "totalPrice", required = false) String totalPrice,
                        @RequestParam(value = "operatorId") Integer operatorId,
                        @RequestParam(value = "descs", required = false) String descs,
-                       @RequestParam(value = "updater") String updater) {
+                       @RequestAttribute User user) {
 
         try {
             SalesOrder order = new SalesOrder();
             order.setOrdernumber(salesOrderService.getSalesOrderNumber());
             order.setGoodsid(goodsId);
             order.setCustomerid(customerId);
-            order.setCustomername(customerName);
             order.setRepoid(respId);
             order.setCount(count);
             order.setUnitprice(new BigDecimal(unitPrice));
@@ -68,8 +66,8 @@ public class SalesOrderController extends BaseController {
             order.setState(1);
             order.setCheckstate(1);
             order.setCheckresult("未审核");
-            order.setUpdater(updater);
-            order.setCreater(updater);
+            order.setUpdater(user.getAccount());
+            order.setCreater(user.getAccount());
             salesOrderService.add(order);
             return addSuccess();
         } catch (Exception e) {
@@ -137,42 +135,39 @@ public class SalesOrderController extends BaseController {
      * @param id
      * @param goodsId
      * @param customerId
-     * @param customerName
      * @param respId
      * @param count
      * @param unitPrice
      * @param totalPrice
      * @param operatorId
      * @param descs
-     * @param updater
+     * @param user
      * @return
      */
     @PostMapping(value = "/modify")
     public ComResp modify(@RequestParam(value = "id") Integer id,
                           @RequestParam(value = "goodsId") Integer goodsId,
                           @RequestParam(value = "customerId") Integer customerId,
-                          @RequestParam(value = "customerName") String customerName,
                           @RequestParam(value = "respId", required = false) Integer respId,
                           @RequestParam(value = "count") Integer count,
                           @RequestParam(value = "unitPirce") String unitPrice,
                           @RequestParam(value = "totalPrice", required = false) String totalPrice,
                           @RequestParam(value = "operatorId") Integer operatorId,
                           @RequestParam(value = "descs", required = false) String descs,
-                          @RequestParam(value = "updater") String updater) {
+                          @RequestAttribute User user) {
 
         try {
             SalesOrder order = new SalesOrder();
             order.setId(id);
             order.setGoodsid(goodsId);
             order.setCustomerid(customerId);
-            order.setCustomername(customerName);
             order.setRepoid(respId);
             order.setCount(count);
             order.setUnitprice(new BigDecimal(unitPrice));
             order.setTotalprice(new BigDecimal(totalPrice));
             order.setEmployeeid(operatorId);
             order.setDescs(descs);
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
             int num = salesOrderService.update(order);
             return modifyResult(num);
         } catch (Exception e) {
@@ -184,20 +179,36 @@ public class SalesOrderController extends BaseController {
      * 删除
      *
      * @param id
-     * @param updater
+     * @param user
      * @return
      */
     @PostMapping(value = "/delete")
     public ComResp delete(@RequestParam(value = "id") Integer id,
-                          @RequestParam(value = "updater") String updater) {
+                          @RequestAttribute User user) {
         try {
             SalesOrder order = new SalesOrder();
             order.setId(id);
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
             salesOrderService.delete(order);
             return deleteSuccess();
         } catch (Exception e) {
             return deleteError(e);
+        }
+    }
+
+    /**
+     * 订单详情
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping(value = "/getById")
+    public ComResp getById(@RequestParam(value = "id") Integer id) {
+        try {
+            SalesOrder salesOrder = salesOrderService.getById(id);
+            return ComResp.success("查询成功！", salesOrder);
+        } catch (Exception e) {
+            return ComResp.success("查询失败！", e);
         }
     }
 
@@ -208,14 +219,14 @@ public class SalesOrderController extends BaseController {
      * @param id
      * @param checkAccount
      * @param checkState
-     * @param updater
+     * @param user
      * @return
      */
     @PostMapping(value = "/check")
     public ComResp check(@RequestParam(value = "id") Integer id,
                          @RequestParam(value = "checkAccount") String checkAccount,
                          @RequestParam(value = "checkState") Integer checkState,
-                         @RequestParam(value = "updater") String updater) {
+                         @RequestAttribute User user) {
         try {
             SalesOrder order = new SalesOrder();
             order.setId(id);
@@ -232,7 +243,7 @@ public class SalesOrderController extends BaseController {
             } else {
                 return ComResp.error("审核状态错误！");
             }
-            order.setUpdater(updater);
+            order.setUpdater(user.getAccount());
 
             int num = salesOrderService.check(order);
             return modifyResult(num);
@@ -240,10 +251,6 @@ public class SalesOrderController extends BaseController {
             return modifyError(e);
         }
     }
-
-
-
-
 
 
     /**
@@ -265,17 +272,17 @@ public class SalesOrderController extends BaseController {
      */
     @GetMapping(value = "/getCheckOrderListByPage")
     public ComResp getCheckOrderListByPage(@RequestParam(value = "type", required = false) Integer type,
-                                      @RequestParam(value = "orderNumber", required = false) String orderNumber,
-                                      @RequestParam(value = "goodsName", required = false) String goodsName,
-                                      @RequestParam(value = "customerName", required = false) String customerName,
-                                      @RequestParam(value = "respId", required = false) Integer respId,
-                                      @RequestParam(value = "operator", required = false) String operator,
-                                      @RequestParam(value = "startTime", required = false) String startTime,
-                                      @RequestParam(value = "endTime", required = false) String endTime,
-                                      @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
-                                      @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
-                                      @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
-                                      @RequestParam(value = "sortRole", required = false, defaultValue = "ASC") String sortRole) {
+                                           @RequestParam(value = "orderNumber", required = false) String orderNumber,
+                                           @RequestParam(value = "goodsName", required = false) String goodsName,
+                                           @RequestParam(value = "customerName", required = false) String customerName,
+                                           @RequestParam(value = "respId", required = false) Integer respId,
+                                           @RequestParam(value = "operator", required = false) String operator,
+                                           @RequestParam(value = "startTime", required = false) String startTime,
+                                           @RequestParam(value = "endTime", required = false) String endTime,
+                                           @RequestParam(value = "limit", required = false, defaultValue = "20") Integer limit,
+                                           @RequestParam(value = "page", required = false, defaultValue = "1") Integer page,
+                                           @RequestParam(value = "sortCode", required = false, defaultValue = "id") String sortCode,
+                                           @RequestParam(value = "sortRole", required = false, defaultValue = "ASC") String sortRole) {
         Paging<SalesOrder> paging = new Paging<>(page, limit);
         try {
             paging.putSearch("goodsName", goodsName);

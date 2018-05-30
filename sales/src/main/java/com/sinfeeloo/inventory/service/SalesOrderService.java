@@ -20,9 +20,10 @@ import java.util.Map;
  */
 @Service
 public class SalesOrderService extends BaseServiceImpl<SalesOrder> {
-    
+
     @Autowired
     private SalesOrderMapper salesOrderMapper;
+
     @Override
     protected List<SalesOrder> selectListByPage(Map<String, Object> searchMap) {
         return salesOrderMapper.selectOrderListByPage(searchMap);
@@ -50,17 +51,19 @@ public class SalesOrderService extends BaseServiceImpl<SalesOrder> {
 
     /**
      * 获得唯一的进货单号
+     *
      * @return
      */
-    public String getSalesOrderNumber(){
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
-        String time=sdf.format(new Date());
+    public String getSalesOrderNumber() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+        String time = sdf.format(new Date());
         String randomString = RandomStringUtils.randomNumeric(8);
-        return "S"+time+randomString;
+        return "S" + time + randomString;
     }
 
     /**
      * 审核
+     *
      * @param order
      * @return
      */
@@ -78,5 +81,9 @@ public class SalesOrderService extends BaseServiceImpl<SalesOrder> {
         paging.setTotal(salesOrderMapper.selectCheckOrderListCount(paging.getSearchMap()));
         paging.setList(salesOrderMapper.selectCheckOrderListByPage(paging.getSearchMap()));
 
+    }
+
+    public SalesOrder getById(Integer id) {
+        return salesOrderMapper.selectByPrimaryKey(id);
     }
 }

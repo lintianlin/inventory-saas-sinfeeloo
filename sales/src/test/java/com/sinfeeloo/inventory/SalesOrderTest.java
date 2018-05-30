@@ -26,7 +26,6 @@ public class SalesOrderTest extends BaseTest {
         ComResp response = salesOrderController.add(
                 9,
                 4,
-                "北京思贤国际",
                 5,
                 100,
                 1,
@@ -65,7 +64,6 @@ public class SalesOrderTest extends BaseTest {
                 15,
                 9,
                 4,
-                "北京思贤国际",
                 5,
                 1000,
                 "38000",

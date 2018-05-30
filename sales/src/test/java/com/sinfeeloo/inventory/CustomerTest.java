@@ -3,6 +3,7 @@ package com.sinfeeloo.inventory;
 import com.sinfeeloo.inventory.base.BaseTest;
 import com.sinfeeloo.inventory.controller.CustomerController;
 import com.sinfeeloo.inventory.entity.ComResp;
+import com.sinfeeloo.inventory.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ public class CustomerTest extends BaseTest {
                 "18810578028",
                 "北京市海淀区五道口5478",
                 "国际化大公司",
-                "admin2"
+                new User()
                 );
         printResponse(response);
     }
@@ -55,14 +56,14 @@ public class CustomerTest extends BaseTest {
                 "18810578028",
                 "北京市五道口财智国际大厦17",
                 "牛逼的公司",
-                "admin2"
+                new User()
         );
         printResponse(response);
     }
 
     @Test
     public void deleteCustomer() {
-        ComResp resp = employeeController.delete(1, "admin2");
+        ComResp resp = employeeController.delete(1, new User());
         printResponse(resp);
     }
 }
