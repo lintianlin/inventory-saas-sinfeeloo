@@ -4,6 +4,7 @@ import com.sinfeeloo.inventory.base.BaseController;
 import com.sinfeeloo.inventory.entity.ComResp;
 import com.sinfeeloo.inventory.entity.Customer;
 import com.sinfeeloo.inventory.entity.Paging;
+import com.sinfeeloo.inventory.entity.User;
 import com.sinfeeloo.inventory.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,6 @@ public class CustomerController extends BaseController {
      * @param mobile
      * @param address
      * @param descs
-     * @param updater
      * @return
      */
     @PostMapping(value = "/add")
@@ -38,7 +38,7 @@ public class CustomerController extends BaseController {
                        @RequestParam(value = "mobile") String mobile,
                        @RequestParam(value = "address") String address,
                        @RequestParam(value = "descs", required = false) String descs,
-                       @RequestParam(value = "updater") String updater) {
+                       @RequestAttribute User user) {
 
         try {
             Customer customer = new Customer();
@@ -48,7 +48,7 @@ public class CustomerController extends BaseController {
             customer.setAddress(address);
             customer.setDescs(descs);
             customer.setState(1);
-            customer.setUpdater(updater);
+            customer.setUpdater(user.getAccount());
             customerService.add(customer);
             return addSuccess();
         } catch (Exception e) {
@@ -94,7 +94,6 @@ public class CustomerController extends BaseController {
      * @param mobile
      * @param address
      * @param descs
-     * @param updater
      * @return
      */
     @PostMapping(value = "/modify")
@@ -104,7 +103,7 @@ public class CustomerController extends BaseController {
                           @RequestParam(value = "mobile") String mobile,
                           @RequestParam(value = "address") String address,
                           @RequestParam(value = "descs", required = false) String descs,
-                          @RequestParam(value = "updater") String updater) {
+                          @RequestAttribute User user) {
 
         try {
             Customer customer = new Customer();
@@ -114,7 +113,7 @@ public class CustomerController extends BaseController {
             customer.setMobile(mobile);
             customer.setAddress(address);
             customer.setDescs(descs);
-            customer.setUpdater(updater);
+            customer.setUpdater(user.getAccount());
             int num = customerService.update(customer);
             return modifyResult(num);
         } catch (Exception e) {
@@ -127,21 +126,36 @@ public class CustomerController extends BaseController {
     /**
      * 修改
      *
-     * @param updater
      * @return
      */
     @PostMapping(value = "/delete")
     public ComResp delete(@RequestParam(value = "id") Integer id,
-                          @RequestParam(value = "updater") String updater) {
+                          @RequestAttribute User user) {
 
         try {
             Customer customer = new Customer();
             customer.setId(id);
-            customer.setUpdater(updater);
+            customer.setUpdater(user.getAccount());
             customerService.delete(customer);
             return deleteSuccess();
         } catch (Exception e) {
             return deleteError(e);
+        }
+    }
+
+    /**
+     * 修改
+     *
+     * @return
+     */
+    @GetMapping(value = "/getById")
+    public ComResp getById(@RequestParam(value = "id") Integer id) {
+
+        try {
+            Customer customer = customerService.getById(id);
+            return ComResp.success("查询成功！", customer);
+        } catch (Exception e) {
+            return ComResp.error("查询失败！", e);
         }
     }
 
