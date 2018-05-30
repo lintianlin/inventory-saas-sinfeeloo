@@ -116,7 +116,6 @@ public class PurchaseOrderController extends BaseController {
     public ComResp modify(@RequestParam(value = "id") Integer id,
                           @RequestParam(value = "goodsId") Integer goodsId,
                           @RequestParam(value = "supplierId") Integer supplierId,
-                          @RequestParam(value = "supplierName") String supplierName,
                           @RequestParam(value = "respId", required = false) Integer respId,
                           @RequestParam(value = "count") Integer count,
                           @RequestParam(value = "unitPirce") String unitPrice,
@@ -130,7 +129,6 @@ public class PurchaseOrderController extends BaseController {
             order.setId(id);
             order.setGoodsid(goodsId);
             order.setSupplierid(supplierId);
-            order.setSuppliername(supplierName);
             order.setRepoid(respId);
             order.setCount(count);
             order.setUnitprice(new BigDecimal(unitPrice));

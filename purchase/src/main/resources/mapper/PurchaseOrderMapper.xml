@@ -222,11 +222,54 @@
 
 
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
-        select id, goodsId, supplierId, supplierName, repoId, orderNumber, count, unitPrice,
-        totalPrice, employeeId, descs, checkState, checkResult, checkAccount, checktime,
-        taketime, creater, creatime, updater, updatime, state, type
-        from lz_purchase_order
-        where id = #{id,jdbcType=INTEGER}
+         SELECT
+        o.id,
+        o.goodsId,
+        g.`name` AS goodsName,
+        o.supplierId,
+        s.name AS supplierName,
+        o.repoId,
+        r.`name` AS storageName,
+        o.orderNumber,
+        o.count,
+        o.unitPrice,
+        o.totalPrice,
+        o.employeeId,
+        e.`name` AS operator,
+        o.descs,
+        o.checkState,
+        o.checkResult,
+        o.checkAccount,
+        o.checktime,
+        DATE_FORMAT(
+        o.checktime,
+        '%Y-%m-%d %H:%i:%s'
+        ) AS checktimeStr,
+        o.taketime,
+        DATE_FORMAT(
+        o.taketime,
+        '%Y-%m-%d %H:%i:%s'
+        ) AS taketimeStr,
+        o.creater,
+        o.creatime,
+        DATE_FORMAT(
+        o.creatime,
+        '%Y-%m-%d %H:%i:%s'
+        ) AS creatimeStr,
+        o.updater,
+        o.updatime,
+        DATE_FORMAT(
+        o.updatime,
+        '%Y-%m-%d %H:%i:%s'
+        ) AS updatimeStr,
+        o.type
+        FROM
+        lz_purchase_order o
+        LEFT JOIN lz_base_goods g ON o.goodsId = g.id AND g.state =1
+        LEFT JOIN lz_base_repo r ON o.repoId = r.id AND r.state =1
+        LEFT JOIN lz_base_employee e ON o.employeeId = e.id AND e.state = 1
+        LEFT JOIN lz_purchase_supplier s ON o.supplierId = s.id AND s.state = 1
+        where o.id = #{id,jdbcType=INTEGER}
     </select>
 
 
