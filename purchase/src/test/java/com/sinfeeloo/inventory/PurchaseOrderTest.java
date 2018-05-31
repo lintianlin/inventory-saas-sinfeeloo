@@ -84,7 +84,7 @@ public class PurchaseOrderTest extends BaseTest {
 
     @Test
     public void chechOrder() {
-        ComResp resp = purchaseOrderController.check(25, 3, new User());
+        ComResp resp = purchaseOrderController.check(25, 3,"", new User());
         printResponse(resp);
     }
 }

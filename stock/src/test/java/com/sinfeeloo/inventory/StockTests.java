@@ -22,7 +22,6 @@ public class StockTests extends BaseTest {
     public void checkPurcharOrder() {
         ComResp comResp = stockController.checkPurcharOrder(
                 33,
-                "admin2",
                 3,
                 "通过",
                 new User()

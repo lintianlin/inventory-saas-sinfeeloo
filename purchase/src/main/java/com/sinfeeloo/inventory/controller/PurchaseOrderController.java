@@ -173,16 +173,17 @@ public class PurchaseOrderController extends BaseController {
     @PostMapping(value = "/check")
     public ComResp check(@RequestParam(value = "id") Integer id,
                          @RequestParam(value = "checkState") Integer checkState,
+                         @RequestParam(value = "checkResult",required = false) String checkResult,
                          @RequestAttribute User user) {
         try {
             PurchaseOrder order = new PurchaseOrder();
             order.setId(id);
             order.setCheckaccount(user.getAccount());
             order.setCheckstate(checkState);
-            if (checkState == 2) {
-                order.setCheckresult("不通过");
-            } else if (checkState == 3) {
-                order.setCheckresult("通过");
+            if (checkState == 2) {//审核不通过
+                order.setCheckresult(checkResult);
+            } else if (checkState == 3) {//审核通过
+                order.setCheckresult(checkResult);
                 //审核通过后更新入库时间
                 order.setTaketime(new Date());
             } else if (checkState == 4) {

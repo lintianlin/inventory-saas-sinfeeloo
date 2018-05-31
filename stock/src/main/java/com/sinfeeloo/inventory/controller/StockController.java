@@ -48,7 +48,6 @@ public class StockController extends BaseController {
      * 审核采购单
      *
      * @param id
-     * @param checkAccount
      * @param checkState
      * @param checkResult
      * @param user
@@ -56,14 +55,13 @@ public class StockController extends BaseController {
      */
     @PostMapping(value = "/checkPurcharOrder")
     public ComResp checkPurcharOrder(@RequestParam(value = "id") Integer id,
-                                     @RequestParam(value = "checkAccount") String checkAccount,
                                      @RequestParam(value = "checkState") Integer checkState,
                                      @RequestParam(value = "checkResult") String checkResult,
                                      @RequestAttribute User user) {
         try {
             PurchaseOrder order = new PurchaseOrder();
             order.setId(id);
-            order.setCheckaccount(checkAccount);
+            order.setCheckaccount(user.getAccount());
             order.setCheckstate(checkState);
             if (checkState == 2) {//不通过
                 order.setCheckresult(checkResult);
@@ -87,7 +85,6 @@ public class StockController extends BaseController {
      * 审核销售单
      *
      * @param id
-     * @param checkAccount
      * @param checkState
      * @param checkResult
      * @param user
@@ -95,14 +92,13 @@ public class StockController extends BaseController {
      */
     @PostMapping(value = "/checkSalesOrder")
     public ComResp checkSalesOrder(@RequestParam(value = "id") Integer id,
-                                   @RequestParam(value = "checkAccount") String checkAccount,
                                    @RequestParam(value = "checkState") Integer checkState,
                                    @RequestParam(value = "checkResult") String checkResult,
                                    @RequestAttribute User user) {
         try {
             SalesOrder order = new SalesOrder();
             order.setId(id);
-            order.setCheckaccount(checkAccount);
+            order.setCheckaccount(user.getAccount());
             order.setCheckstate(checkState);
             if (checkState == 2) {//不通过
                 order.setCheckresult(checkResult);

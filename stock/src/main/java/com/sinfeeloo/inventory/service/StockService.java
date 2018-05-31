@@ -121,12 +121,14 @@ public class StockService extends BaseServiceImpl<Stock> {
             if (tempStock.getTotalcount() > salesOrder.getCount()) {//库存充足
                 //总数量修改
                 tempStock.setTotalcount(tempStock.getTotalcount() - salesOrder.getCount());
-                //进价修改
-                tempStock.setBuyprice(salesOrder.getUnitprice());
+                //销售数量修改
+                tempStock.setSalecount(tempStock.getSalecount() + salesOrder.getCount());
+                //售价 修改
+                tempStock.setSaleprice(salesOrder.getUnitprice());
                 //平均进价修改
 //                tempStock.setAvgbuyprice();
-                //库存总值修改
-                tempStock.setTotalbuyprice(tempStock.getTotalbuyprice().subtract(salesOrder.getTotalprice()));
+                //销售总值修改
+                tempStock.setTotalsaleprice(tempStock.getSaleprice().subtract(salesOrder.getUnitprice()));
                 int num = stockMapper.updateByPrimaryKey(tempStock);
                 if (num > 0) {//修改成功
                     //更新订单中审核状态
@@ -190,7 +192,7 @@ public class StockService extends BaseServiceImpl<Stock> {
         Stock haveThisStock = stockMapper.selectByGoodsIdAndRepoId(temp.getGoodsid(), toStorageId);
         if (null != haveThisStock) {//如果仓库中有这个商品
             //如果有这个商品，则数量相加
-            haveThisStock.setTotalcount(haveThisStock.getTotalcount()+allotNum);
+            haveThisStock.setTotalcount(haveThisStock.getTotalcount() + allotNum);
             //修改库存总值
             haveThisStock.setTotalbuyprice(haveThisStock.getBuyprice().multiply(new BigDecimal(haveThisStock.getTotalcount())));
             //修改销售总值

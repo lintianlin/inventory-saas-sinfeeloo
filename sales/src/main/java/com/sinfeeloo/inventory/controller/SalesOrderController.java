@@ -217,7 +217,6 @@ public class SalesOrderController extends BaseController {
      * 审核
      *
      * @param id
-     * @param checkAccount
      * @param checkState
      * @param user
      * @return
