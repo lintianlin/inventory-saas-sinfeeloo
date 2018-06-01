@@ -90,6 +90,7 @@ public class StockService extends BaseServiceImpl<Stock> {
             stock.setGoodsid(purchaseOrder.getGoodsid());
             stock.setRepoid(purchaseOrder.getRepoid());
             stock.setTotalcount(purchaseOrder.getCount());
+            stock.setSalecount(0);
             stock.setBuyprice(purchaseOrder.getUnitprice());
             stock.setTotalbuyprice(purchaseOrder.getTotalprice());
             stock.setAvgbuyprice(purchaseOrder.getUnitprice());
@@ -128,7 +129,7 @@ public class StockService extends BaseServiceImpl<Stock> {
                 //平均进价修改
 //                tempStock.setAvgbuyprice();
                 //销售总值修改
-                tempStock.setTotalsaleprice(tempStock.getSaleprice().subtract(salesOrder.getUnitprice()       ));
+                tempStock.setTotalsaleprice(tempStock.getSaleprice().subtract(new BigDecimal(salesOrder.getCount())));
                 int num = stockMapper.updateByPrimaryKey(tempStock);
                 if (num > 0) {//修改成功
                     //更新订单中审核状态
