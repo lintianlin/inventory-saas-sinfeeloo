@@ -129,7 +129,7 @@ public class StockService extends BaseServiceImpl<Stock> {
                 //平均进价修改
 //                tempStock.setAvgbuyprice();
                 //销售总值修改
-                tempStock.setTotalsaleprice(tempStock.getSaleprice().subtract(new BigDecimal(salesOrder.getCount())));
+                tempStock.setTotalsaleprice(tempStock.getSaleprice().multiply(new BigDecimal(salesOrder.getCount())));
                 int num = stockMapper.updateByPrimaryKey(tempStock);
                 if (num > 0) {//修改成功
                     //更新订单中审核状态
