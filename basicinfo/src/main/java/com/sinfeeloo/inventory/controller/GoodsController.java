@@ -59,7 +59,7 @@ public class GoodsController extends BaseController {
             goods.setUpdater(updater);
             goods.setState(1);
             goodsService.addGoods(goods);
-            return ComResp.success("添加成功！");
+            return ComResp.success("添加成功 ！");
         } catch (Exception e) {
             return ComResp.error("添加失败！", e);
         }
